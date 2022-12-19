@@ -1,0 +1,92 @@
+body {
+    background-color: #112240;
+    
+  }
+.NavBar{
+    width: 100%;
+   
+  }
+nav{
+    justify-content: flex-end;
+    padding-right: 50px;
+    display: flex;
+    
+    font-family: consolas;
+
+}
+span{
+    color:#21564D;
+} 
+nav ul li{
+    
+    color:  rgba(246, 252, 251, 0.7);;
+    padding: 20px;
+    list-style-type: none;
+    display: inline-block;
+}
+button{
+margin-left: 10px;
+color:#21564D;
+border-color: #21564D;
+width: 123.51px;
+height: 37.74px;
+margin-top: 25px;
+background-color: #112240;
+border-radius: 5px;
+font-family: consolas;
+font-weight: bold;
+font-size: medium;
+}
+nav ul li:hover{
+        color:#21564D;
+        transition: .3s;
+
+}
+button:hover{
+    border-color: #112240;
+    background-color:#21564D;
+    color:white;
+    transition:.4s;
+}
+nav img{
+    margin-right: 300px;
+    width: 120px;
+height: 123px;
+}
+#greetings{
+width: 294px;
+height: 54.8px;
+margin-left: 120px;
+margin-top: 100px;
+top: 302px;
+
+font-family: 'Consolas';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+
+color: rgba(245, 245, 245, 0.5);
+
+}
+#name{
+ margin-top:20px;
+ margin-bottom: 0px;
+margin-left: 120px;
+font-size: clamp(40px, 8vw, 80px);
+font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+font-style: normal;
+font-weight: 700;
+color: #21564D;
+
+}
+#slogan{
+margin-top: 0px;
+margin-left: 120px;
+font-size: clamp(40px, 8vw, 80px);
+font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+font-style: normal;
+font-weight: 700;
+color: rgba(33, 86, 77, 0.5);
+
+}
