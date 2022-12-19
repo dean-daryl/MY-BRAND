@@ -20,12 +20,13 @@ span{
 nav ul li{
     
     color:  rgba(246, 252, 251, 0.7);;
-    padding: 20px;
+    padding: 10px;
     list-style-type: none;
     display: inline-block;
 }
-button{
-margin-left: 10px;
+button{ 
+margin-right: 1px;  
+padding-left: 10px;
 color:#21564D;
 border-color: #21564D;
 width: 123.51px;
@@ -49,9 +50,9 @@ button:hover{
     transition:.4s;
 }
 nav img{
-    margin-right: 300px;
-    width: 120px;
-height: 123px;
+    margin-right: 400px;
+    width: 80px;
+height: 80px;
 }
 #greetings{
 width: 294px;
@@ -89,4 +90,17 @@ font-style: normal;
 font-weight: 700;
 color: rgba(33, 86, 77, 0.5);
 
+}
+#description{
+    margin-top:-50px;
+    margin-left:120px; 
+    width: 40%;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 24px;
+    display: block;
+    align-items: center;
+    color: rgba(156, 153, 153, 0.6);
 }
