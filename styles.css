@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden;
+   overflow-x: hidden;
     background-color: #0a192f;
   }
   @font-face {
@@ -1228,6 +1228,10 @@ left:100px;
 #contactname , #Email , #message{
     width:280px;
 }
+body {
+    overflow-x: hidden;
+     background-color: #0a192f;
+   }
 }
 
 
@@ -1429,6 +1433,10 @@ left:100px;
     #contactname , #Email , #message{
         width:280px;
     }
+    body {
+        overflow-x: hidden;
+         background-color: #0a192f;
+       }
     }
 
 @media screen and (min-width:900px) and (max-width:1200px){
@@ -1487,6 +1495,7 @@ left:100px;
                 position: relative;
                 right:100px;
                 bottom:80px;
+              
             }
         #skills{
         font-size: 15px;    
@@ -1627,4 +1636,9 @@ left:100px;
         #contactname , #Email , #message{
             width:280px;
         }
+        body {
+            overflow-x: hidden;
+             background-color: #0a192f;
+           }
+           
         }
