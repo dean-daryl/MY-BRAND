@@ -1,29 +1,37 @@
 body {
+  overflow-x: hidden;
     background-color: #0a192f;
-    
   }
-nav{
-    justify-content: flex-end;
-    padding-right: 50px;
-    display: flex;
-    font-family: consolas;
+  @font-face {
+    font-family: 'Inter';
+    src: url(...);
+    font-weight: 600;
+    font-style: normal;
+}
 
+nav{
+    /* justify-content: flex-end; */
+    padding-right: 50px;
+    display: flex ;
+    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 span{
-    color:#17C3B2;
+    color:#64ffda;
 } 
 nav ul li{
     
     color:  rgba(246, 252, 251, 0.7);
     padding: 10px;
+    font-size: 15px;
     list-style-type: none;
     display: inline-block;
+    font-style: normal;
 }
 #resume{
     left:20px;   
     top: 10px;;
     padding: 2px 14px;
-    border: 2px solid #17C3B2;
+    border: 2px solid #64ffda;
     height: 50px;
     position: relative;
     overflow: hidden;
@@ -33,17 +41,18 @@ nav ul li{
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color:  rgba(246, 252, 251, 0.7);
+    color: #64ffda;
     border-radius: 5px;
+    
    }
    
    #resume:hover {
     background-color:rgba(121, 177, 172, 0.1);
-    color:#17C3B2;
+    color:#64ffda;
     
 }
 nav ul li:hover{
-        color:#17C3B2;
+        color:#64ffda;
         transition: .3s;
 }
 nav img{
@@ -58,39 +67,44 @@ margin-right: 500px;
 
 }
 #surname{
-color:#17C3B2;
+color:#64ffda;
 }
+
 #greetings{
 width: 294px;
 height: 54.8px;
 margin-left: 120px;
 margin-top: 100px;
-font-family: 'Consolas';
+font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 font-style: normal;
 font-weight: 400;
-font-size: 24px;
+font-size: 20px;
 line-height: 28px;
 transition-delay: 100ms;
-color: #17C3B2;
+color: #64ffda;
 
 
 }
 #name{
+width:100%;
 
- margin-top:20px;
+position: relative;
+margin-top:20px;
  margin-bottom: 0px;
 margin-left: 120px;
-font-size: clamp(40px, 8vw, 80px);
+font-size: clamp(40px, 8vw, 70px);
 font-family: sans-serif;   
 font-style: normal;
 font-weight: 700;
 transition-delay: 200ms;
 color:white;
 }
+.Intro{
+}
 #slogan{
 margin-top: 0px;
 margin-left: 120px;
-font-size: clamp(40px, 8vw, 80px);
+font-size: clamp(40px, 8vw, 70px);
 font-family:sans-serif;
 font-style: normal;
 font-weight: 700;
@@ -101,28 +115,259 @@ transition-delay: 300ms;
 #description{
     margin-top:-50px;
     margin-left:120px; 
-    width: 40%;
-    font-family: 'Inter',sans-serif;
+    width: 40%;  
+    font-family: "Inter",system-ui, -apple-system,sans-serif;
     font-style: normal;
-    font-weight: 200;
-    font-size: 22px;
+    font-weight: 400;  
+    font-size: 17px;
     line-height: 24px;
     display: block;
     align-items: center;
     letter-spacing: 0.1em;
-    color: rgba(156, 153, 153, 0.6);
+    color: rgba(255,255,255, 0.4);
     transition-delay: 400ms;
 }
-.About{
-    padding-left:200px;
-    justify-content: center;
-}
+
 #reachout{
-    left:120px;   
-    top: 10px;
+    position: relative;
+    left:200px;   
+    top: 20px;
     width:250px;
-    border: 2px solid #17C3B2;
+    border: 2px solid#64ffda;
     height: 60px;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color:#64ffda;
+    border-radius: 5px;
+    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+}
+#reachout:hover {
+    background-color:rgba(121, 177, 172, 0.1);
+    color:#64ffda;
+    
+}
+#socialmed_list{
+    
+    list-style: none;
+    justify-content: flex-start;
+    
+}
+.social_section svg:hover{
+    color:#64ffda;
+
+}
+
+ .email_section a:hover{
+    color:#64ffda;
+}
+ .social_section svg{ 
+    position: relative;
+    top:150px;
+    padding-top:50px;
+    color: rgba(156, 153, 153, 0.6);
+    height:23px;
+    width:22.05px;
+    vertical-align: top;
+}
+
+.Intro{
+    padding-left: 80px;
+    width:1500px;
+    display: block;
+    justify-content: center;
+
+
+}
+
+#titleAboutme{
+    position: relative;
+    left: 200px;
+    top:250px;
+    bottom: 500px;
+    color: white;
+    font-family: 'calibri';}
+
+.AboutMe span{
+    font-family: 'consolas';
+    font-weight: 100;
+    color:#64ffda;
+}
+.AboutMe p{
+    position: relative;
+    left: 80px;
+    top: 370px;
+    margin-top:-50px;
+    margin-left:120px; 
+    width: 542px;
+    height:150px ; 
+    font-family:'Inter',system-ui,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    
+ /* position: relative;
+ left: 200px;
+ top: 250px;
+ width: 700px;
+ font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+ font-style: normal;
+  font-weight: 400;
+  width: 593px;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5); */
+}
+.picture{
+    
+    margin-right: 0px;
+    position: relative;
+    bottom:320px;
+    left: 950px;
+    width:380px;
+    height: 570px;
+    border:2px solid;
+    border-color: #64ffda;
+    border-radius: 10px;
+}
+.picture img{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    height: 530px;
+    top:20px;
+    right: 100px;
+
+}
+
+#skills{
+width:30px;
+color: rgba(255, 255, 255, 0.5);
+position: relative;
+top:230px;
+left: 200px;
+font-family:"Consolas",system-ui,sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 30px;
+list-style-type:circle;
+
+}
+#get_in_touch{
+    width:250px;
+    position: relative;
+    right:30px;
+    color: white;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+}
+#titleWhats_Next{
+    width:250px;
+    position: relative;
+    top: 10px;
+    right:40px;     
+    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-style: normal;
+    font-size: 20px;
+    color:#64ffda;
+    font-weight: 100px;
+}
+.contact{
+    width:500px;
+    height:800px;
+    position: relative;
+    top: 200px;
+    left: 600px;
+
+}
+#contactform{
+border: 1px solid;
+border-color: #64ffda;
+border-radius: 10px;
+justify-content: center;
+height: 400px;
+padding-top: 50px;
+padding-left: 50px;
+width:400px;
+position: relative;
+top:60px;
+bottom:40px;
+right:150px;
+
+}
+#contactname{
+    color: white;
+position: relative;
+background:#0a192f;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+width: 330.84px;
+height: 42.14px;
+}
+#Name_label{
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+
+    position: relative;
+    bottom:10px;
+    color: white;
+ font-size:20px;   
+}
+#email_label{
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+ 
+    position: relative;
+    top:10px;
+    color: white;
+    font-size:20px;    
+}
+#Email{
+    color: white;  
+position: relative;
+top:20px;
+background:#0a192f;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+width: 330.84px;
+height: 42.14px;
+}
+#message_label{
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+
+    position: relative;
+    top:10px;
+    color: white;
+    font-size:20px;    
+}
+#message{
+    color: white;
+position: relative;
+top:20px;
+background:#0a192f;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+width: 330.84px;
+height: 42.14px;
+
+}
+
+#SignIn_button{
+    left:60px;   
+    top:5px;;
+    padding: 2px 14px;
+    border: 2px solid #64ffda;
+    height: 50px;
+    width:200px;
     position: relative;
     overflow: hidden;
     background-color: transparent;
@@ -131,25 +376,1255 @@ transition-delay: 300ms;
     transition: .3s;
     z-index: 1;
     font-family: inherit;
-    color:  rgba(246, 252, 251, 0.7);
+    color: #64ffda;
     border-radius: 5px;
-    font-family: consolas;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
-#reachout:hover {
-    background-color:rgba(121, 177, 172, 0.1);
-    color:#17C3B2;
-    
+#submit_form{
+    left:60px;   
+    top:60px;
+    padding: 2px 14px;
+    border: 2px solid #64ffda;
+    height: 50px;
+    width:200px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #64ffda;
+    border-radius: 5px;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
-#socialmed_list{
-    list-style: none;
-    padding-right: 300px;
-    
+#contact_description{
+    position: relative;
+    top:20px;
+    right:170px;
+    width:500px;
+    text-align: center;
+     line-height: 30px;
+    font-size: 15px;
+    font-weight: 200;
+    font-family:'calibri';
+    color: rgba(255, 255, 255, 0.7);
+}
+#SignUp_Form{
+background-color:#0a192f;
+border: 1px solid;
+border-color: #64ffda;
+border-radius: 10px;
+height: 400px;
+padding-top: 50px;
+padding-left: 50px;
+width:400px;
+position: relative;
+top:150px;
+left:450px;
+
+}
+#SignUp{
+
+    position: relative;
+    left:110px;  
+    bottom:10px;   
+    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-style: normal;
+    font-size: 20px;
+    color:#64ffda;
+    font-weight: 100px;
+
+}
+#password_label{
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    position: relative;
+    top:10px;
+    color: white;
+    font-size:30px;    
+}
+#password{
+color: white;
+position: relative;
+top:20px;
+background:#0a192f;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+width: 330.84px;
+height: 42.14px;
+
+}
+#SignIn{
+
+    position: relative;
+    left:110px;  
+    bottom:10px;   
+    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-style: normal;
+    font-size: 20px;
+    color:#64ffda;
+    font-weight: 100px;
+
+}
+#SignIn_Form{
+    background-color:#0a192f;
+border: 1px solid;
+border-color: #64ffda;
+border-radius: 10px;
+justify-content: center;
+height: 400px;
+padding-top: 50px;
+padding-left: 50px;
+width:400px;
+position: relative;
+top:200px;
+left:450px;
+
 }
 
-svg{
-    padding-top:50px;
-    color: black;
-    height:23px;
-    width:22.05px;
-    vertical-align: top;
+.About .email_section a{
+    position: relative;
+    left:1450px;
+    bottom: 340px;
+    padding-top:150px;
+    height: 50px;
+    font-size:18px;
+    color: rgba(156, 153, 153, 0.6);
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
+
+
+#folder{
+    left:200px;
+}
+
+#blogtitle{
+    position: relative;
+    font-size: 13px;
+    width:200px;
+    bottom: 70px;;
+    left: 240px;
+}
+
+.Blogs .Cards{
+ width:75%;
+ margin:75px auto;
+ display:grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-gap: 25px;
+
+}
+.card{
+
+    border:1px solid #64ffda;
+    border-radius: 10px;
+    padding:10px;
+    width: 305px;
+    height: 255px;
+    background-color: #112240;
+}
+.card .card-content{
+    position: relative;
+    bottom:21px;
+    right:4px;
+    width:309px;
+    height: 264px;
+    border-radius: 10px;
+}
+.card .card-content h2{
+    position: relative;
+    top:-20px;
+    color:white;
+    left:20px;
+    width:200px;
+    font-size: 15px;
+    font-family:'calibri','sans-serif';
+}
+.card .card-content p{
+ position: relative;
+    top:-10px;
+    color:white;
+    width:200px;
+    left:20px;
+    font-size: 13px;
+    font-family:'calibri',sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 200;
+    line-height: 15px;;
+
+}
+.card .card-content li{
+    display:inline;
+    padding:10px;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    top:15px;
+    right:30px;
+    font-size: 10px;
+    font-family:'consolas','sans-serif';
+    font-style: italic;
+    font-weight: 100;
+
+}
+#blog_Section_title{
+    position: relative;
+    left:600px;
+    font-family:"Calibri";
+    color:white;
+}
+
+#Join{
+    position: relative;
+    left:600px;   
+    top: 18 px;
+    width:250px;
+    border: 2px solid#64ffda;
+    height: 60px;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color:#64ffda;
+    border-radius: 5px;
+    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+}
+#Join:hover {
+    background-color:rgba(121, 177, 172, 0.1);
+    color:#64ffda;
+}
+.blogcontent{
+
+    position: relative;
+    top:50px;
+    left:100px;  
+    width: 60%; 
+    background-color: rgba(17, 34, 64, 0.72);
+
+}
+/* .content p{
+    color:white;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left:200px;
+    padding:10px;   
+} */
+.blogcontent .title h2{
+    font-family: "calibri";
+    color:white;
+    position: relative;
+    left:100px;
+    bottom:20px;
+    padding-top: 30px;
+}
+.blogcontent .CoverImage img{
+    position: relative;
+    left:60px;
+    bottom:10px;
+    width:700px;
+
+}
+.blogcontent .paragraphs p{
+    color:rgba(255, 255, 255, 0.7);
+font-family: "calibri";
+    padding:10px;
+    position: relative;
+    
+}
+.blogcontent .paragraphs img{
+    position: relative;
+    left:200px;
+}
+.relatedarticles{
+position: relative;
+left:1100px;
+bottom:1650px;
+color:white;
+}
+.relatedarticles li{ 
+      
+    font-size: 20px;
+    font-family: "calibri",sans-serif; 
+    position: relative;
+    right:60px;
+    padding-top: 10px;
+}
+.relatedarticles h2{
+    font-family: "calibri",sans-serif;   
+}
+.advert{
+    color:white;
+    position: relative;
+    left:1100px;
+    bottom:1550px;
+    }
+.advert h2{
+    font-family: "calibri",sans-serif;  
+
+
+}
+.advert .advert-content{
+    background-color:#112240;
+width: 200px;
+height: 150px;
+color: rgba(17, 34, 64, 0.72);
+
+
+}
+
+.UserComments{
+    padding:10px;
+    background-color:#112240;
+    width: 800px;
+    height: 90px;
+    position: relative;
+    left:150px;
+    bottom: 250px;
+    border-radius: 5px;
+   
+    border: 1px solid black ;
+    
+
+}
+
+.UserComments p{
+    font-family: "calibri";
+color:white;
+position: relative;
+left:100px; 
+bottom:80px; 
+
+
+}
+.UserComments img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+.UserComments h4{
+    font-family: "calibri";
+    color:white;
+ position: relative;
+ left:100px;
+ bottom:70px;
+}
+.UserComments h5{
+    font-family: "calibri";
+    padding: 2px;
+    color:grey;
+    position: relative;
+    display: inline;
+    bottom:70px;
+    }
+.comment{
+    font-family: "calibri";
+position: relative;
+left:220px;
+bottom:300px;
+}
+.comment button{
+    font-family: "calibri";
+    border:1px solid #64ffda;
+    border-radius: 2px;
+   background-color:#0a192f;
+    width:70px;
+    padding:5px;
+    position:relative;
+    top:5px;
+}
+#comment{
+    height:50px;
+    width:  500px;
+    border-radius: 5px ;
+}
+
+
+
+
+
+/* .comments .comment{
+        padding:30px;
+        margin-bottom: 30px;;
+        background-color:#0a192f;
+        width: 1000px;
+        height: 50px;
+        position: relative;
+        left:210px;
+        top:60px;
+        border-radius: 5px;
+        border: 1px solid #64ffda;
+    
+    
+    } */
+    /* .comments img{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        position: relative;
+        top:10px;
+
+    }
+    .comments h4{
+     position: relative;
+     left:100px;
+     bottom:70px;
+    }
+    .comments h5{
+        padding: 1px;
+        color:grey;
+        position: relative;
+        display: inline;
+        bottom:90px;
+        }
+    .comments p{
+        color:white;
+        position: relative;
+    bottom:80px;
+    left:100px;
+    }
+    */
+.Blogs .folder svg{ 
+        color:#64ffda;
+        height: 40px;
+        position: relative;
+        top:23px;
+        
+
+    }
+    .Blogs .link svg{
+        color:white;
+        height: 40px;
+        padding-left:250px;
+        position: relative;
+        bottom:20px;
+
+    }
+    .Blogs h2{
+        color:white;
+        font-family:"calibri";
+        position: relative;
+        left:100px;
+    }
+    .Blogs span{
+        position: relative;
+        font-family: 'consolas';
+        font-weight: 100;
+        color: #64ffda;
+    }
+.Join .login {
+    position: relative;
+    left:625px;
+}
+
+.Work .title h2{
+    position: relative;
+    left:600px;
+    color:white;
+    font-family: 'calibri';
+}
+.Work .title span{
+    font-family: 'consolas';
+    font-weight: 100;
+    color: #64ffda;
+}
+.Work .workimage img{
+height: 430px;
+position: relative;
+mix-blend-mode: exclusion;
+left: 150px;
+top:100px;
+}  
+.Work .workimage img:hover{
+    mix-blend-mode: normal;
+}     
+.Work .projectheading h2{
+    color:#64ffda;
+    font-family: 'consolas';
+    position: relative;
+    font-size: 18px;
+    left:1120px;
+    bottom:300px;
+}
+.Work .projectname h2{
+    color:white;
+    font-family: 'calibri';
+    position: relative;
+    font-size: 28px;
+    left:1100px;
+    bottom:300px;
+}
+.Work .projectdescription p{
+background-color: #112240;
+border-radius: 5px;
+padding:25px;
+color:rgba(255, 255, 255, 0.5);
+position: relative;
+left:750px;
+bottom:280px;
+font-size:12px;
+font-family: 'Consolas',system-ui;
+font-style: normal;
+font-weight: 100;
+width:500px;
+}
+.Work .projectdescription a{
+    color:#64ffda;
+}
+.Work .links svg{
+    color: white;
+    padding-right:20px;
+    height: 30px;
+    position:relative;
+    left:1225px;
+    bottom:270px;
+}
+.Work .links svg:hover{
+    color:#64ffda;
+
+}
+
+.Work .resources li{
+display:inline;
+font-size:13px;
+font-family:'consolas';
+font-weight: 100;
+color:rgba(255, 255, 255, 0.3);
+padding-left:15px; 
+position: relative;
+left:800px;
+bottom:230px;
+
+}
+.experience .companyname li{
+    font-family: 'Calibri';
+    position: relative;
+    list-style-type: none;
+    left:250px;
+    bottom:150px;
+    padding-bottom:15px;
+    color:rgba(255, 255, 255, 0.7);
+}
+.experience .companyname li:hover{
+    color:#64ffda;
+}
+.experience .jobname h3{
+    font-family: 'calibri';
+    color:white;
+    position: relative;
+    left:450px;
+    bottom:375px;
+
+}
+.experience .jobname h5{
+    font-family: 'consolas';
+    font-weight: 100;
+    color:rgba(255, 255, 255, 0.5);
+    position: relative;
+    left:450px;
+    bottom:385px;
+    
+
+}
+.experience .jobdescription li{
+    color:rgba(255, 255, 255, 0.5);
+    position: relative;
+    left:420px;
+    bottom:370px;
+    width: 500px;
+    font-family: 'calibri';
+    font-weight: 100;
+    padding-bottom:10px;
+}
+.experience h2{
+    font-family: 'calibri';
+    color: white;
+    position: relative;
+    left:290px;
+    bottom:200px;
+}
+ .dashboard .menu li {
+    color: white;
+    
+    padding-top: 30px;
+    padding-bottom: 150px;
+    list-style-type:none;
+    font-family: 'calibri';
+    font-style:normal;
+    font-weight: 300;
+
+ }
+.dashboard .menu{
+    height:100%;
+    width:150px;
+    background-color: #21564D;
+}
+.dashboard .counter{
+    position: relative;
+    left: 500px;
+    bottom:800px;
+}
+.counter .UserCount{
+    color: white;
+    position: relative;
+    right:100px;
+    top:20px;
+    border: 1px solid black;
+    width: 200px;
+    height:40px;
+    padding: 20px;
+    background-color: #21564D;
+}
+
+.counter .BlogCount {
+    color: white;
+    position: relative;
+    left:450px;
+    bottom:75px;
+    width: 200px;
+    height:50px;
+    padding: 20px;
+    background-color: #21564D;
+}
+
+ .UserList{
+    position:relative;
+    left:400px;
+    bottom:865px;
+    border-radius:5px;
+}
+ .BlogList{
+    position:relative;
+    left:950px;
+    bottom:1010px;
+    border-radius:5px;
+}
+#BlogSearch{
+    position: relative;
+    top:105px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:359px)and (max-width: 768px){
+.Intro{
+        position: relative;
+        bottom:200px;
+        right:140px;
+    }
+#slogan{
+        font-size: 25px;
+      
+     }
+
+#description{
+        width:310px;
+        font-size: 15px;
+        position: relative;
+        top:50px;
+       }
+
+.social_section svg {
+        
+        position: relative;
+        right:40px;
+        top: 1px;
+    }
+
+#mypicture{
+        position: relative;
+        width: 100px;
+        height: 400px;
+        right:300px;
+
+    }
+
+
+.AboutMe p{
+    line-height:20px;
+ width:300px;
+ font-size: 10px;
+ margin-left: 0px;
+ position: relative;
+ right:100px; }
+
+.AboutMe  {
+
+position: relative;
+right:30px;
+
+}
+.AboutMe h2{
+text-align: start;
+}
+
+.reach_out{
+        width:100px;
+        position: relative;
+        right:130px;
+        bottom:120px;
+    }
+#skills{
+font-size: 10px;    
+position: relative;
+left:80px;
+bottom:80px;
+
+
+}
+.AboutMe .picture {
+padding-bottom: 200px;
+width:300px;
+height:300px;
+border:0px;
+position: relative;
+
+right:500px;
+
+}
+#mypicture{
+     padding-bottom: 200px;
+width:300px;
+height:300px;
+position: relative;
+top:600px;
+right:850px;
+
+}
+.experience{
+position: relative;
+top:400px;
+right:250px;
+}
+
+.experience .companyname li{
+    font-size: 10px;
+}
+.experience .jobname {
+    font-size: 15px;
+ position: relative;
+ right:50px;
+    }
+.experience .jobdescription li{
+    margin-left: 330px;
+    width:200px;
+    font-size: 10px;
+    position: relative;
+    left:20px;
+}
+
+.Work{
+
+    width:100px;
+}
+.Work .projectheading h2{
+font-size: 10px;
+position: relative;
+left:280px;
+bottom:120px;
+}
+.Work .workimage img{
+    position: relative;
+    left:30px;
+    width:200px;
+    height: 200px;
+}
+.Work .projectname h2{
+    font-size: 10px;
+position: relative;
+left:300px;
+bottom:120px;
+}
+.Work .projectdescription p{
+    padding:5px;
+ font-size: 10px;
+    position: absolute;
+    right:600px;
+    top:2550px;
+    bottom:200px;
+    left:150px;
+    height:55px;
+    width:200px;
+}
+.Work .resources li{
+
+    font-size: 10px;
+
+}
+.Work .resources{
+        display: flex;
+    width:200px;
+    position: relative;
+    right:610px;
+    top:220px;
+}
+.Work .title h2{
+    position: relative;
+    left:150px;
+    top: 50px;
+    font-size: 20px;
+    height: 10px;
+    width: 220px;
+}
+.Blogs h2{
+    color: white;
+    font-family:'calibri';
+}
+.Blogs .Cards{
+    position: relative;
+    right:10px;
+    grid-template-columns: repeat(1,1fr);
+}
+
+#Join{
+position: relative;
+left:100px;
+}
+#login{
+    position: relative;
+    left:130px;
+}
+  
+.contact{
+    position: relative;
+    left:100px;
+    width:170px;
+}
+#contactform{   
+    position: relative;
+  right:90px;
+    width:310px;
+}
+#contact_description{
+    font-size:10px;
+}
+#contactname , #Email , #message{
+    width:280px;
+}
+}
+
+
+@media screen and (min-width:768px) and (max-width:900px){
+
+    .Intro{
+            position: relative;
+            bottom:100px;
+            right:40px;
+        }
+    #slogan{
+            font-size: 35px;
+          
+         }
+    
+    #description{
+            width:310px;
+            font-size: 15px;
+            position: relative;
+            top:40px;
+           }
+    
+    .social_section svg {
+            
+            position: relative;
+            right:40px;
+            top: 1px;
+        }
+    
+    #mypicture{
+            position: relative;
+            width: 100px;
+            height: 400px;
+            right:300px;
+    
+        }
+    
+    
+    .AboutMe p{
+        padding:5px;
+        line-height:20px;
+     width:450px;
+     font-size: 15px;
+     margin-left: 0px;
+     position: relative;
+     right:90px; }
+
+    
+    .AboutMe  {
+    
+    position: relative;
+    left:100px;
+    
+    }
+    
+    .reach_out{
+            width:100px;
+            position: relative;
+            right:0px;
+            bottom:80px;
+        }
+    #skills{
+    font-size: 15px;    
+    position: relative;
+    left:80px;
+    bottom:80px;
+    
+    
+    }
+    .AboutMe .picture {
+        padding-bottom: 200px;
+    width:300px;
+    height:300px;
+    border:0px;
+    position: relative;
+    
+    right:500px;
+    
+    }
+    #mypicture{
+         border-radius: 5px;
+    width:300px;
+    height:300px;
+    position: relative;
+    top:600px;
+    right:850px;
+    
+    }
+    .experience{
+
+    position: relative;
+    top:400px;
+    right:150px;
+    }
+    
+    .experience .companyname li{
+        font-size: 15px;
+    }
+    .experience .jobname {
+        font-size: 18px;
+     position: relative;
+     right:50px;
+        }
+    .experience .jobdescription li{
+        margin-left: 330px;
+        width:200px;
+        font-size: 11px;
+        position: relative;
+        left:20px;
+    }
+    
+    .Work{
+        position: relative;
+        left:100px;
+        width:100px;
+    }
+    .Work .projectheading h2{
+    font-size: 10px;
+    position: relative;
+    left:280px;
+    bottom:120px;
+    }
+    .Work .workimage img{
+        position: relative;
+        left:30px;
+        width:200px;
+        height: 200px;
+    }
+    .Work .projectname h2{
+    font-size: 12px;
+    position: relative;
+    left:300px;
+    bottom:120px;
+    }
+    .Work .projectdescription p{
+        padding:5px;
+     font-size: 10px;
+        position: absolute;
+        right:600px;
+        top:200px;
+        bottom:200px;
+        left:150px;
+        height:55px;
+        width:200px;
+    }
+    .Work .resources li{
+    
+        font-size: 10px;
+    
+    }
+    .Work .resources{
+            display: flex;
+        width:200px;
+        position: relative;
+        right:610px;
+        top:220px;
+    }
+    .Work .title h2{
+        position: relative;
+        left:200px;
+        top: 50px;
+        height: 10px;
+        width: 250px;
+    }
+    .Blogs h2{
+        color: white;
+        font-family:'calibri';
+        position: relative;
+        left: 200px;
+    }
+    .Blogs .Cards{
+        position: relative;
+        left:150px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    #Join{
+    position: relative;
+    left:300px;
+    }
+    #login{
+        position: relative;
+        left:330px;
+    }
+      
+    .contact{
+        position: relative;
+        left:360px;
+        width:170px;
+    }
+    #contactform{   
+        position: relative;
+      right:90px;
+        width:310px;
+    }
+    #contact_description{
+        font-size:10px;
+    }
+    #contactname , #Email , #message{
+        width:280px;
+    }
+    }
+
+@media screen and (min-width:900px) and (max-width:1200px){
+        .Intro{
+                position: relative;
+                bottom:100px;
+                right:100px;
+            }
+        #slogan{
+                font-size: 35px;
+              
+             }
+        
+        #description{
+                width:310px;
+                font-size: 15px;
+                position: relative;
+                top:40px;
+               }
+        
+        .social_section svg {
+                
+                position: relative;
+                right:40px;
+                top: 1px;
+            }
+        
+        #mypicture{
+                position: relative;
+                width: 100px;
+                height: 400px;
+                right:300px;
+        
+            }
+        
+        
+        .AboutMe p{
+            padding:5px;
+            line-height:20px;
+         width:450px;
+         font-size: 15px;
+         margin-left: 0px;
+         position: relative;
+         right:90px; }
+    
+        
+        .AboutMe  {
+        
+        position: relative;
+        left:100px;
+        
+        }
+        
+        .reach_out{
+                width:100px;
+                position: relative;
+                right:100px;
+                bottom:80px;
+            }
+        #skills{
+        font-size: 15px;    
+        position: relative;
+        left:80px;
+        bottom:80px;
+        
+        
+        }
+        .AboutMe .picture {
+            padding-bottom: 200px;
+        width:300px;
+        height:300px;
+        border:0px;
+        position: relative;
+        
+        right:500px;
+        
+        }
+        #mypicture{
+             border-radius: 5px;
+        width:300px;
+        height:300px;
+        position: relative;
+        top:600px;
+        right:850px;
+        
+        }
+        .experience{
+        position: relative;
+        top:400px;
+        left:40px;
+        }
+        
+        .experience .companyname li{
+            font-size: 15px;
+        }
+        .experience .jobname {
+            font-size: 18px;
+         position: relative;
+         right:50px;
+            }
+        .experience .jobdescription li{
+            margin-left: 330px;
+            width:200px;
+            font-size: 11px;
+            position: relative;
+            left:20px;
+        }
+        
+        .Work{ position: relative;
+            left:200px;
+            width:200px;
+        }
+        .Work .projectheading h2{
+        font-size: 10px;
+        position: relative;
+        left:500px;
+        bottom:120px;
+        }
+        .Work .workimage img{
+            position: relative;
+            left:30px;
+            width:400px;
+            height: 200px;
+        }
+        .Work .projectname h2{
+        font-size: 12px;
+        position: relative;
+        left:500px;
+        bottom:120px;
+        }
+        .Work .projectdescription p{
+            padding:5px;
+         font-size: 10px;
+            position: absolute;
+            right:400px;
+            top:200px;
+            bottom:200px;
+            left:350px;
+            height:55px;
+            width:300px;
+        }
+        .Work .resources li{
+        
+            font-size: 10px;
+        
+        }
+        .Work .resources{
+                display: flex;
+            width:300px;
+            position: relative;
+            right:410px;
+            top:220px;
+        }
+        .Work .title h2{
+            position: relative;
+            left:200px;
+            top: 50px;
+            font-size: 15px;
+            height: 10px;
+            width: 200px;
+        }
+        .Blogs h2{
+            color: white;
+            font-family:'calibri';
+            position: relative;
+            left:350px;
+        }
+        .Blogs .Cards{
+            position: relative;
+            left:200px;
+            grid-template-columns: repeat(1,1fr);
+        }
+        
+        #Join{
+        position: relative;
+        left:350px;
+        }
+        #login{
+            position: relative;
+            left:380px;
+        }
+          
+        .contact{
+            position: relative;
+            left:400px;
+            width:170px;
+        }
+        #contactform{   
+            position: relative;
+          right:90px;
+            width:310px;
+        }
+        #contact_description{
+            font-size:10px;
+        }
+        #contactname , #Email , #message{
+            width:280px;
+        }
+        }
