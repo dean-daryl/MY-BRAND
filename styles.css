@@ -1034,7 +1034,6 @@ bottom:230px;
     html,body{
         overflow-x: hidden;
     }
-
     .NavBar li{
 
         visibility: hidden;
@@ -1339,9 +1338,12 @@ right:50px;
 }
 
 
-@media  screen and (min-width:321px)and (max-width: 768px){
+@media  screen and (min-width:320px)and (max-width: 768px){
     html,body{
-        overflow-x: hidden;
+        overflow-x:hidden;
+        overflow-y:scroll;
+   
+   
     }
 
     .NavBar li{
@@ -1572,8 +1574,8 @@ left:100px;
 }
 #contactform{   
     position: relative;
-  right:90px;
-    width:310px;
+  right:100px;
+    width:305px;
 }
 #contact_description{
     padding-left: 20px;;
