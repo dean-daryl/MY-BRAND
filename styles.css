@@ -944,6 +944,9 @@ bottom:230px;
     left:290px;
     bottom:200px;
 }
+
+
+
  .dashboard .menu li {
     color: white;
     
@@ -956,7 +959,11 @@ bottom:230px;
 
  }
 .dashboard .menu{
-    height:100%;
+ margin:0px;
+ position: relative;
+ right:10px;
+ bottom:15px;
+    height: 100%;
     width:150px;
     background-color: #21564D;
 }
@@ -970,7 +977,6 @@ bottom:230px;
     position: relative;
     right:100px;
     top:20px;
-    border: 1px solid black;
     width: 200px;
     height:40px;
     padding: 20px;
@@ -981,9 +987,9 @@ bottom:230px;
     color: white;
     position: relative;
     left:450px;
-    bottom:75px;
+    bottom:59px;
     width: 200px;
-    height:50px;
+    height:40px;
     padding: 20px;
     background-color: #21564D;
 }
@@ -991,26 +997,79 @@ bottom:230px;
  .UserList{
     position:relative;
     left:400px;
-    bottom:865px;
+    bottom:855px;
     border-radius:5px;
 }
  .BlogList{
     position:relative;
     left:950px;
-    bottom:1010px;
+    bottom:1017px;
     border-radius:5px;
 }
-#BlogSearch{
+.UserList input{
+    border:1px solid white;
+    height: 20px;
+    border-radius: 3px;
+}
+.BlogList input{
+    border:1px solid white;     
+    height: 20px;
+    border-radius: 3px;
     position: relative;
-    top:105px;
+    top:123px;
 }
 
 
+.blog .blog_title label{
+    font-family: "calibri";
+color: white;
+font-size: 20px;
+position: relative;
+left:300px;
+top:100px;
+}
+#blog_title{
+    position: relative;
+    top:100px;
+    left: 500px;
+    background-color: #112240;
+    border:1px solid white;
+    border-radius: 5px;
+    height: 40px;
+    width:400px;
+    color:white;
+}
 
-
-
-
-
+.blog .content label{
+position: relative;
+top:200px;
+}
+.blog .content textarea{
+    position: relative;
+    top:300px;  
+    left:450px;
+    height:250px;
+    width:500px;
+}
+#publish_blog{
+    left:700px;   
+    top:350px;
+    padding: 2px 14px;
+    border: 2px solid #64ffda;
+    height: 50px;
+    width:200px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #64ffda;
+    border-radius: 5px;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+}
 
 
 

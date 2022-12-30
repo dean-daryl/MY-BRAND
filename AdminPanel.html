@@ -8,15 +8,15 @@
     
     <title>Document</title>
 </head>
-<body style="overflow-x:hidden ;">
+<body  id="adminpanel" style=" overflow:hidden;background-color:rgba(156, 156, 156, 1);">
     <div class="dashboard">
         <div class="menu">
             
             <ul>
                 <li>Dashboard</li>
-                <li>Add Blog</li>
-                <li>Comments</li>
-                <li>Message</li>
+                <li><a href="AddBlog.html"style="text-decoration: none;">Add Blog</a></li>
+                <li><a href="Comments.html"style="text-decoration: none;">Comments</a></li>
+                <li><a href="Messages.html"style="text-decoration: none;">Messages</a></li>
             </ul>
         </div>
         <div class="counter">
@@ -27,12 +27,12 @@
 
         <div class="UserList">
 
-            <input type="text" id="UserSearch" name="UserSearch" value="Search for a User">
+            <input type="text" id="UserSearch" name="UserSearch" placeholder="Search for a User">
             <ul style="list-style-type: none;"> 
         </div>
         <div class="BlogList">
 
-            <input type="text" id="BlogSearch" name="BlogSearch" value="Search for a Blog">
+            <input type="text" id="BlogSearch" name="BlogSearch" placeholder="Search for a Blog">
 
         </div>
         
