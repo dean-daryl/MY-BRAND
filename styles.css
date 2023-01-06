@@ -478,7 +478,7 @@ left:450px;
 }
 
 .About .email_section a{
-    position: relative;
+    position: fixed;
     left:1450px;
     bottom: 340px;
     padding-top:150px;
@@ -720,8 +720,8 @@ bottom:80px;
     font-size: 15px;;
     font-family: "calibri";
 position: relative;
-left:220px;
-bottom:300px;
+left:150px;
+   bottom :300px;
 }
 .comment button{
     color:white;
@@ -947,7 +947,36 @@ bottom:230px;
 
 
 
- .dashboard .menu li {
+    /* DASHBOARD */
+
+.dashboard .searchkeywords{
+    padding-left: 50px;
+    position: relative;
+    bottom:828px;   
+    left:140px;
+    height: 50px;;
+    background-color: #21564D;
+    }
+.dashboard .searchkeywords input{
+    position: relative;
+    left:130px;
+    top:10px;
+    width: 200px;
+    height:20px;
+    border:1px solid white;
+    border-radius: 5px;;
+}
+.dashboard .searchkeywords img{
+position: relative;
+left:120px;
+top:14px;
+height:20px;
+width: 20px;
+
+}
+
+
+ .dashboard .dashboardmenu li {
     color: white;
     
     padding-top: 30px;
@@ -958,7 +987,7 @@ bottom:230px;
     font-weight: 300;
 
  }
-.dashboard .menu{
+.dashboard .dashboardmenu{
  margin:0px;
  position: relative;
  right:10px;
@@ -973,6 +1002,7 @@ bottom:230px;
     bottom:800px;
 }
 .counter .UserCount{
+    font-family: 'Calibri';
     color: white;
     position: relative;
     right:100px;
@@ -981,9 +1011,11 @@ bottom:230px;
     height:40px;
     padding: 20px;
     background-color: #21564D;
+    border-radius: 5px;
 }
 
 .counter .BlogCount {
+    font-family: 'Calibri';
     color: white;
     position: relative;
     left:450px;
@@ -992,6 +1024,8 @@ bottom:230px;
     height:40px;
     padding: 20px;
     background-color: #21564D;
+    border-radius: 5px;
+
 }
 
  .UserList{
@@ -1070,16 +1104,130 @@ top:200px;
     border-radius: 5px;
     font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
+   
+
+    /* comments */
+
+.searchcomment{
+    position: relative;
+    left:50px;
+}
+.searchcomment input{
+    width:250px;
+    height:25px;
+    border: 1px solid white;
+    border-radius:8px;
+}
+.searchcomment img{
+
+    position: relative;
+    top:10px;
+}
+.menu{
+    background-color: rgba(33, 86, 77, 1);
+    
+    height: 80px;
+    width:1022px;
+    position: relative;
+    left:50px;
+    top:50px;
+}
+.menu p{
+    display: inline;
+    padding-right:210px;
+    position: relative;
+    left:90px;
+    top:30px;
+    color: white;
+    font-family: "calibri";
+
+  
+}
+.Comments .commentlist  {
+    background-color: rgba(217, 217, 217,2 );
+   position: relative;
+    left:50px;
+    top:50px;
+    height: 50px;
+    width: 1022px;
+}
+.Comments .commentlist p{
+    display: inline;
+    padding-right:180px;
+    position: relative;
+    top:0px;
+    left:10px;
+    }
+    .Comments .commentlist img{
+        height:30px;
+        position: relative;
+        top:10px;
+        left:20px;
+        padding-right: 30px;
+    }
 
 
+        /* Messages */
 
 
-
-
-
-
-
-
+        .searchmessage{
+            position: relative;
+            left:50px;
+        }
+        .searchmessage input{
+            width:250px;
+            height:25px;
+            border: 1px solid white;
+            border-radius:8px;
+        }
+        .searchmessage img{
+        
+            position: relative;
+            top:10px;
+        }
+        .menu{
+            background-color: rgba(33, 86, 77, 1);
+            
+            height: 80px;
+            width:1022px;
+            position: relative;
+            left:50px;
+            top:50px;
+        }
+        .menu p{
+            display: inline;
+            padding-right:210px;
+            position: relative;
+            left:90px;
+            top:30px;
+            color: white;
+            font-family: "calibri";
+        
+          
+        }
+        .Messages .messagelist  {
+            background-color: rgba(217, 217, 217,2 );
+           position: relative;
+            left:50px;
+            top:50px;
+            height: 50px;
+            width: 1022px;
+        }
+        .Messages .messagelist p{
+            display: inline;
+            padding-right:180px;
+            position: relative;
+            top:0px;
+            left:10px;
+            }
+            .Messages .messagelist img{
+                height:30px;
+                position: relative;
+                top:10px;
+                left:20px;
+                padding-right: 30px;
+            }
+        
 
 
 
@@ -1104,31 +1252,32 @@ top:200px;
         position: relative;
     }
 
-    .social_section ul{
+    .social_section {
         display: flex;
         position: relative;
-        top:35px;
-        right:35px;
+        top:20px;
+        right:30px;
     }
     .social_section svg{
 
-        padding-left: 30px;;
+        padding-left: 30px;
 
     }
-    .email_section  a{
-        position: relative;
-        right:10px;
-        writing-mode:sideways-lr;
-    }
+  
 .Intro{
    
     width:300px;
         position: relative;
         bottom:200px;
-        right:150px;
+    }
+    #name{
+        position: relative;
+        right:30px;
     }
 #slogan{
-        font-size: 15px;
+    position: relative;
+    right:35px;
+        font-size: 10px;
       
      }
 
@@ -1137,29 +1286,29 @@ top:200px;
         font-size: 10px;
         position: relative;
         top:50px;
-        right:0px;
+        right:30px;
        }
 
-
+/* 
 #mypicture{
         position: relative;
         width: 100px;
         height: 400px;
         right:300px;
 
-    }
+    } */
 .About{
 
 position: relative;
 right:20px;
 }
-.About .email_section a{
+.About .email_section {
     margin-bottom: 20px;
         font-size: 12px;
         writing-mode:horizontal-tb;
         position: relative;
-        left:60px;
-        bottom:110px;
+        right:30px;
+        bottom:0px;
     }
 .AboutMe p{
     line-height:20px;
@@ -1167,18 +1316,20 @@ right:20px;
  font-size: 10px;
  margin-top:5px;
  position: relative;
- left:40px; }
+ left: 40px;
+ }
 
 .AboutMe  {
 position: relative;
 right:100px;
 
 }
-.AboutMe h2{
-text-align: start;
+#titleAboutme{
+position: relative;
+left: 100px;;
 }
 
-.reach_out{
+.About .reach_out{
     
         width:100px;
         position: relative;
@@ -1193,27 +1344,19 @@ bottom:80px;
 
 
 }
-.AboutMe .picture {
-padding-bottom: 200px;
-width:250px;
+#mypicture{
+padding-bottom: 100px;
+width:200px;
 height:250px;
 position: relative;
-right: 350px;
+right: 480px;
 
 }
-#mypicture{
-     padding-bottom: 200px;
-width:300px;
-height:300px;
-position: relative;
-top:600px;
-right:810px;
 
-}
 .experience{
 position: relative;
 top:400px;
-right:290px;
+right:2 00px;
 }
 
 .experience .companyname li{
@@ -1400,7 +1543,7 @@ right:50px;
 @media  screen and (min-width:320px)and (max-width: 768px){
     html,body{
         overflow-x:hidden;
-        overflow-y:scroll;
+        
    
    
     }
@@ -1502,7 +1645,7 @@ bottom:80px;
 
 
 }
-.AboutMe .picture {
+/* .AboutMe .picture {
 padding-bottom: 200px;
 width:300px;
 height:300px;
@@ -1511,14 +1654,14 @@ position: relative;
 
 right:300px;
 
-}
+} */
 #mypicture{
      padding-bottom: 200px;
 width:300px;
 height:300px;
 position: relative;
 top:600px;
-right:900px;
+right:930px;
 
 }
 .experience{
@@ -1533,14 +1676,14 @@ right:250px;
 .experience .jobname {
     font-size: 15px;
  position: relative;
- right:50px;
+ right:80px;
     }
 .experience .jobdescription li{
     margin-left: 330px;
     width:200px;
     font-size: 10px;
     position: relative;
-    left:20px;
+    left:0px;
 }
 
 .Work{
@@ -1550,7 +1693,7 @@ right:250px;
 .Work .projectheading h2{
 font-size: 10px;
 position: relative;
-left: 250px;
+left: 235px;
 bottom:120px;
 }
 .Work .workimage img{
@@ -1569,10 +1712,10 @@ bottom:120px;
     padding:5px;
  font-size: 10px;
     position: absolute;
-    right:600px;
+    right:700px;
     top:200px;
     bottom:200px;
-    left:150px;
+    left:100px;
     height:55px;
     width:200px;
     border: 1px solid black;
@@ -1583,14 +1726,14 @@ bottom:120px;
 }
 .Work .resources{
         display: flex;
-    width:200px;
+    width:150px;
     position: relative;
     right:620px;
     top:220px;
 }
 .Work .title h2{
     position: relative;
-    left:150px;
+    left:110px;
     top: 50px;
     font-size: 20px;
     height: 10px;
@@ -1598,7 +1741,7 @@ bottom:120px;
 }
 .Work .links{
     position: relative;
-    right:950px;
+    right:1000px;
     top:250px;
     display: inline;
 
@@ -1609,45 +1752,76 @@ bottom:120px;
     font-family:'calibri';
 }
 .Blogs .Cards{
+    justify-self: center;
     position: relative;
-    right:20px;
+    right:15px;
     grid-template-columns: repeat(1,1fr);
 
+}
+.Blogs .Cards .card{
+    width: 300px;
+}
+.Blogs .Cards .card .card-content .folder{
+position: relative;
+left:30px;
+}
+.Blogs .Cards .card .card-content .link{
+    position: relative;
+    right:30px;
+}
+.Blogs .Cards .card .card-content p{
+    position: relative;
+    left:30px;
+}
+.Blogs .Cards .card .card-content a{
+    position: relative;
+    left:10px;
+}
+.Blogs .Cards .card .card-content li{
+    position: relative;
+    right:10px;
 }
 
 #Join{
     
 position: relative;
-left:100px;
+left:50px;
 }
 #login{
     width:300px;    
     position: relative;
-    left:130px;
+    left:80px;
 }
   
 .contact{
+    justify-self: center;
     position: relative;
-    left:100px;
+    left:150px;
     width:170px;
 }
 #contactform{   
     position: relative;
   right:100px;
-    width:305px;
+    width:250px;
 }
 #contact_description{
+    position: relative;
+    right: 210px;
     padding-left: 20px;;
     font-size:10px;
 }
 #contactname , #Email , #message{
-    width:280px;
+    width:200px;
+}
+#submit_form{
+    position: relative;
+    left:10px;  
 }
 
 
 .blogcontent{
     width: 300px;
-    left: 0px;
+    left: 40px;
 }
 .blogcontent p{
     width: 250px;
@@ -1721,20 +1895,19 @@ right:50px;
             position: relative;
             top:40px;
            }
- .social_section{
-            position: relative;
-           }
-    .social_section li{
+
+    /* .social_section li{
         position: relative;
         display: inline;
         padding-left: 20px;
         
-    }
+    } */
     .social_section svg {
 
             position: relative;
-            left:   70px;
-            top: 320px;
+            left:0px;
+            margin-left: 0px;
+            top: 250px;
         }
     
     #mypicture{
@@ -1764,10 +1937,10 @@ right:50px;
     }
     .About .email_section a{
         font-size: 13px;
-        writing-mode: horizontal-tb;
-        position: relative;
-        left:165px;
-        bottom:20px;
+        height: 200px;
+        position: fixed;
+        left:750px;
+        top:500px;
     }
     
     .reach_out{
@@ -1901,21 +2074,21 @@ right:50px;
     
     #Join{
     position: relative;
-    left:300px;
+    left:250px;
     }
     #login{
         position: relative;
-        left:330px;
+        left:290px;
     }
       
     .contact{
         position: relative;
-        left:360px;
+        left:300px;
         width:170px;
     }
     #contactform{   
         position: relative;
-      right:90px;
+      right:120px;
         width:310px;
     }
     #contact_description{
@@ -1924,14 +2097,70 @@ right:50px;
     #contactname , #Email , #message{
         width:280px;
     }
+
+
+    .blogcontent{
+        width: 600px;
+        left: 80px;
+    }
+    .blogcontent p{
+        width: 550px;
+        font-size: 15px;
+        position: relative;
+       
+    }
+    .blogcontent .paragraphs {
+    
+    position: relative;
+    left:10px;
+    
+    }
+    .blogcontent .paragraphs img{
+        height:300px ;
+        width: 550px;
+        position: relative;
+        left:20px;
+    }
+    .blogcontent .CoverImage img{
+        height: 300px;
+        width:550px;
+        position: relative;
+        left: 20px;
+    }
+    .blogcontent .title{
+    font-size: 15px;
+    width:550px;
+    position: relative;
+    right:50px;  
+    }
+    .comment{
+      
+        position: relative;
+        left:55px;    
+    }
+    .UserComments{
+        width:400px;
+        position: relative;
+        left:5px;
+    }
+
+
+    }
+
+@media screen and (min-width:900px)and (max-width:1200px){
+
+
+
+    
+}
+@media screen and (min-width:900px) and (max-width:1200px){
+      
     body {
         overflow-x: hidden;
          background-color: #0a192f;
        }
-    }
+       
 
-@media screen and (min-width:900px) and (max-width:1200px){
-      
     .Intro{
                 position: relative;
                 bottom:100px;
@@ -2140,9 +2369,5 @@ right:50px;
         #contactname , #Email , #message{
             width:280px;
         }
-        body {
-            overflow-x: hidden;
-             background-color: #0a192f;
-           }
-           
+       
         }
