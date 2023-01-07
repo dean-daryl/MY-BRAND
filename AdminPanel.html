@@ -8,7 +8,7 @@
     
     <title>Document</title>
 </head>
-<body  id="adminpanel" style=" overflow:hidden;background-color:rgba(156, 156, 156, 1);">
+<body  id="adminpanel" style="background-color:rgba(156, 156, 156, 1);">
     <div class="dashboard">
         <div class="dashboardmenu">
             
@@ -16,7 +16,7 @@
                 <li>Dashboard</li>
                 <li><a href="AddBlog.html"style="text-decoration: none; color:white;">Add Blog</a></li>
                 <li><a href="Comments.html"style="text-decoration: none;color:white;">Comments</a></li>
-                <li><a href="Messages.html"style="text-decoration: none;color:white;x">Messages</a></li>
+                <li><a href="Messages.html"style="text-decoration: none;color:white;">Messages</a></li>
             </ul>
         </div>
         <div class="searchkeywords">
@@ -24,10 +24,14 @@
             <input type="text" id="keywordsearch" name="keywordsearch" placeholder="Search for Keywords">
 
         </div>
-        <div class="counter">
-            <div class="UserCount"><h3>User Count: <span>80</span></h3></div>
-            <div class="BlogCount"><h3>Blog Count: <span>6</span></h3></div>
+        <div class="counter" id="Counter">
+            <div class="UserCount" id="UserCount"><h3>User Count: <span>80</span></h3></div>
+            <div class="BlogCount" id="BlogCount"><h3>Blog Count: <span>6</span></h3></div>
             
+        </div>
+        <div class="sitevisitstracker" id="sitevtracker">
+            <h2>Site Activity Tracker</h2>
+            <img src="siteactivitytracker.png">
         </div>
 
         <div class="UserList">
@@ -40,7 +44,16 @@
             <input type="text" id="BlogSearch" name="BlogSearch" placeholder="Search for a Blog">
 
         </div>
-        
+        <div class="sitevisits" id="sitevisits">
+
+            <p>Site Visits: <span>20</span></p>
+
+        </div>
+        <div class="advertclicks" id="Advertclicks">
+
+            <p>Advert Clicks: <span>20</span></p>
+
+        </div>
 
     </div>
     
