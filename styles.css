@@ -1,5 +1,6 @@
 body {
    overflow-x: hidden;
+   overflow-y: scroll;
     background-color: #0a192f;
   }
  
@@ -192,18 +193,19 @@ transition-delay: 300ms;
     color:#64ffda;
 }
 .AboutMe p{
+    padding-bottom: 20px;
     position: relative;
     left: 80px;
-    top: 370px;
+    top: 310px;
     margin-top:-50px;
     margin-left:120px; 
     width: 542px;
-    height:150px ; 
+    height:100px ; 
     font-family:'Inter',system-ui,sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
-    line-height: 20px;
+    line-height:20px;
     align-items: center;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.5);
@@ -1031,16 +1033,17 @@ width: 20px;
  .UserList{
     position:relative;
     left:400px;
-    bottom:855px;
+    bottom:870px;
     border-radius:5px;
 }
  .BlogList{
     position:relative;
     left:950px;
-    bottom:1017px;
+    bottom:1030px;
     border-radius:5px;
 }
 .UserList input{
+
     border:1px solid white;
     height: 20px;
     border-radius: 3px;
@@ -1052,6 +1055,56 @@ width: 20px;
     position: relative;
     top:123px;
 }
+
+.dashboard .sitevisits{
+    height: 150px;
+    width:200px;
+    position: relative;
+    left:400px;
+    background-color: #21564D;
+    bottom:550px;
+    border-radius: 5px;;
+}
+
+.dashboard .sitevisits p{
+    text-align: center;
+    position: relative;
+    top:50px;
+    color: white;
+    font-family: "calibri";
+}
+.dashboard .advertclicks{
+    height: 150px;
+    width:200px;
+    position: relative;
+    left:950px;
+    background-color: #21564D;
+    bottom:720px;
+    border-radius: 5px;;
+}
+
+.dashboard .advertclicks p{
+    text-align: center;
+    position: relative;
+    top:50px;
+    color: white;
+    font-family: "calibri";
+}
+.dashboard .sitevisitstracker{
+    height:0px;
+    width:300px;
+    position: relative;
+    bottom:750px;
+    left: 400px;;
+}
+.dashboard .sitevisitstracker img{
+    height:200px;
+    width:700px;
+}
+
+
+
+
 
 
 .blog .blog_title label{
@@ -1076,7 +1129,12 @@ top:100px;
 
 .blog .content label{
 position: relative;
-top:200px;
+top:150px;
+font-family: "calibri";
+color: white;
+font-size: 20px;
+position: relative;
+left:300px;
 }
 .blog .content textarea{
     position: relative;
@@ -1228,10 +1286,6 @@ top:200px;
                 padding-right: 30px;
             }
         
-
-
-
-
 
 
 
@@ -1537,13 +1591,25 @@ right:50px;
     position: relative;
     left:5px;
 }
+
+    /* dashboard */
+.dashboard .dashboardmenu{
+    width: 20vw;
 }
 
 
-@media  screen and (min-width:320px)and (max-width: 768px){
+
+
+
+
+}
+
+
+@media  screen and (min-width:320px)and (max-width: 767px)
+{
     html,body{
         overflow-x:hidden;
-        
+        overflow-y: scroll;
    
    
     }
@@ -1863,13 +1929,284 @@ right:50px;
 }
 
 
+.dashboard{
+    height: 100vh;
+}
+.dashboard .dashboardmenu{
+
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width:20vw;
+}
+.dashboard .dashboardmenu li{
+    font-size: 10px;
+    position: relative;
+    right:20px;
+}
+.dashboard .searchkeywords{
+    width:80vw;
+    height: 50px;
+    position: absolute;
+    left:20vw;
+    top:0;
+    
+}
+.dashboard .searchkeywords img{
+    position: relative;
+    left:1px;
+}
+.dashboard .searchkeywords input{
+    width:40vw;
+    position: relative;
+    left:1px;
+}
+#Counter{
+    display: grid;
+position: absolute;
+left: 20vw;
+top:0px;
+
+}
+#UserCount{
+    float: left;
+    position: relative;
+    top:100px;
+    right:15vw;   
+    left:15vw; 
+    width: 20vw;
+    height:10vw;
+    font-size: 2vw;
+}
+#BlogCount{
+    float: left;
+    margin-top:25px;
+    position:relative;
+    left:15vw;
+    right: 100px;
+   width: 20vw;
+    height:10vw;
+    font-size: 2vw;
+    top:100px;
+}
+/* .UserCount .UserList{
+margin-top:5px;
+position: absolute;
+top:12.5vh;
+left:0 ;
+}
+.UserList input{
+
+   height: 10px;
+   width: 25vw;
+    font-size: 2vw;
+    
+}
+.BlogList{
+    
+margin: auto;
+position:relative;
+top:0;
+left:35vw;
+}
+.BlogList input{
+   
+    width:25vw;
+    font-size: 2vw;
+    height: 10px; */
+/* } */
+#sitevtracker{
+    
+    margin-top:20px;
+    width:50vw;
+    height:40vw;
+    top:300px;
+    left:25vw;
+}
+#sitevtracker h2{
+    position: relative;
+    left:50px;
+    font-size: 3vw;
+}
+#sitevisits {
+    display: inline;
+    float: left;
+    position: relative;
+    top:315px;
+    right:15vw;   
+    left:25vw; 
+    width: 25vw;
+    height:8vh;
+    font-size: 2vw;
+    margin-top: 3vh;
+   
+    
+   
+}
+#Advertclicks{
+    display: inline;
+    float: left;
+    margin-top: 3vh;
+    position:relative;
+    left:40vw;
+    right: 100px;
+   width: 25vw;
+    height:8vh;
+    font-size: 2vw;
+    top:315px;
+}
+#sitevisits p{
+    position: relative;
+    bottom:10px;    
+    top:20px;
+}
+#Advertclicks p{
+    position: relative;
+    bottom:10px;    
+    top:20px;
 }
 
 
-@media screen and (min-width:768px) and (max-width:900px){
+
+        /* Add Blog */
+        .blog{
+            height:100vh;
+        }
+
+.blog .blog_title label{
+    position: relative ;
+    top: 9vh;
+    left:8vw;
+
+ 
+    
+}   
+.blog .content label{
+    position: relative ;
+    top:10vh;
+    left:6vw;
+    
+}   
+#blog_title{
+   position: relative;
+   top:9vh;
+   left:20vw; 
+   width:50vw;
+}
+#textarea{
+    position: relative;
+    top:20vh;
+    left:13vw; 
+    width:55vw;
+    height:20vh;
+}
+
+#publish_blog{
+
+    position: relative;
+    top:27vh;
+    left:40vw;   
+    width:25vw;
+}
+
+        /* Comments */
+ .searchcomment{ 
+    width:80vw;
+    left: 5vw;;
+ }
+.searchcomment input{
+    width:60vw;
+
+}
+.menu{
+    left:5vw;
+    width:90vw;
+    display:flex;
+        
+
+}
+.menu p{
+    top:1vh;
+    left:5vw;
+    font-size:2vh;
+    padding-right: 15vw;
+}
+
+
+.Comments .commentlist{
+    left:2.5vw;
+    width:90vw;
+    display:flex;
+        
+}
+.Comments .commentlist  p{
+    
+    left:-3vw;
+    font-size:1.5vh;
+    padding-right:10vw;
+}
+.Comments .commentlist img{
+    left:1vw;
+    padding-left:2vw;
+
+}  
+
+    /* Messages */
+    .searchmessage{ 
+        width:80vw;
+        left: 5vw;;
+     }
+    .searchmessage input{
+        width:60vw;
+    
+    }
+    .menu{
+        
+        left:2.5vw;
+        width:90vw;
+        display:flex;
+            
+    
+    }
+    .menu p{
+        top:1vh;
+        left:8vw;
+        font-size:2vh;
+        padding-right: 15vw;
+    }
+    
+    .Messages .messagelist{
+        left:2.5vw;
+        width:90vw;
+        display:flex;
+        overflow-x: hidden;
+        overflow-y: visible;
+            
+    }
+    .Messages .messagelist  p{
+     
+        left:-3vw;
+        font-size:1.5vh;
+        padding-right:10vw;
+        z-index: 1;
+    }
+    .Messages .messagelist img{
+        left:-1vw;
+        padding-left:1vw;
+    
+    }  
+
+}
+
+
+
+
+@media screen and (min-width:768px) and (max-width:1025px){
 
     html,body{
-        overflow-x: hidden;
+        overflow: scroll;
+        
     }
 
     .NavBar li{
@@ -2145,9 +2482,1283 @@ right:50px;
     }
 
 
+    /* Dashboard */
+
+    .dashboard{
+        height: 100vh;
+    }
+    .dashboard .dashboardmenu{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100vh;
+        width:20vw;
+    }
+    .dashboard .dashboardmenu li{
+        font-size: 10px;
+        position: relative;
+        right:20px;
+    }
+    .dashboard .searchkeywords{
+        width:80vw;
+        height: 50px;
+        position: absolute;
+        left:20vw;
+        top:0;
+        
+    }
+    .dashboard .searchkeywords img{
+        position: relative;
+        left:1px;
+    }
+    .dashboard .searchkeywords input{
+        width:40vw;
+        position: relative;
+        left:1px;
+    }
+    #Counter{
+    display: inline-block;
+    position: absolute;
+    left: 20vw;
+    top:0px;
+    
+    }
+    #UserCount{
+        position: relative;
+        top:159.8px;
+        left:50px;
+
+    }
+    #BlogCount{
+        position: relative;
+        left:350px; 
+        top: 80px;
+    }
+    #sitevtracker{
+        margin-bottom:2px;
+        margin-top:20px;
+        width:50vw;
+        height:40vw;
+        top:300px;
+        left:25vw;
+    }
+    #sitevtracker h2{
+        position: relative;
+        left:50px;
+        font-size: 3vw;
+    }
+    #sitevisits {
+        display: inline;
+        float: left;
+        position: relative;
+        top:190px;
+        right:15vw;   
+        left:25vw; 
+        width: 25vw;
+        height:8vh;
+        font-size: 2vw;
+        margin-top: 3vw;
+       
+        
+       
+    }
+    #Advertclicks{
+        display: inline;
+        float: left;
+        margin-top: 3vw;
+        position:relative;
+        left:40vw;
+        width: 25vw;
+        height:8vh;
+        font-size: 2vw;
+        top:190px;
+    }
+    #sitevisits p{
+        position: relative;
+        bottom:10px;    
+        top:5px;
+    }
+    #Advertclicks p{
+        position: relative;
+        bottom:10px;    
+        top:5px;
+    }
+    
+    
+
+            /* Add Blog */
+            .blog{
+                height:100vh;
+            }
+    
+    .blog .blog_title label{
+        position: relative ;
+        top: 9vh;
+        left:8vw;
+    
+     
+        
+    }   
+    .blog .content label{
+        position: relative ;
+        top:10vh;
+        left:6vw;
+        
+    }   
+    #blog_title{
+       position: relative;
+       top:9vh;
+       left:20vw; 
+       width:50vw;
+    }
+    #textarea{
+        position: relative;
+        top:20vh;
+        left:13vw; 
+        width:55vw;
+        height:20vh;
+    }
+    
+    #publish_blog{
+    
+        position: relative;
+        top:27vh;
+        left:40vw;   
+        width:25vw;
+    }
+    
+            /* Comments */
+     .searchcomment{ 
+        width:80vw;
+        left: 5vw;;
+     }
+    .searchcomment input{
+        width:60vw;
+    
+    }
+    .menu{
+        left:5vw;
+        width:90vw;
+        display:flex;
+            
+    
+    }
+    .menu p{
+        top:1vh;
+        left:5vw;
+        font-size:2vh;
+        padding-right: 15vw;
+    }
+    
+    
+    .Comments .commentlist{
+        left:2.5vw;
+        width:90vw;
+        display:flex;
+            
+    }
+    .Comments .commentlist  p{
+        
+        left:-3vw;
+        font-size:1.5vh;
+        padding-right:10vw;
+    }
+    .Comments .commentlist img{
+        left:1vw;
+        padding-left:2vw;
+    
+    }  
+    
+        /* Messages */
+        .searchmessage{ 
+            width:80vw;
+            left: 5vw;;
+         }
+        .searchmessage input{
+            width:60vw;
+        
+        }
+        .menu{
+            
+            left:2.5vw;
+            width:90vw;
+            display:flex;
+                
+        
+        }
+        .menu p{
+            top:1vh;
+            left:8vw;
+            font-size:2vh;
+            padding-right: 15vw;
+        }
+        
+        .Messages .messagelist{
+            left:2.5vw;
+            width:90vw;
+            display:flex;
+            overflow-x: hidden;
+            overflow-y: visible;
+                
+        }
+        .Messages .messagelist  p{
+         
+            left:-3vw;
+            font-size:1.5vh;
+            padding-right:10vw;
+            z-index: 1;
+        }
+        .Messages .messagelist img{
+            left:-1vw;
+            padding-left:1vw;
+        
+        }  
+    
+
+
+
     }
 
-@media screen and (min-width:900px)and (max-width:1200px){
+
+
+
+    @media screen and (min-width:768px) and (max-width:1025px){
+
+    html,body{
+        overflow: scroll;
+        
+    }
+
+    .NavBar li{
+
+        visibility: hidden;
+    }
+    .NavBar button{
+        visibility: hidden;
+    }
+    .Intro{
+            position: relative;
+            bottom:100px;
+            right:40px;
+        }
+    #slogan{
+            font-size: 35px;
+          
+         }
+    
+    #description{
+            width:310px;
+            font-size: 15px;
+            position: relative;
+            top:40px;
+           }
+
+    /* .social_section li{
+        position: relative;
+        display: inline;
+        padding-left: 20px;
+        
+    } */
+    .social_section svg {
+
+            position: relative;
+            left:0px;
+            margin-left: 0px;
+            top: 250px;
+        }
+    
+    #mypicture{
+            position: relative;
+            width: 100px;
+            height: 400px;
+            right:300px;
+    
+        }
+    
+    
+    .AboutMe p{
+        padding:5px;
+        line-height:20px;
+     width:450px;
+     font-size: 15px;
+     margin-left: 0px;
+     position: relative;
+     right:90px; }
+
+    
+    .AboutMe  {
+    
+    position: relative;
+    left:100px;
+    
+    }
+    .About .email_section a{
+        font-size: 13px;
+        height: 200px;
+        position: fixed;
+        left:750px;
+        top:500px;
+    }
+    
+    .reach_out{
+            width:100px;
+            position: relative;
+            right: 40px;
+            bottom:10px;
+        }
+    #skills{
+    font-size: 15px;    
+    position: relative;
+    left:80px;
+    bottom:80px;
+    
+    
+    }
+    .AboutMe .picture {
+        padding-bottom: 200px;
+    width:300px;
+    height:300px;
+    border:0px;
+    position: relative;
+    
+    right:500px;
+    
+    }
+    #mypicture{
+         border-radius: 5px;
+    width:300px;
+    height:300px;
+    position: relative;
+    top:600px;
+    right:850px;
+    
+    }
+    .experience{    
+
+    position: relative;
+    top:400px;
+    right:150px;
+    }
+    
+    .experience .companyname li{
+        font-size: 15px;
+    }
+    .experience .jobname {
+        font-size: 18px;
+     position: relative;
+     right:50px;
+        }
+    .experience .jobdescription li{
+        margin-left: 330px;
+        width:200px;
+        font-size: 11px;
+        position: relative;
+        left:20px;
+    }
+    
+    .Work{
+        position: relative;
+        left:100px;
+        width:100px;
+    }
+    .Work .projectheading h2{
+    font-size: 10px;
+    position: relative;
+    left:280px;
+    bottom:120px;
+    }
+    .Work .workimage img{
+        position: relative;
+        left:30px;
+        width:200px;
+        height: 200px;
+    }
+    .Work .projectname h2{
+    font-size: 12px;
+    position: relative;
+    left:300px;
+    bottom:120px;
+    }
+    .Work .projectdescription p{
+        padding:5px;
+     font-size: 10px;
+        position: absolute;
+        right:600px;
+        top:200px;
+        bottom:200px;
+        left:150px;
+        height:55px;
+        width:200px;
+    }
+    .Work .resources li{
+    
+        font-size: 10px;
+    
+    }
+    .Work .resources{
+            display: flex;
+        width:200px;
+        position: relative;
+        right:610px;
+        top:220px;
+    }
+    .Work .title h2{
+        position: relative;
+        left:200px;
+        top: 50px;
+        height: 10px;
+        width: 250px;
+    }
+    .Work .links{
+        position: relative;
+        right:840px;
+        top:180px;
+    
+    
+    }
+    .Blogs h2{
+        color: white;
+        font-family:'calibri';
+        position: relative;
+        left: 200px;
+    }
+    .Blogs .Cards{
+
+        position: relative;
+        right:50px;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    #Join{
+    position: relative;
+    left:250px;
+    }
+    #login{
+        position: relative;
+        left:290px;
+    }
+      
+    .contact{
+        position: relative;
+        left:300px;
+        width:170px;
+    }
+    #contactform{   
+        position: relative;
+      right:120px;
+        width:310px;
+    }
+    #contact_description{
+        font-size:10px;
+    }
+    #contactname , #Email , #message{
+        width:280px;
+    }
+
+
+    .blogcontent{
+        width: 600px;
+        left: 80px;
+    }
+    .blogcontent p{
+        width: 550px;
+        font-size: 15px;
+        position: relative;
+       
+    }
+    .blogcontent .paragraphs {
+    
+    position: relative;
+    left:10px;
+    
+    }
+    .blogcontent .paragraphs img{
+        height:300px ;
+        width: 550px;
+        position: relative;
+        left:20px;
+    }
+    .blogcontent .CoverImage img{
+        height: 300px;
+        width:550px;
+        position: relative;
+        left: 20px;
+    }
+    .blogcontent .title{
+    font-size: 15px;
+    width:550px;
+    position: relative;
+    right:50px;  
+    }
+    .comment{
+      
+        position: relative;
+        left:55px;    
+    }
+    .UserComments{
+        width:400px;
+        position: relative;
+        left:5px;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard{
+        height: 100vh;
+    }
+    .dashboard .dashboardmenu{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100vh;
+        width:20vw;
+    }
+    .dashboard .dashboardmenu li{
+        font-size: 10px;
+        position: relative;
+        right:20px;
+    }
+    .dashboard .searchkeywords{
+        width:80vw;
+        height: 50px;
+        position: absolute;
+        left:20vw;
+        top:0;
+        
+    }
+    .dashboard .searchkeywords img{
+        position: relative;
+        left:1px;
+    }
+    .dashboard .searchkeywords input{
+        width:40vw;
+        position: relative;
+        left:1px;
+    }
+    #Counter{
+    display: inline-block;
+    position: absolute;
+    left: 20vw;
+    top:0px;
+    
+    }
+    #UserCount{
+        position: relative;
+        top:159.8px;
+        left:50px;
+
+    }
+    #BlogCount{
+        position: relative;
+        left:350px; 
+        top: 80px;
+    }
+    #sitevtracker{
+        margin-bottom:2px;
+        margin-top:20px;
+        width:50vw;
+        height:40vw;
+        top:300px;
+        left:25vw;
+    }
+    #sitevtracker h2{
+        position: relative;
+        left:50px;
+        font-size: 3vw;
+    }
+    #sitevisits {
+        display: inline;
+        float: left;
+        position: relative;
+        top:190px;
+        right:15vw;   
+        left:25vw; 
+        width: 25vw;
+        height:8vh;
+        font-size: 2vw;
+        margin-top: 3vw;
+       
+        
+       
+    }
+    #Advertclicks{
+        display: inline;
+        float: left;
+        margin-top: 3vw;
+        position:relative;
+        left:40vw;
+        width: 25vw;
+        height:8vh;
+        font-size: 2vw;
+        top:190px;
+    }
+    #sitevisits p{
+        position: relative;
+        bottom:10px;    
+        top:5px;
+    }
+    #Advertclicks p{
+        position: relative;
+        bottom:10px;    
+        top:5px;
+    }
+    
+    
+
+            /* Add Blog */
+            .blog{
+                height:100vh;
+            }
+    
+    .blog .blog_title label{
+        position: relative ;
+        top: 9vh;
+        left:8vw;
+    
+     
+        
+    }   
+    .blog .content label{
+        position: relative ;
+        top:10vh;
+        left:6vw;
+        
+    }   
+    #blog_title{
+       position: relative;
+       top:9vh;
+       left:20vw; 
+       width:50vw;
+    }
+    #textarea{
+        position: relative;
+        top:20vh;
+        left:13vw; 
+        width:55vw;
+        height:20vh;
+    }
+    
+    #publish_blog{
+    
+        position: relative;
+        top:27vh;
+        left:40vw;   
+        width:25vw;
+    }
+    
+            /* Comments */
+     .searchcomment{ 
+        width:80vw;
+        left: 5vw;;
+     }
+    .searchcomment input{
+        width:60vw;
+    
+    }
+    .menu{
+        left:5vw;
+        width:90vw;
+        display:flex;
+            
+    
+    }
+    .menu p{
+        top:1vh;
+        left:5vw;
+        font-size:2vh;
+        padding-right: 15vw;
+    }
+    
+    
+    .Comments .commentlist{
+        left:2.5vw;
+        width:90vw;
+        display:flex;
+            
+    }
+    .Comments .commentlist  p{
+        
+        left:-3vw;
+        font-size:1.5vh;
+        padding-right:10vw;
+    }
+    .Comments .commentlist img{
+        left:1vw;
+        padding-left:2vw;
+    
+    }  
+    
+        /* Messages */
+        .searchmessage{ 
+            width:80vw;
+            left: 5vw;;
+         }
+        .searchmessage input{
+            width:60vw;
+        
+        }
+        .menu{
+            
+            left:2.5vw;
+            width:90vw;
+            display:flex;
+                
+        
+        }
+        .menu p{
+            top:1vh;
+            left:8vw;
+            font-size:2vh;
+            padding-right: 15vw;
+        }
+        
+        .Messages .messagelist{
+            left:2.5vw;
+            width:90vw;
+            display:flex;
+            overflow-x: hidden;
+            overflow-y: visible;
+                
+        }
+        .Messages .messagelist  p{
+         
+            left:-3vw;
+            font-size:1.5vh;
+            padding-right:10vw;
+            z-index: 1;
+        }
+        .Messages .messagelist img{
+            left:-1vw;
+            padding-left:1vw;
+        
+        }  
+    
+
+
+
+    }
+
+    @media screen and (min-width:768px) and (max-width:1025px){
+
+        html,body{
+            overflow: scroll;
+            
+        }
+    
+        .NavBar li{
+    
+            visibility: hidden;
+        }
+        .NavBar button{
+            visibility: hidden;
+        }
+        .Intro{
+                position: relative;
+                bottom:100px;
+                right:40px;
+            }
+        #slogan{
+                font-size: 35px;
+              
+             }
+        
+        #description{
+                width:310px;
+                font-size: 15px;
+                position: relative;
+                top:40px;
+               }
+    
+        /* .social_section li{
+            position: relative;
+            display: inline;
+            padding-left: 20px;
+            
+        } */
+        .social_section svg {
+    
+                position: relative;
+                left:0px;
+                margin-left: 0px;
+                top: 250px;
+            }
+        
+        #mypicture{
+                position: relative;
+                width: 100px;
+                height: 400px;
+                right:300px;
+        
+            }
+        
+        
+        .AboutMe p{
+            padding:5px;
+            line-height:20px;
+         width:450px;
+         font-size: 15px;
+         margin-left: 0px;
+         position: relative;
+         right:90px; }
+    
+        
+        .AboutMe  {
+        
+        position: relative;
+        left:100px;
+        
+        }
+        .About .email_section a{
+            font-size: 13px;
+            height: 200px;
+            position: fixed;
+            left:750px;
+            top:500px;
+        }
+        
+        .reach_out{
+                width:100px;
+                position: relative;
+                right: 40px;
+                bottom:10px;
+            }
+        #skills{
+        font-size: 15px;    
+        position: relative;
+        left:80px;
+        bottom:80px;
+        
+        
+        }
+        .AboutMe .picture {
+            padding-bottom: 200px;
+        width:300px;
+        height:300px;
+        border:0px;
+        position: relative;
+        
+        right:500px;
+        
+        }
+        #mypicture{
+             border-radius: 5px;
+        width:300px;
+        height:300px;
+        position: relative;
+        top:600px;
+        right:850px;
+        
+        }
+        .experience{    
+    
+        position: relative;
+        top:400px;
+        right:150px;
+        }
+        
+        .experience .companyname li{
+            font-size: 15px;
+        }
+        .experience .jobname {
+            font-size: 18px;
+         position: relative;
+         right:50px;
+            }
+        .experience .jobdescription li{
+            margin-left: 330px;
+            width:200px;
+            font-size: 11px;
+            position: relative;
+            left:20px;
+        }
+        
+        .Work{
+            position: relative;
+            left:100px;
+            width:100px;
+        }
+        .Work .projectheading h2{
+        font-size: 10px;
+        position: relative;
+        left:280px;
+        bottom:120px;
+        }
+        .Work .workimage img{
+            position: relative;
+            left:30px;
+            width:200px;
+            height: 200px;
+        }
+        .Work .projectname h2{
+        font-size: 12px;
+        position: relative;
+        left:300px;
+        bottom:120px;
+        }
+        .Work .projectdescription p{
+            padding:5px;
+         font-size: 10px;
+            position: absolute;
+            right:600px;
+            top:200px;
+            bottom:200px;
+            left:150px;
+            height:55px;
+            width:200px;
+        }
+        .Work .resources li{
+        
+            font-size: 10px;
+        
+        }
+        .Work .resources{
+                display: flex;
+            width:200px;
+            position: relative;
+            right:610px;
+            top:220px;
+        }
+        .Work .title h2{
+            position: relative;
+            left:200px;
+            top: 50px;
+            height: 10px;
+            width: 250px;
+        }
+        .Work .links{
+            position: relative;
+            right:840px;
+            top:180px;
+        
+        
+        }
+        .Blogs h2{
+            color: white;
+            font-family:'calibri';
+            position: relative;
+            left: 200px;
+        }
+        .Blogs .Cards{
+    
+            position: relative;
+            right:50px;
+            grid-template-columns: repeat(2,1fr);
+        }
+        
+        #Join{
+        position: relative;
+        left:250px;
+        }
+        #login{
+            position: relative;
+            left:290px;
+        }
+          
+        .contact{
+            position: relative;
+            left:300px;
+            width:170px;
+        }
+        #contactform{   
+            position: relative;
+          right:120px;
+            width:310px;
+        }
+        #contact_description{
+            font-size:10px;
+        }
+        #contactname , #Email , #message{
+            width:280px;
+        }
+    
+    
+        .blogcontent{
+            width: 600px;
+            left: 80px;
+        }
+        .blogcontent p{
+            width: 550px;
+            font-size: 15px;
+            position: relative;
+           
+        }
+        .blogcontent .paragraphs {
+        
+        position: relative;
+        left:10px;
+        
+        }
+        .blogcontent .paragraphs img{
+            height:300px ;
+            width: 550px;
+            position: relative;
+            left:20px;
+        }
+        .blogcontent .CoverImage img{
+            height: 300px;
+            width:550px;
+            position: relative;
+            left: 20px;
+        }
+        .blogcontent .title{
+        font-size: 15px;
+        width:550px;
+        position: relative;
+        right:50px;  
+        }
+        .comment{
+          
+            position: relative;
+            left:55px;    
+        }
+        .UserComments{
+            width:400px;
+            position: relative;
+            left:5px;
+        }
+    
+    
+        /* Dashboard */
+    
+        .dashboard{
+            height: 100vh;
+        }
+        .dashboard .dashboardmenu{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100vh;
+            width:20vw;
+        }
+        .dashboard .dashboardmenu li{
+            font-size: 10px;
+            position: relative;
+            right:20px;
+        }
+        .dashboard .searchkeywords{
+            width:80vw;
+            height: 50px;
+            position: absolute;
+            left:20vw;
+            top:0;
+            
+        }
+        .dashboard .searchkeywords img{
+            position: relative;
+            left:1px;
+        }
+        .dashboard .searchkeywords input{
+            width:40vw;
+            position: relative;
+            left:1px;
+        }
+        #Counter{
+        display: inline-block;
+        position: absolute;
+        left: 20vw;
+        top:0px;
+        
+        }
+        #UserCount{
+            position: relative;
+            top:159.8px;
+            left:50px;
+    
+        }
+        #BlogCount{
+            position: relative;
+            left:350px; 
+            top: 80px;
+        }
+        #sitevtracker{
+            margin-bottom:2px;
+            margin-top:20px;
+            width:50vw;
+            height:40vw;
+            top:300px;
+            left:25vw;
+        }
+        #sitevtracker h2{
+            position: relative;
+            left:50px;
+            font-size: 3vw;
+        }
+        #sitevisits {
+            display: inline;
+            float: left;
+            position: relative;
+            top:190px;
+            right:15vw;   
+            left:25vw; 
+            width: 25vw;
+            height:8vh;
+            font-size: 2vw;
+            margin-top: 3vw;
+           
+            
+           
+        }
+        #Advertclicks{
+            display: inline;
+            float: left;
+            margin-top: 3vw;
+            position:relative;
+            left:40vw;
+            width: 25vw;
+            height:8vh;
+            font-size: 2vw;
+            top:190px;
+        }
+        #sitevisits p{
+            position: relative;
+            bottom:10px;    
+            top:5px;
+        }
+        #Advertclicks p{
+            position: relative;
+            bottom:10px;    
+            top:5px;
+        }
+        
+        
+    
+                /* Add Blog */
+                .blog{
+                    height:100vh;
+                }
+        
+        .blog .blog_title label{
+            position: relative ;
+            top: 9vh;
+            left:8vw;
+        
+         
+            
+        }   
+        .blog .content label{
+            position: relative ;
+            top:10vh;
+            left:6vw;
+            
+        }   
+        #blog_title{
+           position: relative;
+           top:9vh;
+           left:20vw; 
+           width:50vw;
+        }
+        #textarea{
+            position: relative;
+            top:20vh;
+            left:13vw; 
+            width:55vw;
+            height:20vh;
+        }
+        
+        #publish_blog{
+        
+            position: relative;
+            top:27vh;
+            left:40vw;   
+            width:25vw;
+        }
+        
+                /* Comments */
+         .searchcomment{ 
+            width:80vw;
+            left: 5vw;;
+         }
+        .searchcomment input{
+            width:60vw;
+        
+        }
+        .menu{
+            left:5vw;
+            width:90vw;
+            display:flex;
+                
+        
+        }
+        .menu p{
+            top:1vh;
+            left:5vw;
+            font-size:2vh;
+            padding-right: 15vw;
+        }
+        
+        
+        .Comments .commentlist{
+            left:2.5vw;
+            width:90vw;
+            display:flex;
+                
+        }
+        .Comments .commentlist  p{
+            
+            left:-3vw;
+            font-size:1.5vh;
+            padding-right:10vw;
+        }
+        .Comments .commentlist img{
+            left:1vw;
+            padding-left:2vw;
+        
+        }  
+        
+            /* Messages */
+            .searchmessage{ 
+                width:80vw;
+                left: 5vw;;
+             }
+            .searchmessage input{
+                width:60vw;
+            
+            }
+            .menu{
+                
+                left:2.5vw;
+                width:90vw;
+                display:flex;
+                    
+            
+            }
+            .menu p{
+                top:1vh;
+                left:8vw;
+                font-size:2vh;
+                padding-right: 15vw;
+            }
+            
+            .Messages .messagelist{
+                left:2.5vw;
+                width:90vw;
+                display:flex;
+                overflow-x: hidden;
+                overflow-y: visible;
+                    
+            }
+            .Messages .messagelist  p{
+             
+                left:-3vw;
+                font-size:1.5vh;
+                padding-right:10vw;
+                z-index: 1;
+            }
+            .Messages .messagelist img{
+                left:-1vw;
+                padding-left:1vw;
+            
+            }  
+        
+    
+    
+    
+        }
+
+
+
+/* @media screen and (min-width:900px)and (max-width:1200px){
 
 
 
@@ -2371,3 +3982,32 @@ right:50px;
         }
        
         }
+/* @media  (min-width:200px) { */
+    /* .dashboard .dashboardmenu{
+        right:30px;
+        margin-left: 1px;
+        width: 25vw;
+  
+    
+    }
+    .dashboard .dashboardmenu li{
+        font-size: 2vw;
+    }
+    
+    .dashboard .searchkeywords{
+        height:10vw;
+        position:fixed;
+        top:1.5vw;
+        left:21.9vw
+    
+    }
+    .dashboard .searchkeywords img{
+        position: relative;
+        left:-10vw;
+        height: 5vw;
+        width: 5vw;
+    }
+
+
+
+} */ 
