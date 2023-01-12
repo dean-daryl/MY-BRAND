@@ -3,22 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <link  rel="stylesheet" href="styles.css">
      <title>Daryl MURENZI</title>
 </head>
 <body>
- <div class="NavBar" >
+ <div class="NavBar" id="NavBar">
     
      <nav>
+        <div class="HamburgerMenu"><svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="13" class="bar"></rect>
+            <rect y="30" width="100" height="13"class="bar"></rect>
+            <rect y="60" width="100" height="13" class="bar"></rect>
+          </svg></div>
+        
         
         <h2 id="Logo">Daryl <span id="Surname">Murenzi</span></h2>
-        <ul id="navlist">
-            <li><span>01. </span>About</li>
-            <li><span>02. </span>Work</li>
-            <li><span>03. </span>Experience</li>
-            <li><span>04. </span>Blogs</li>
-            <li><span>05. </span>Contact Me</li>
+        <ul class="nav-menu">
+            <li id="About"><span>01. </span>About</li>
+            <li id="Work"><span>02. </span>Work</li>
+            <li id="Experience"><span>03. </span>Experience</li>
+            <li id="Blogs"><span>04. </span>Blogs</li>
+            <li id="Contact"><span>05. </span>Contact Me</li>
+            <li id="Resume" ><span>06.</span> Resume</li>
+           
+        </ul>
+        <ul class="show-menu" >
+            <li id="About"><span>01. </span>About</li>
+            <li id="Work"><span>02. </span>Work</li>
+            <li id="Experience"><span>03. </span>Experience</li>
+            <li id="Blogs"><span>04. </span>Blogs</li>
+            <li id="Contact"><span>05. </span>Contact Me</li>
+            
         
         
         </ul>
@@ -45,9 +61,9 @@
 
 </div>
  
- <div class="About">
+ <div class="About" id="AboutSection">
 
-     <div class="Intro"> 
+     <div class="Intro" id="IntroSection"> 
           <p id="greetings"> Hi my Name is, </p>
          <p id="name">Daryl Murenzi</p>
           <p id="slogan">I build things for the Web</p>
@@ -58,51 +74,78 @@
         <a href="mailto:deandaryl7@gmail.com" id="myemail">deandaryl7@gmail.com</a>
     </div>
    
-       <div class="reach_out">
+       <div class="reach_out" id="ReachOutButton">
          <button id="reachout">Reach Out!</button>
     
         </div>
-     <div class="AboutMe">
+     <div class="AboutMe" id="AboutMeSection">
          <h2 id="titleAboutme" ><span>01. </span> About Me</h2>
-         <p>Hello! My name is Daryl and I enjoy creating things that live on the internet. My interest in web development started back in 2019 when I joined a coding bootcamp </p>
-
-         <p>Fast-forward to today, and I’ve had the privilege of working on several projects.</p>
-           <p> I also recently joined Andela as a trainee, I am being trained to become a Software Engineer.</p>
-            <p>Here are a few technologies I’ve been working with recently:</p>
+        <div class="story" id="story"><p>Hello! My name is Daryl and I enjoy creating things that live on the internet. My interest in web development started back in 2019 when I joined a coding bootcamp </p><br>
+            <p>Fast-forward to today, and I’ve had the privilege of working on several projects.</p>
+              <p> I also recently joined Andela as a trainee, I am being trained to become a Software Engineer.</p>
+               <p>Here are a few technologies I’ve been working with recently:</p></div> 
             <ul id="skills">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Figma</li>
                 <li>JavaScript</li>
             </ul>
-            <div class="picture" >
-                <img src="Portfolio picture.jpg" id="mypicture"style="width: 100%;">
-            </div>
+            
             
      </div>
+     <div class="" id="picture" >
+                <img src="Portfolio picture.jpg" id="mypicture">
+            </div>
 
     </div>
-    <div class="experience">
-        <h2><span style="font-family: 'consolas';font-weight: 100;">02.</span>Where I've worked</h2>
+    <div class="experience" id="ExperienceSection">
+        <h2 id="WhereIveworked"><span>02.</span>Where I've worked</h2>
        <div class="companyname"> <ul>
-        <li >Upstatement</li>
-        <li>Scout</li>
-        <li>Apple</li>
-        <li>Scout</li>
-        <li>Starry</li>
-        <li>MullenLowe</li>
+
+        <li id="UpstatementButton" >Upstatement</li>
+        <li id="scoutButton">Scout</li>
+        <li id="AppleButton">Apple</li>
+        <li id="ScoutButton">Scout</li>
+        <li id="StarryButton">Starry</li>
+        <li id="MullenLoweButton">MullenLowe</li>
     </ul></div>
-    <div class="jobname">
-        <h3>Engineer<span>@Upstatement</span></h3>
+    <div class="jobdetails"><div class="jobname">
+        <h3 id="UpstatementPost">Engineer<span>@Upstatement</span></h3>
+        <h3 id="ScoutPost" style="display: none;">Engineer<span>@Scout</span></h3>
         <h5>May 2018-Present</h5>
     </div>
     <div class="jobdescription">
-        <ul>
+        <ul id="Upstatement">
             <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
             <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li>
             <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
         </ul>
-    </div>
+
+        <ul id="Scout1" style="display: none">
+            <li>Worked with a team of three designers to build a marketing website and e-commerce platform for blistabloc, an ambitious startup originating from Northeastern</li>
+            <li>Helped solidify a brand direction for blistabloc that spans both packaging and web</li>
+            <li>Interfaced with clients on a weekly basis, providing technological expertise</li>
+
+        </ul>
+        <ul id="Scout2" style="display: none">
+            <li>Worked with a team of three designers to build a marketing website and e-commerce platform for blistabloc, an ambitious startup originating from Northeastern</li>
+            <li>Helped solidify a brand direction for blistabloc that spans both packaging and web</li>
+            <li>Interfaced with clients on a weekly basis, providing technological expertise</li>
+
+        </ul>
+        <ul id="Apple" style="display: none">
+            <li>Worked with a team of three designers to build a marketing website and e-commerce platform for blistabloc, an ambitious startup originating from Northeastern</li>
+            <li>Helped solidify a brand direction for blistabloc that spans both packaging and web</li>
+            <li>Interfaced with clients on a weekly basis, providing technological expertise</li>
+
+        </ul><ul id="Starry" style="display: none">
+            <li>Worked with a team of three designers to build a marketing website and e-commerce platform for blistabloc, an ambitious startup originating from Northeastern</li>
+            <li>Helped solidify a brand direction for blistabloc that spans both packaging and web</li>
+            <li>Interfaced with clients on a weekly basis, providing technological expertise</li>
+
+        </ul>
+
+    </div></div>
 
 
     </div>
@@ -120,36 +163,38 @@
 
 
 
-    <div class="Work">      
+    <div class="Work" id="WorkSection">      
         <div class="title">
             <h2><span>03.</span>Somethings I’ve Built</h2>
-        </div>
+        </div> 
         <div class="workimage">
             <img src="portfoliofigma.png">
         </div>
-        <div class="projectheading">
+
+        <div class="projectdetails"> <div class="projectheading">
             <h2>Featured Project</h2>
         </div>  
         <div class="projectname">
             <h2>Halcyon Theme</h2>
         </div>   
-        <div class="projectdescription">
-            <p>A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode" target="_blank" rel="noopener noreferrer">Visual Studio Marketplace</a>, <a href="https://packagecontrol.io/packages/Halcyon%20Theme" target="_blank" rel="noopener noreferrer">Package Control</a>, <a href="https://atom.io/themes/halcyon-syntax" target="_blank" rel="noopener noreferrer">Atom Package Manager</a>, and <a href="https://www.npmjs.com/package/hyper-halcyon-theme" target="_blank" rel="noopener noreferrer">npm</a>.</p>        </div>   
+        <div class="projectdescription" >
+            <p>A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode" target="_blank" rel="noopener noreferrer">Visual Studio Marketplace</a>, <a href="https://packagecontrol.io/packages/Halcyon%20Theme" target="_blank" rel="noopener noreferrer">Package Control</a>, <a href="https://atom.io/themes/halcyon-syntax" target="_blank" rel="noopener noreferrer">Atom Package Manager</a>,   and <a href="https://www.npmjs.com/package/hyper-halcyon-theme" target="_blank" rel="noopener noreferrer">npm</a>.</p>
+        </div>  
         <div class="resources">
             <ul>
                 <li>VS Code</li>
-                <li>Sublime Text</li>
+                <li>SublimeText</li>
                 <li>Atom</li>
                 <li>iTerm2</li>
                 <li>Hyper</li>
-
             </ul>
         </div>  
         <div class="links">
             <a href="https://github.com/dean-daryl"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
             <a href="https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 
-        </div>
+        </div></div>
+       
 
 
     </div>
@@ -166,15 +211,15 @@
 
     
     
-    <div class="Blogs">
-        <h2 ><span>04 .</span>Blogs/Articles</h2>
+    <div class="Blogs" id="BlogSection">
+        <h2 id="BlogsSectionTitle"><span>04 .</span>Blogs/Articles</h2>
 
 
         <div class="Cards"> <div class="card">
             
                 <div class="card-content">
                     <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
-                    <div class="link">
+                    <div class="link" id="linktowork">
                         <a href="https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
                     </div>
                    
@@ -266,7 +311,7 @@
                         <ul><li>Algolia</li>
                             <li>Wordpress</li>
                             <li>PHP</li>
-                        </ul>>
+                        </ul>
                 </div>
             </div>
        
@@ -286,7 +331,7 @@
        </div>
 
 
-<div class="contact">
+<div class="contact" id="ContactSection">
     <div class="contact_titles">
         <h1 id="get_in_touch">Get In Touch</h1>
         <h2 id="titleWhats_Next" >05. What's Next ?</h2>
@@ -300,7 +345,7 @@
             <input type="email" id="Email" name="email"  value="" style="color: white;"><br><br>
             <label for="message" id="message_label">Message:</label><br>
             <input type="text" id="message" name="message" value=""><br>
-            <button id="submit_form">Submit</button>
+            <button id="submit_contactform">Submit</button>
           
 
 
@@ -310,7 +355,131 @@
 
 
 </div>
+<!-- <div class="footer">
+    <footer>Built and Designed by Daryl Murenzi</footer>
+</div> -->
+<script>
+        // slide down navbar
 
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("NavBar").style.top = "0";
+  } else {
+    document.getElementById("NavBar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+// // Hamburger button
+
+
+const hamburger = document.querySelector('.HamburgerMenu');
+const nav = document.querySelector('.nav-menu');
+hamburger.addEventListener('click', toggleMenu);
+nav.addEventListener('click', toggleMenu);
+function toggleMenu() {
+  hamburger.classList.toggle('active');
+  nav.classList.toggle('show-menu');
+  
+}
+
+
+
+
+// scrolling to sections
+
+
+const link1=document.getElementById("About");
+link1.addEventListener("click", scrollToSection1);
+ function scrollToSection1(event){
+    event.preventDefault();
+    const section1= document.getElementById("AboutMeSection");
+    section1.scrollIntoView({ behavior: "smooth" });
+ }
+
+
+ const link2=document.getElementById("Work");
+link2.addEventListener("click", scrollToSection2);
+ function scrollToSection2(event){
+    event.preventDefault();
+    const section2 = document.getElementById("WorkSection");
+    section2.scrollIntoView({ behavior: "smooth" });
+ }
+ const link3=document.getElementById("Experience");
+link3.addEventListener("click", scrollToSection3);
+ function scrollToSection3(event){
+    event.preventDefault();
+    const section4 = document.getElementById("ExperienceSection");
+    section4.scrollIntoView({ behavior: "smooth" });
+ }
+
+ const link4=document.getElementById("Blogs");
+link4.addEventListener("click", scrollToSection4);
+ function scrollToSection4(event){
+    event.preventDefault();
+    const section4 = document.getElementById("BlogSection");
+    section4.scrollIntoView({ behavior: "smooth" });
+ }
+ const link5=document.getElementById("Contact");
+link5.addEventListener("click", scrollToSection5);
+ function scrollToSection5(event){
+    event.preventDefault();
+    const section5 = document.getElementById("ContactSection");
+    section5.scrollIntoView({ behavior: "smooth" });
+ }
+ const link6=document.getElementById("ReachOutButton");
+link6.addEventListener("click", scrollToSection5);
+ function scrollToSection5(event){
+    event.preventDefault();
+    const section5 = document.getElementById("ContactSection");
+    section5.scrollIntoView({ behavior: "smooth" });
+ }
+ const link7=document.getElementById("Logo");
+link7.addEventListener("click", scrollToSection6);
+ function scrollToSection6(event){
+    event.preventDefault();
+    const section6 = document.getElementById("IntroSection");
+    section6.scrollIntoView({ behavior: "smooth" });
+ }
+
+
+ let upstatement = document.getElementById("Upstatement");
+let scout = document.getElementById("Scout1");
+let apple=document.getElementById("Apple");
+let Starry=document.getElementById("Starry")
+document.getElementById("scoutButton").addEventListener("click", function() {
+    upstatement.style.display = "none";
+    scout.style.display = "block";
+});
+document.getElementById("AppleButton").addEventListener("click", function() {
+    upstatement.style.display = "none";
+    apple.style.display = "block";
+});
+document.getElementById("StarryButton").addEventListener("click", function() {
+    upstatement.style.display = "none";
+    Starry.style.display = "block";
+});
+
+
+
+let Upstatement = document.getElementById("UpstatementPost")
+let Scout=document.getElementById("ScoutPost")
+document.getElementById("scoutButton").addEventListener('click',function(){
+
+Upstatement.style.display="none";
+Scout.style.display="block";
+
+
+});
+
+
+
+
+
+</script>
     
 </body>
 </html>
