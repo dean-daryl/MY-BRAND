@@ -8,21 +8,32 @@
     
     <title>Document</title>
 </head>
-<body  id="adminpanel" style="background-color:rgba(156, 156, 156, 1);">
+<body  id="adminpanel" style=" overflow:visible;">
     <div class="dashboard">
         <div class="dashboardmenu">
             
             <ul>
-                <li>Dashboard</li>
-                <li><a href="AddBlog.html"style="text-decoration: none; color:white;">Add Blog</a></li>
-                <li><a href="Comments.html"style="text-decoration: none;color:white;">Comments</a></li>
-                <li><a href="Messages.html"style="text-decoration: none;color:white;">Messages</a></li>
+                <li><svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="#fff"></path>
+                  </svg>
+                  Dashboard</li>
+                 <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" fill="#fff"></path>
+                    </svg>
+                    <a href="AddBlog.html"style="text-decoration: none; color:white;">Add Blog</a>
+                  </li>
+                <li> <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" fill="#fff"></path>
+                  </svg><a href="Comments.html"style="text-decoration: none;color:white;">Comments</a></li>
+                <li><svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" fill="#fff"></path>
+                  </svg><a href="Messages.html"style="text-decoration: none;color:white;">Messages</a></li>
             </ul>
         </div>
         <div class="searchkeywords">
             <img src="searchicon.png">
-            <input type="text" id="keywordsearch" name="keywordsearch" placeholder="Search for Keywords">
-
+            <input type="text" id="keywordsearch" name="keywordsearch" placeholder="Search">
         </div>
         <div class="counter" id="Counter">
             <div class="UserCount" id="UserCount"><h3>User Count: <span>80</span></h3></div>
@@ -32,17 +43,6 @@
         <div class="sitevisitstracker" id="sitevtracker">
             <h2>Site Activity Tracker</h2>
             <img src="siteactivitytracker.png">
-        </div>
-
-        <div class="UserList">
-
-            <input type="text" id="UserSearch" name="UserSearch" placeholder="Search for a User">
-            <ul style="list-style-type: none;"> 
-        </div>
-        <div class="BlogList">
-
-            <input type="text" id="BlogSearch" name="BlogSearch" placeholder="Search for a Blog">
-
         </div>
         <div class="sitevisits" id="sitevisits">
 
@@ -54,6 +54,18 @@
             <p>Advert Clicks: <span>20</span></p>
 
         </div>
+
+        <!-- <div class="UserList">
+
+            <input type="text" id="UserSearch" name="UserSearch" placeholder="Search for a User">
+            <ul style="list-style-type: none;"> 
+        </div>
+        <div class="BlogList">
+
+            <input type="text" id="BlogSearch" name="BlogSearch" placeholder="Search for a Blog">
+
+        </div> -->
+        
 
     </div>
     

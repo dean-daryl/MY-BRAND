@@ -4,62 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="stylesheet" href="styles.css">
+    <link  rel="stylesheet" href="admindashboardstyle.css">
 
     <title>Comments</title>
 
 </head>
 <body>
-    <a href="AdminPanel.html" style="text-decoration: none;color: aqua;">Back</a>
-        <div class="searchmessage">
-         <img src="searchicon.png">
-            <input type="text" id="MessageSearch" name="MessageSearch" placeholder="Search for a message">
+    <div class="side-menu">
+        <div class="brandname">
+          <h1>Daryl Murenzi</h1>
+      
+        </div>
+      
+         <ul>
+         <a href="sampledashboard.html"><li><img src="dashboard1.png" alt="">&nbsp; <span>Dashboard</span></li></a> 
+         <a href="AddBlog.html"><li><img src="blog.png" alt="">&nbsp;<span>Add Blog</span> </li></a>
+          <a href="Comments.html"><li><img src="comments.png" alt=""> &nbsp;<span>Comments</span></li></a>
+         <a href="Messages.html"><li><img src="messages.png" alt="">&nbsp;<span>Messages</span></li></a> 
+          
+          </ul>
+         
+      
+      
+        </div>
+      
+      <div class="container">
+        <div class="header">
+        <div class="nav">
+          <div class="search">
+            <input type="text" placeholder="Search..">
+            <button type="submit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="grey"/>
+            </svg></button>
+          </div>
+          <div class="user">
+           <a href="#" class="btn">Add New User</a>
+           <img src="notifications.png">
+           <div class="img-case">
+            <img src="Portfolio picture.jpg">
+           </div>
+          </div>
+        </div>
         </div>
 
-        <div class="menu">
-            <p>Message from:</p>
-            <p>Message</p>
-            <p>Email</p>
-
-        </div>
-
+         
+        
+    </div>
     <div class="Messages">
+        <div class="messagemenu">
+             <p>Messages From:</p>
+             <p>Messages</p>
+             <p>Email</p></div>  
       <div class="messagelist">
-        <input type="checkbox">
-                <img src="maleuser.png">
+       <input type="checkbox">
+        <img src="maleuser.png">
         <p>Username</p>
-        <p>This is a message</p>
-        <p>email@example.com</p></div>  
-        <div class="messagelist" style="background-color: #9C9C9C;">
-            <input type="checkbox">            
+        <p>This is a Message</p>
+        <p> <a href="mailto:deandaryl7@gmail.com"  id="myemail" style="text-decoration: none; color: black;">example@gmail.com</a></p></div>  
+        <div class="messagelist"style="background-color: #9C9C9C;">
+            <input type="checkbox">
             <img src="maleuser.png">
             <p>Username</p>
-            <p>This is a message</p>
-            <p>email@example.com</p></div>  
+            <p>This is a Message</p>
+            <p> <a href="mailto:example@gmail" id="myemail" style="text-decoration: none;color: black;">example@gmail.com</a></p>
+            
+            </div>  
             <div class="messagelist">
-                <input type="checkbox">                
-                <img src="maleuser.png">
-                <p>Username</p>
-                <p>This is a message</p>
-                <p>email@example.com</p></div> 
-            <div class="messagelist" style="background-color: #9C9C9C;">
-                <input type="checkbox">                    
-                <img src="maleuser.png">
-                    <p>Username</p>
-                    <p>This is a message</p>
-                    <p>email@example.com</p></div>    
-             <div class="messagelist" style="background-color: #9C9C9C;">
                 <input type="checkbox">
                 <img src="maleuser.png">
+                <p>Username</p>
+                <p>This is a Message</p>
+                <p> <a href="mailto:example@gmail" id="myemail" style="text-decoration: none;color: black;">example@gmail.com</a></p></div>  
+                <div class="messagelist" style="background-color: #9C9C9C;">
+                    <input type="checkbox">
+                    <img src="maleuser.png">
+                    <p>Username</p>
+                    <p>This is a Message</p>
+                    <p> <a href="mailto:example@gmail" id="myemail" style="text-decoration: none;color: black;">example@gmail.com</a></p></div>  
+                    <div class="messagelist">
+                        <input type="checkbox">
+                        <img src="maleuser.png">
                         <p>Username</p>
-                        <p>This is a message</p>
-                        <p>email@example.com</p></div>   
-                        <div class="messagelist">
-                            <input type="checkbox">
-                            <img src="maleuser.png">
-                            <p>Username</p>
-                            <p>This is a message</p>
-                            <p>email@example.com</p></div>  
+                        <p>This is a Message</p>
+                        <p> <a href="mailto:example@gmail.com" id="myemail" style="text-decoration: none;color: black;">example@gmail.com</a></p></div>
+    </div>
     </div>
     
 </body>
