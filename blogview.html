@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <link  rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body>
+<body style="width: 100vw;">
     <div class="backtoblogs">
         <a href="index.html" style="color: #64ffda;text-decoration: none;font-family: calibri ;">Back to Blogs</a>
     </div>
@@ -39,6 +40,13 @@
 
 
     </div>
+
+    <div class="postactivity">
+        <p id="likecount" style="color: white;">100</p>
+        <img src="whitelike.png" alt="" id="whitelike">
+        <p id="commentcount" style="color: white;padding-left: 15px;">3</p>
+        <img src="comments.png" alt="" id="commentpost">
+    </div>
     <!-- <div class="relatedarticles">
 
         <h2><u>Other Related Articles</u></h2>
@@ -59,9 +67,9 @@
     
     <div class="comment">     
         <h2 id="comments_title" >Comments</h2>
-        <!-- <label for="comment" id="comment_label">Comment:</label><br> -->
-            <input type="comment" id="comment" name="message" value="Leave a Comment"><br>
-            <button id="submit_comment">Comment</button>
+                <form> <input type="comment" id="comment" name="message" placeholder="Leave a Comment" required><br>
+                    <button id="submit_comment" type="submit">Comment</button></form>
+           
     </div>
 
   <div class="UserComments">
