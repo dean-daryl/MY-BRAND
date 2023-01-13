@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
     <title>Document</title>
 </head>
 <body style=" overflow-x: hidden;">
@@ -16,11 +18,11 @@
             <form id="SignIn_Form">
                 <h2 id="SignInTitle">Sign In</h2>
                 <label for="Email" id="email_label" >Email:</label><br>
-                <input type="email" id="Email" name="email"  value="" ><br><br>
+                <input type="email" id="Email" name="email"  value="" required ><br><br>
                 <label for="password" id="password_label">Password:</label><br>
-                <input type="password" id="password" name="password" value=""><br>
-                <a href="SignUp.html" style=" text-decoration:none;"><h5 style="color: white; font-family:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;">Don't have an account?Create Account </h5></a>
-                <button id="submit_SignInform">Submit</button>
+                <input type="password" id="password" name="password" value="" required><br>
+                <a href="SignUp.html" style=" text-decoration:none;"><h5 style=" color:white;font-family: Inconsolata;">Don't have an account?Create Account </h5></a>
+                <button id="submit_SignInform" style="font-family: consolas;" >Submit</button>
             </form>
         </div>
     </div>

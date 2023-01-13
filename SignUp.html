@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link  rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
 </head>
@@ -11,19 +13,42 @@
     <a href="index.html" style="text-decoration: none;color: #64ffda;">Back</a>
     <div class="SignUp">
         <div class="SignUpForm">
-            <form id="SignUp_Form">
+            <form id="SignUp_Form" name="signupform" onsubmit="validate(event);">
                 <h2 id="SignUpTitle">Sign Up</h2>
-                <label for="contactname" id="Name_label">Name:</label><br>
-                    <input type="text" id="contactname" name="contactname" value=""><br>
-                <label for="Email" id="email_label" >Email:</label><br>
-                <input type="email" id="Email" name="email"  value="" ><br><br>
-                <label for="password" id="password_label">Password:</label><br>
+                <label for="contactname" id="Name_label" style="color: white; font-family:'Inconsolata';">Name:</label><br>
+                    <input type="text" id="contactname" name="username" ><br>
+                <label for="Email" id="email_label" style="color: white; font-family:'Inconsolata';">Email:</label><br>
+                <input type="email" id="Email" name="useremail"  value="" ><br><br>
+                <label for="password" id="password_label" style="color: white; font-family:'Inconsolata';" >Password:</label><br>
                 <input type="password" id="password" name="password" value=""><br>
-                <a href="" style=" text-decoration:none;"><h5 style="color: white; font-family:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;">Already Have an account?Log In</h5></a>
-                <button id="submit_SignUpform">Submit</button>
+                <a href="SignIn.html" style=" text-decoration:none;"><h5 style="color: white; font-family:'Inconsolata';">Already Have an account?Log In</h5></a>
+                <button id="submit_SignUpform" name="submit_SignUpForm" type="submit">Submit</button>
             </form>
         </div>
         
         </div>
+        <script>
+function validate(event){
+event.preventDefault;
+if(document.signupform.username.value==""){
+    alert("Please Provide Name");
+    document.signupform.username.focus() 
+    return false;
+}
+if(document.signupform.useremail.value==""){
+    alert("Please Provide Email");
+    return false;
+}
+if(document.signupform.password.value==""){
+    alert("Please Provide Valid Message");
+    return false;
+}
+return true;
+}
+
+
+
+
+        </script>
 </body>
 </html>

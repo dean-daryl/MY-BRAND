@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Inconsolata';
+    src: url() format('truetype');
+}
+
+
 body {
    overflow-x: hidden;
    overflow-y: scroll;
@@ -43,7 +49,7 @@ nav ul li{
     background-color: transparent;
     text-align: center;
     font-size: 16px;
-    font-family: inherit;
+    font-family:"Inconsolata";
     color: #64ffda;
     border-radius: 5px;
     
@@ -74,7 +80,7 @@ color:white;
 margin-right: 500px;
 position: absolute;
 top: 0;
-
+font-family: "Inconsolata"
 }
 #surname{
 color:#64ffda;
@@ -125,7 +131,7 @@ transition-delay: 300ms;
     margin-top:-50px;
     margin-left:150px; 
     width: 40%;  
-    font-family: "Inter",system-ui, -apple-system,sans-serif;
+    font-family:"Inconsolata";
     font-style: normal;
     font-weight: 400;  
     font-size: 17px;
@@ -213,6 +219,7 @@ transition-delay: 300ms;
     margin-left: 150px;
 }
 #story{
+
     margin-top:10px;
     padding-bottom: 25px;
 }
@@ -224,17 +231,18 @@ transition-delay: 300ms;
     margin-top:50px;
     margin-left:120px;   */
     position:static;
+    padding-top:5px;
     margin-left: 100px;
     width: 542px;
-    height:70px ; 
-    font-family:'Inter',system-ui,sans-serif;
+    height:60px ; 
+    font-family:"Inconsolata";
     font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 100;  
+    font-size: 15px;
     line-height:20px;
     align-items: center;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
     
  /* position: relative;
  left: 200px;
@@ -286,14 +294,14 @@ transition-delay: 300ms;
 
 #skills{
 width:30px;
-color: rgba(255, 255, 255, 0.5);
+color: rgba(255, 255, 255, 0.3);
 margin-left:110px;
 margin-top: -60px;
 margin-bottom: 450px;
-font-family:"Consolas",system-ui,sans-serif;
+font-family:"Inconsolata";
 font-style: normal;
 font-weight: 500;
-font-size: 15px;
+font-size: 12px;
 line-height: 30px;
 list-style-type:circle;
 
@@ -422,19 +430,18 @@ height: 42.14px;
     text-align: center;
     font-size: 16px;
     transition: .3s;
-    z-index: 1;
+   
     font-family: inherit;
     color: #64ffda;
     border-radius: 5px;
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-}
+    font-family:"consolas";}
 #submit_SignUpform{
-    left:60px;   
-    top:60px;
+    
     padding: 2px 14px;
     border: 2px solid #64ffda;
     height: 50px;
-    width:200px;
+    width:10vw;
+    margin-left:5vw;
     position: relative;
     overflow: hidden;
     background-color: transparent;
@@ -445,7 +452,7 @@ height: 42.14px;
     font-family: inherit;
     color: #64ffda;
     border-radius: 5px;
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-family:'Consolas';
 }
 #submit_SignInform{
     left:60px;   
@@ -473,10 +480,11 @@ height: 42.14px;
     width:500px;
     text-align: center;
      line-height: 30px;
-    font-size: 15px;
+    font-size: 13px;
+    padding-bottom: 10px;
     font-weight: 200;
-    font-family:'calibri';
-    color: rgba(255, 255, 255, 0.7);
+    font-family:'inconsolata';
+    color: rgba(255, 255, 255, 0.5);
 }
 #SignUp_Form{
 background-color:#0a192f;
@@ -555,7 +563,7 @@ margin-left: 30vw;
     color: rgba(156, 153, 153, 0.6);
     writing-mode: vertical-rl;
     text-decoration: none;
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-family:"Inconsolata";
 }
 .About .email_section a:hover{
     color: #64ffda;
@@ -576,7 +584,7 @@ margin-left: 30vw;
 
 .Blogs .Cards{
  width:75%;
-margin-left:12vw;
+ margin:auto;
  display:grid;
  grid-template-columns: repeat(3,1fr);
  grid-gap: 25px;
@@ -611,7 +619,8 @@ margin-left:12vw;
     color:white;
     width:200px;
     font-size: 15px;
-    font-family:'calibri','sans-serif';
+    font-family:'Inconsolata';
+    font-weight: 200;
 }
 .card .card-content p{
  
@@ -640,7 +649,7 @@ margin-left:12vw;
 #blog_Section_title{
     position: relative;
     left:600px;
-    font-family:"Calibri";
+    font-family:"calibri";
     color:white;
 }
 
@@ -669,8 +678,8 @@ margin-left:12vw;
 
     position: relative;
     top:50px;
-    left:100px;  
-    width: 60%; 
+    left:10vw;
+    width: 80%; 
     background-color: rgba(17, 34, 64, 0.72);
 
 }
@@ -682,7 +691,7 @@ margin-left:12vw;
     padding:10px;   
 } */
 .blogcontent .title h2{
-    font-family: "calibri";
+    font-family: "Inconsolata";
     color:white;
     position: relative;
     left:100px;
@@ -698,7 +707,7 @@ margin-left:12vw;
 }
 .blogcontent .paragraphs p{
     color:rgba(255, 255, 255, 0.7);
-font-family: "calibri";
+font-family: "Inconsolata";
     padding:10px;
     position: relative;
     
@@ -743,7 +752,23 @@ color: rgba(17, 34, 64, 0.72);
 
 
 }
+.postactivity {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top:50px;
+    left:10vw;
+    width:35vw;
+    height:4vw;
+    
+}
+.postactivity img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top:10px;
 
+}
 .UserComments{
     padding:10px;
     background-color:#112240;
@@ -859,6 +884,7 @@ left:150px;
     left:100px;
     }
     */
+
 .Blogs .folder svg{ 
         color:#64ffda;
         height: 40px;
@@ -876,7 +902,7 @@ left:150px;
     }
     #BlogsSectionTitle{
         color:white;
-        font-family:"calibri";
+        font-family:"Inconsolata";
         margin-left: 200px;
     }
     .Blogs span{
@@ -957,7 +983,7 @@ margin-top:-25vw;
  margin-left: 20vw;
 color:white;
 font-size:1vw;
-font-family: 'Calibri';
+font-family: 'Inconsolata';
 
 }
 
@@ -965,7 +991,7 @@ font-family: 'Calibri';
     margin-left: 20vw;
     color:white;
 font-size:1vw;
-font-family: 'Calibri';
+font-family: 'Inconsolata';
    
    }
 
@@ -973,8 +999,8 @@ font-family: 'Calibri';
    display: inline;
    padding: 1vw;
    color: grey;
-   font-family: calibri;
-   font-size:1vw;
+   font-family:"consolas";
+   font-size:0.8vw;
 }
 
 .experience .companyname{
@@ -983,7 +1009,7 @@ margin-left: 25vw;
 
 }
 .experience .companyname li{
-    font-family: 'Calibri';
+    font-family: 'Inconsolata';
     list-style-type: none;
     padding-bottom:15px;
     color:rgba(255, 255, 255, 0.7);
@@ -1608,8 +1634,10 @@ align-items: center;
 .AboutMe{
     margin-left:0vw;
 }
+
 #story p{
-    width: 80%;
+width: 80%;
+height:11vh;
 margin-left: 5vw;
 left:5px;
 
@@ -1620,11 +1648,12 @@ left:5px;
 }
 
 #mypicture {
-    height:30vh;
+    height:50vh;
     width:80vw;
     padding-top: 600px;
     margin-left: -50vw;
-    
+    border: none;
+    border-radius: 0px;
 }
 #picture{
 border: none;
@@ -1660,11 +1689,14 @@ margin-left:15vw;
 
         .Blogs .Cards {
             justify-self: center;
-            width:200vw;
-            margin-left:10vw;
+            width:100vw;
+            margin:5vw;
             overflow-x: scroll;
             grid-template-columns: repeat(1,1fr);
         
+        }
+        .card{
+            box-shadow: none;
         }
         #Join{
             margin-left: 10vw;
@@ -1677,14 +1709,15 @@ margin-left:15vw;
         
 
 .blogcontent{
-    width:100%;
+    width:90vw;
     left: 0px;
+    
 }
 .blogcontent p{
-    width: 98%;
+    width: 90%;
     font-size: 13px;
     position: relative;
-   left:0px;
+   
 }
 .blogcontent .paragraphs {
 
@@ -1713,28 +1746,31 @@ right:50px;
 }
 .comment{
     position: relative;
-    left:5px;    
+    left:0px;   
 }
 .UserComments{
     position: relative;
-    left:5px;
+    left:0px;
+    width: 95%;
 }
 
-
+.postactivity{
+    margin-left: -10vw;
+}
  /* Work Section */
 
  .Work .workimage img{
-    margin-left:5vw;
+    margin-left:2vw;
     width:60vw;
     height: 30vh;
  }
 .Work .projectdetails .projectdescription p{
     padding:5px;
     height:6vh;
-    width: 30vw;
-    margin-left: 4vw;
+    width: 35vw;
+    margin-left:0vw;
 
-    font-size:7px;
+    font-size:6.5px;
 
 
 }
@@ -1746,20 +1782,20 @@ right:50px;
 .Work .projectdetails .projectheading h2{
     font-size: 10px;
     width: 100px;
-    margin-left:70vw;
+    margin-left:65vw;
 }
 
 .Work .projectdetails .projectname h2{
     font-size: 10px;
     width: 100px;
-    margin-left:70vw;
+    margin-left:65vw;
 }
 
 
 .Work .projectdetails .resources li{
     list-style-type: none;
     display: list-item;
-    margin-left: -5vw;
+    margin-left: -10vw;
     padding-left:4vw;
 
     
@@ -1786,18 +1822,29 @@ right:50px;
     .contact .contact_titles{
         margin-left:-12vw;
     }
+    .contact{
+    margin-left:40vw;
+    padding-top:50px;
+   
+}
+
+
     #contactform{
-        width:80vw;
-        margin-left:-38vw;
+        width:75vw;
+        margin-left:-37vw;
         margin-top: 8vh;
     }
-    #contactname , #Email , #message{
+    #contactname , #Email , #message,#password{
         width:60vw;
         position: relative;;
         right:10px;
-        margin-left:5vw;;
+        margin-left:5vw;
+        font-family: "inconsolata";
     }
+    #contact_description{
+        font-size: 11px;
 
+    }
     #submit_form{
         width:40vw;
         margin-left:-10vw;
@@ -1828,7 +1875,7 @@ right:50px;
         #contactname , #Email , #password{
             width:60vw;
             position: relative;;
-            right:10px;
+            right:30px;
         }
     
         #submit_contactform{
@@ -1859,9 +1906,16 @@ right:50px;
     
         }
 
+        #submit_SignUpform{
+            width:30vw;
+            margin-left: 15vw;
+        }
 
+        #submit_SignInform{
+            width:30vw;
+            margin-left:0vw;
+        }
 
-          
 
 
 }      
@@ -1904,6 +1958,7 @@ right:50px;
     display: none;    }
     
        .NavBar .HamburgerMenu{
+        cursor: pointer;
         display: block;
         position:absolute;
         left:90vw;
@@ -1934,15 +1989,15 @@ right:50px;
         padding-top: 100px; 
     
     }
-    .HamburgerMenu.active .bar:nth-child(1){
-      transform: rotate(45deg) translate(0,-40px);
-    }
-    .HamburgerMenu.active .bar:nth-child(2){
-      opacity: 0;
-    }
-    .HamburgerMenu.active .bar:nth-child(3){
-      transform: rotate(-45deg) translate(0, -8px);
-    }
+        .HamburgerMenu.active .bar:nth-child(1){
+        transform: rotate(45deg) translate(0,8px);
+        }
+        .HamburgerMenu.active .bar:nth-child(2){
+    display: none;    
+}
+        .HamburgerMenu.active .bar:nth-child(3){
+        transform: rotate(-45deg) translate(0, -8px);
+        }
     
     
     .social_section ul{
@@ -1998,10 +2053,11 @@ right:50px;
     }
     
     #mypicture {
-        height:40vh;
+        height:50vh;
         width:80vw;
         padding-top: 500px;
         margin-left: -50vw;
+        border-radius: 0px;
         
     }
     #picture{
@@ -2044,6 +2100,7 @@ right:50px;
                 grid-template-columns: repeat(2,2fr);
             
             }
+            
             #Join{
                 margin-left: 35vw;
             }
@@ -2235,7 +2292,9 @@ right:50px;
                 margin-left:-10vw;
         
             }
-    
+            #submit_SignUpform{
+                width:50vw;
+            }
     
     }    
 
