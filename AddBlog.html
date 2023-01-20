@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
@@ -53,28 +51,144 @@
         </div>
 
         <div class="Blog">
-            <form><div class="blogtitle">
+            <form  id="AddBlogform" name="AddBlogform" onsubmit="validate();return false;">
+            <div class="blogtitle">
                 <label>Title:</label>
-                <input type="text" required>
+                <input type="text" id="blogtitleinput" name="blogtitleinput" ><br>
+                <span id="title_error" style=" visibility: visible; font-size:12px;position:relative;left:200px;color: red; font-family: 'inconsolata';"></span>
 
+            </div>
+            <div class="summary">
+              <label>Summary: </label>
+              <textarea  id="blogsummary" ></textarea><br>
+              <span id="summaryerror" style=" visibility:visible;color: red;font-family:'inconsolata';position:relative;left:200px;"> </span>
             </div>
             <div class="blogcontent">
 
-                <div id="summernote"></div>
+                <textarea name="summernote" id="summernote" ></textarea>
+              <p id="content_error" style=" visibility: visible; font-size:12px;position:relative;right:30px;top:84px;color: red; font-family: 'inconsolata';"> </p>
+            </div>
+            <div class="Blogresources">
+              <label>Resources: </label>
+              <input type="text" id="blogresources" >
+            
             </div>
             <button id="publish" type="submit">Publish</button>
-        </form>
+            </form>
         </div>
         </div>
 
 
 
 
+<script src="sweetalert.min.js"></script>
+<script>
 
+function validate(){
+  var summary=blogsummary.value.trim();
+  var title= blogtitleinput.value.trim();
+  var content=summernote.value.trim();
+  console.log(summary.length)
+const title_input=document.getElementById("blogtitleinput")
+if(title.length==0){
+title_error.innerHTML="Title is required";
+title_input.style.border="solid 2px red";
+}
+if(title.length>0&&title.length<2){
+  title_error.innerHTML="Title is too short";
+title_input.style.border="solid 2px red";
+}
+if(title.length>1){
+  title_error.innerHTML="";
+title_input.style.border="solid 2px green";
+}
+if(summary.length==0){
+  summaryerror.innerHTML="Blog Summary is required";
+  blogsummary.style.border="solid 2px red";
+}
+if(summary.length>0&&summary.length<2){
+  summaryerror.innerHTML="Blog Summary is too short";
+  blogsummary.style.border="solid 2px red";
+}
+if(summary.length>=200){
+  summaryerror.innerHTML="Blog Summary is too long";
+  blogsummary.style.border="solid 2px red";
+}
+if(summary.length>1&&summary.length<200){
+  summaryerror.innerHTML="";
+  blogsummary.style.border="solid 2px green";
+}
+
+if(content.length===0){
+content_error.innerHTML="Please Write Something :)";
+
+}
+if(content.length >0 && content.length < 11){
+content_error.innerHTML="Blog too short";
+}
+ if(content.length >=11 && content.length <= 1000){
+  content_error.innerHTML="";
+
+}
+if(title.length>1&&summary.length>1&&summary.length<200){
+  return true;
+}
+}
+</script>
 
 <script>$(document).ready(function() {
     $('#summernote').summernote();
   });
+
+
+
+document.getElementById('publish').addEventListener('click', function(){
+
+
+
+
+var blogtitle=document.getElementById("blogtitleinput").value.trim();
+var blogsummary=document.getElementById("blogsummary").value.trim();
+var blogcontent=document.getElementById("summernote").value.trim();
+var blogresources=document.getElementById("blogresources").value.trim();
+var blog={
+  title:blogtitle,
+  summary:blogsummary,
+  content:blogcontent,
+  resources:blogresources
+
+};
+var blogs;
+if(validate()){
+ 
+  if(localStorage.getItem("blogs")){
+  blogs=JSON.parse(localStorage.getItem("blogs"));
+  blogs.push(blog);
+}
+else{
+  blogs=[];
+  blogs.push(blog);
+}
+localStorage.setItem("blogs",JSON.stringify( blogs));
+
+} 
+
+
+
+}
+
+);
+
+
+
+// display blogs from local storage
+
+
+
+
+
+
+
   </script>
 </body>
 </html>

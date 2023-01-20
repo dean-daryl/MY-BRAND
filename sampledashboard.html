@@ -40,7 +40,7 @@
      <a href="#" class="btn">Add New User</a>
      <img src="notifications.png">
      <div class="img-case">
-      <img src="Portfolio picture.jpg">
+      <img id="logout" src="https://img.icons8.com/ios/50/null/exit--v1.png"/>
      </div>
     </div>
   </div>
@@ -95,14 +95,15 @@
         <h2>Blogs</h2>
         
       </div>
-      <table> 
-        <tr>
+      <table id="blogtable"> 
+        <!-- <tr>
           <th>Name</th>
           <th>Date </th>
           <th style="position: relative;left:30px;" colspan="2">Option</th>
 
 
         </tr>
+        
         <tr>
           <td>Integrating Algolia search with Wordpress Multisite</td>
           <td>11/01/2023 </td>
@@ -126,7 +127,7 @@
           <td>11/01/2023 </td>
           <td><a href="blogview.html" class="b.">View</a> </td>
           <td>Delete</td>
-        </tr>
+        </tr> -->
       </table>
     </div>
     <div class="userlist">
@@ -134,8 +135,8 @@
         <h2>Users</h2>
         
       </div>
-      <table>
-        <tr>
+      <table id="usertable">
+        <!-- <tr>
           <th>Name</th>
           <th>Email</th>
           <th>Information</th>
@@ -152,12 +153,93 @@
           <td>John Doe</td>
           <td>JohnDoe@gmail.com</td>
           <td><img src="information.png"></td>
-        </tr>
+        </tr> -->
       </table>
     </div>
   </div>
 </div>
 </div>
      
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function fetchBlog(){
+ var blogtable=document.getElementById("blogtable");
+ var blogs=JSON.parse(localStorage.getItem("blogs"));
+ blogtable.innerHTML=`<th>Name</th>
+          <th>Date </th>
+          <th style="position: relative;left:30px;" colspan="2">Option</th>`
+ for(var i=0;i<blogs.length;i++){
+  var title=blogs[i].title;
+  if(blogs){
+
+  blogtable.innerHTML+=`
+                <tr>
+          <td>${title}</td>
+          <td>11/01/2023 </td>
+          <td><a href="blogview.html" class="b.">View</a> </td>
+          <td>Delete</td>
+        </tr>`;
+ }
+ else{
+  blogtable.innerHTML=`No available blog posts!`;
+
+ }
+ }
+
+
+
+ 
+
+}
+
+function fetchUser(){
+  var usertable=document.getElementById("usertable");
+ var users=JSON.parse(localStorage.getItem("users"));
+ usertable.innerHTML=`<th>Name</th>
+          <th>Email </th>
+          <th style="position: relative;right:0px;" colspan="2">Info</th>`
+ for(var i=0;i<users.length;i++){
+  var email=users[i].email;
+  var name=users[i].name;
+  if(users){
+
+  usertable.innerHTML+=`
+         <tr>
+          <td>${name}</td>
+          <td>${email}</td>
+          <td><img src="information.png"></td>      </tr>
+        <tr>`;
+ }
+ else{
+  blogtable.innerHTML=`No available blog posts!`;
+
+ }
+ }
+
+
+
+}
+
+fetchUser();
+fetchBlog();
+ 
+
+ document.getElementById("logout").addEventListener('click',function(){
+  localStorage.setItem('status','guest');
+  window.location.href='index.html';
+
+ })
+</script>
 </body>
 </html>
