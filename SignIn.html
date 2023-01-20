@@ -10,21 +10,91 @@
     <title>Document</title>
 </head>
 <body style=" overflow-x: hidden;">
-<a href="index.html" style="text-decoration: none;color: #64ffda;">Back</a>
+<a href="index.html" style="text-decoration: none;color: #64ffda; font-family: 'inconsolata';">Back</a>
 
     <div class="SignIn">
 
         <div class="SignInForm">
-            <form id="SignIn_Form">
+            <form id="SignIn_Form" onsubmit="validate();return false;">
                 <h2 id="SignInTitle">Sign In</h2>
                 <label for="Email" id="email_label" >Email:</label><br>
-                <input type="email" id="Email" name="email"  value="" required ><br><br>
+                <input type="text" id="Email" name="email"  value=""  ><br>
+                <span  id="email_error" style=" visibility:visible;  color: red; font-family: 'Inconsolata'; position:relative;"></span><br>
                 <label for="password" id="password_label">Password:</label><br>
-                <input type="password" id="password" name="password" value="" required><br>
-                <a href="SignUp.html" style=" text-decoration:none;"><h5 style=" color:white;font-family: Inconsolata;">Don't have an account?Create Account </h5></a>
+                <input type="password" id="password" name="password" value="" ><br>
+                <p id="password_error" style=" visibility:hidden; color: red; font-family: 'Inconsolata'; position:relative;top:5px;"> Password is required</p><br>
+                <a href="SignUp.html" style=" text-decoration:none;"><h5 style=" color:white;font-family: Inconsolata;">Don't have an account?Create Account </h5></a><br>
+                
+                <span id="credential_error" style=" visibility:visible; color: red; font-family: 'Inconsolata'; position:relative;bottom:20px;z-index: 0;"></span><br>
                 <button id="submit_SignInform" style="font-family: consolas;" >Submit</button>
             </form>
         </div>
     </div>
+
+
+<script>
+
+function validate(){
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
+
+const email=document.getElementById("Email");
+const password=document.getElementById("password");
+const email_error=document.getElementById("email_error");
+const password_error=document.getElementById("password_error");
+
+if(email.value.length==0){
+    email.style.border="solid 2px red";
+    email_error.innerHTML="Email is required";
+   
+}
+if(!email.value.match(mailformat)&&email.value.length>0){
+    email.style.border="solid 2px red";
+    email_error.innerHTML="Enter a valid Email";
+  
+}
+if(email.value.match(mailformat)){
+    email.style.border="1px solid #64ffda";
+  email_error.innerHTML="";
+}
+if( password.value==""){
+    password_error.style.visibility="visible";
+    password.style.border="2px solid red";
+
+}
+if(password.value.length>0){
+    password_error.style.visibility="hidden";
+    password.style.border="1px solid #64ffda";
+}
+// if(password.value.length>0 &&email.value.length>0){
+  
+// }
+}
+
+
+document.getElementById('submit_SignInform').addEventListener('click',function(){
+    const email_error=document.getElementById("email_error");
+const password_error=document.getElementById("password_error");
+    var useremail=document.getElementById('Email').value;
+   var userpassword=document.getElementById('password').value;
+var users=JSON.parse(localStorage.getItem('users'));
+for(var i=0;i<users.length;i++){
+
+    if(useremail==users[i].email&&userpassword==users[i].password){
+        window.open("sampledashboard.html","_blank");
+        
+       localStorage.setItem('status','auth_status');
+        credential_error.innerHTML='';
+    }
+    else if(useremail!=users[i].email&&userpassword!=users[i].password){
+        credential_error.innerHTML='Incorrect Credentials'
+    }
+    
+}
+
+});
+
+
+
+</script>
 </body>
 </html>

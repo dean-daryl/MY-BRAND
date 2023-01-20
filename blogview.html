@@ -67,34 +67,111 @@
     
     <div class="comment">     
         <h2 id="comments_title" >Comments</h2>
-                <form> <input type="comment" id="comment" name="message" placeholder="Leave a Comment" required><br>
+                <form name="commentform" id="commentform" onsubmit="validate(); return false; "> 
+                    <input type="text" id="commentorname" placeholder="Add Name"><br>
+                    <span id="commentorname_error" style=" visibility: visible; color: red;font-family: 'inconsolata';"></span><br>
+                    <input type="text" id="comment" name="comment" placeholder="Leave a Comment" ><br>
+                    <p id="comment_error" style=" visibility: hidden; color: red;font-family: 'inconsolata';">Comment required</p>
                     <button id="submit_comment" type="submit">Comment</button></form>
            
     </div>
+    <div  id="commentssection"> 
+    </div>
+ 
 
-  <div class="UserComments">
+        <script src="sweetalert.min.js"></script>
+
+<script>    
+function validate() {
+    if(document.commentform.comment.value==""){
+        comment_error.style.visibility="visible";
+        comment.style.border="solid 2px red";
+      
+    }
+     if(document.commentform.commentorname.value==""){
+        commentorname.style.border="solid 2px red";
+
+        commentorname_error.innerHTML="Name is required";
+    }
+     if(document.commentform.commentorname.value.length>0 && document.commentform.commentorname.value.length<2){
+        commentorname.style.border="solid 2px red";
+        commentorname_error.innerHTML="Name is too short";
+
+    }
+    
+    if(document.commentform.commentorname.value.length>1 ){
+        comment_error.style.visibility="hidden";
+        comment.style.border="solid 1px #64ffda";
+        commentorname.style.border="solid 2px #64ffda";
+        commentorname_error.innerHTML="";
+    }
+    if(document.commentform.comment.value.length>0 ){
+        comment.style.border="solid 1px #64ffda";
+        comment_error.style.visibility="hidden";
+
+    }
+}
+
+document.getElementById('submit_comment').addEventListener('click',function(){
+    var name=document.getElementById('commentorname').value;
+    var commentcontent=document.getElementById('comment').value;
+    var comment={
+    name:name,
+    comment:commentcontent
+
+}
+var comments;
+    if(name&&comment){
+        if(localStorage.getItem("comments")){
+            comments=JSON.parse(localStorage.getItem('comments'))
+            comments.push(comment);
+        }
+        else{
+            comments=[];
+            comments.push(comment);
+        }
+    localStorage.setItem('comments',JSON.stringify(comments))
+
+    }
+    
+
+location.reload();
+
+
+
+})
+
+
+function fetchComments(){
+
+   var commentsec=document.getElementById("commentssection");
+
+   comments=JSON.parse(localStorage.getItem("comments"));
+
+        if(!comments){
+           document.querySelector('#commentssection').innerHTML='No Comments'
+        }
+        else{
+
+            for(let i=0;i<comments.length;i++){
+        var name=comments[i].name;
+        var comment=comments[i].comment;
+
+            commentsec.innerHTML +=`
+            <div class="UserComments" onclick>
             
             <img src="Portfolio picture.jpg">
-            <h4>Daryl Murenzi</h4>
-            <p>This is a Comment!</p>
-            <h5 style="font-weight: 10;">21.December.2022  .</h5>
+            <h4>${name}</h4>
+            <p>${comment}</p>
+                        <h5 style="font-weight: 10;">21.December.2022  .</h5>
             <h5 style="font-weight: 10;">2 hours ago</h5>
-        </div>
-        <div class="UserComments">
-            
-            <img src="Portfolio picture.jpg">
-            <h4>Daryl Murenzi</h4>
-            <p>This is a Comment!</p>
-            <h5 style="font-weight: 10;">21.December.2022  .</h5>
-            <h5 style="font-weight: 10;">2 hours ago</h5>
-        </div>
-        <div class="UserComments">
-            
-            <img src="Portfolio picture.jpg">
-            <h4>Daryl Murenzi</h4>
-            <p>This is a Comment!</p>
-            <h5 style="font-weight: 10;">21.December.2022  .</h5>
-            <h5 style="font-weight: 10;">2 hours ago</h5>
-        </div>
+                             </div>`
+        }
+    }
+    };
+
+fetchComments();
+</script>
+       
 </body>
 </html>

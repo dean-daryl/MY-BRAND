@@ -50,18 +50,10 @@
          
         
     </div>
-    <div class="Messages">
-        <div class="messagemenu">
-             <p>Messages From:</p>
-             <p>Messages</p>
-             <p>Email</p></div>  
-      <div class="messagelist">
-       <input type="checkbox">
-        <img src="maleuser.png">
-        <p>Username</p>
-        <p>This is a Message</p>
-        <p> <a href="mailto:deandaryl7@gmail.com"  id="myemail" style="text-decoration: none; color: black;">example@gmail.com</a></p></div>  
-        <div class="messagelist"style="background-color: #9C9C9C;">
+    <div class="Messages" id="messagesection">
+        
+        
+        <!-- <div class="messagelist"style="background-color: #9C9C9C;">
             <input type="checkbox">
             <img src="maleuser.png">
             <p>Username</p>
@@ -86,9 +78,42 @@
                         <img src="maleuser.png">
                         <p>Username</p>
                         <p>This is a Message</p>
-                        <p> <a href="mailto:example@gmail.com" id="myemail" style="text-decoration: none;color: black;">example@gmail.com</a></p></div>
-    </div>
+                        <p> <a href="mailto:example@gmail.com" id="myemail" style="text-decoration: none;color: black;">example@gmail.com</a></p></div> -->
     </div>
     
+      
+    
+
+    <script>
+      fetchMesages();
+      function fetchMesages() {
+        var messagesec=document.getElementById('messagesection');
+        messages=JSON.parse(localStorage.getItem('messages'));
+        messagesec.innerHTML=` <div class="messagemenu">
+             <p>Messages From:</p>
+             <p>Messages</p>
+             <p>Email</p></div> `;
+
+        for(let i=0;i<messages.length;i++){
+          var contactname=messages[i].name;
+          var message=messages[i].message;
+          var email=messages[i].email;
+          messagesec.innerHTML+=`<div class="messagelist">
+       <input type="checkbox">
+        <img src="maleuser.png">
+        <p>${contactname}</p>
+        <p>${message}</p>
+        <p> <a href="mailto:deandaryl7@gmail.com"  id="myemail" style="text-decoration: none; color: black;">${email}</a></p></div>`
+          
+
+
+
+        }
+
+
+      }
+
+
+    </script>
 </body>
 </html>

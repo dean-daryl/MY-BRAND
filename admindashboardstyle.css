@@ -89,7 +89,7 @@ th,td{
     position: absolute;
     right: 0;
     width: 80vw;
-    height: 100vh;
+    height:300vh;
     background: #f1f1f1;
 }
 .container .header{
@@ -152,16 +152,18 @@ align-items: center;
     height: 50px;
 }
 .container .header .nav .user .img-case img{
+    width:30px;
+    height: 30px;
     position:absolute;
-    top:0;
-    left:0;
-    width:100%
+    top:10px;
+    left:10px;
+    
 }
 
 .container .content{
     position: relative;
     margin-top: 10vh;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 .container .content .cards{
     padding:20px 15px;
@@ -214,6 +216,7 @@ width: 30px;
 
 }
 .container .Blog{
+    height: 100vh;
     margin-left: 15vw;
     margin-top:20vh;
 }
@@ -231,9 +234,47 @@ padding-right: 50px;
 .container .Blog .blogtitle input{
 width:30vw;
 height:2vw;
+position: relative;
+left:75px;
 
 
 }
+/* .container .Blog .blogresources {
+   
+} */
+.container .Blog .Blogresources input{
+    width:30vw;
+    height:2vw;
+    position: relative;
+    top:105px;
+    left:100px;
+    
+    
+}  
+.container .Blog .Blogresources label{
+    width:30vw;
+    height:2vw;
+    position: relative;
+    top:105px;
+    left:0px;
+    font-size:20px;
+    
+    
+}    
+.container .Blog .summary textarea{
+    width:30vw;
+    height:5vw;
+    font-family: "inconsolata";
+    font-size: 20px;
+    
+    }
+.container .Blog .summary label{
+
+        font-size: 2vw;
+        padding-right: 50px;
+        
+            
+        }
 .container .Blog .blogcontent label{
 
     font-size: 2vw;
@@ -247,27 +288,26 @@ height:2vw;
    
     .note-editor{
         width: 50vw;
-        height:50vh;
+        max-height:200vh;
         position: relative;
+        top:100px;
         right: 30px;
-        margin-bottom:1vw;
-        
+        margin-bottom:5vw;
         
     }
     #publish{
         margin-left:20vw;
-        margin-top: 20px;
+        margin-top: 120px;
         padding: 2px 14px;
         border: 2px solid #21564D;
         height: 50px;
         width:10vw;
-        position: relative;
         overflow: hidden;
         background-color: White;
         text-align: center;
         font-size: 16px;
         transition: .5s;
-        z-index: 1;
+        
         font-family: inherit;
         color:#000;
         border-radius: 5px;
