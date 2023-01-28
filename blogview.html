@@ -13,33 +13,8 @@
         <a href="index.html" style="color: #64ffda;text-decoration: none;font-family: inconsolata;">Back to Blogs</a>
     </div>
 
-    <div class="blogcontent">
-        <div class="title"><h2><u>Integrating Algolia Search with Wordpress Multisite</u></h2></div>
-        <div class="CoverImage">
-            <img src="telescope.jpeg" >
-
-        </div>
-        <div class="paragraphs">
-                <p>At Upstatement, we recently wrapped up a project where one of the more notable engineering tasks was implementing global search for a large WordPress multisite network. We were tasked with revamping the web experience for a college of a large university, and each school under this college had its own individual site within the broader network.</p>
-    <p>Building websites for higher-ed is not for the faint of heart. Unless executed properly, these websites can quickly spin into deep labyrinths of information. That’s why we decided to make search a prominent and easily accessible feature of the site we were working on (and subsequently every site in the network). Rather than jam-packing the top navigation with nested menus and links, we empowered the user to take the path of least resistance to their desired destination — via a global search box in the navigation bar of every page.
-        Setting up search with Algolia</p>
-    <p>Choosing Algolia to build search for our WordPress multisite network was a no-brainer. Not only were our clients familiar with and happy with what Algolia had to offer, but we’ve also successfully built many sites with the tool over the years. Since we’re tech agnostic here at Upstatement, a big advantage of using Algolia with our projects is that they have robust SDKs for whichever tech stack we’re using.</p>
-    <p>Typically, there are three main steps to integrate Algolia into a project:</p>
-        <p>
-            1.Indexing your data<br>
-            2.Optimizing your data relevance<br>
-            3.Building your front-end search experience</p><br>
-    <p>In a typical web project, indexing data would probably not be a big deal. Most likely, you would install the Algolia npm package, throw all of your searchable data into a JSON file, push it up to Algolia, and call it a day.</p>
-    <p>Indexing data for a WordPress site, however, is a little more complex. Due to the way content is managed and stored in WordPress, the data we wish to index requires more work on our end in order to be formatted in a way that Algolia understands. The editorial nature of WordPress also requires us to make sure our Algolia records are kept in sync with the latest and greatest content available in our database. In other words, content should be searchable as soon as it’s published.</p>        
-    <p>In a typical web project, indexing data would probably not be a big deal. Most likely, you would install the Algolia npm package, throw all of your searchable data into a JSON file, push it up to Algolia, and call it a day.</p>
-    <img src="Pikachu.gif">
-    <p>Indexing data for a WordPress site, however, is a little more complex. Due to the way content is managed and stored in WordPress, the data we wish to index requires more work on our end in order to be formatted in a way that Algolia understands. The editorial nature of WordPress also requires us to make sure our Algolia records are kept in sync with the latest and greatest content available in our database. In other words, content should be searchable as soon as it’s published.</p>        
-
-
-        </div>
-
-
-    </div>
+    <div class="blogcontent" id="blogcontent"></div>
+    
 
     <div class="postactivity">
         <p id="likecount" style="color: white;">100</p>
@@ -82,6 +57,19 @@
         <script src="sweetalert.min.js"></script>
 
 <script>    
+
+document.getElementById('whitelike').addEventListener('click',function(e){
+    var img=e.target;
+    if (img.id === "whitelike") {
+        img.src = "blacklikebutton.png";
+        img.id = 'blacklike';
+    } else if (img.id === "blacklike") {
+        img.src = "whitelike.png";
+        img.id = 'whitelike';
+    }
+});
+
+
 function validate() {
     if(document.commentform.comment.value==""){
         comment_error.style.visibility="visible";
@@ -140,6 +128,43 @@ location.reload();
 
 
 })
+
+function fetchBlog(){
+   blogs=JSON.parse(localStorage.getItem("blogs"));
+  var blogcontent=document.getElementById("blogcontent");
+  
+// If there are no Blogs in Local Storage
+    if (!blogs) {
+
+    document.querySelector("#blogcontent").innerHTML = "No blog posts available.";
+    
+}
+// Incase there are Blogs
+else{       
+    for( let i=0;i<blogs.length;i++){
+        var title=blogs[i].title;
+    var summary=blogs[i].summary;
+    var content=blogs[i].content
+    var resources=blogs[i].resources;
+    var cover=blogs[i].coverimage;
+    blogcontent.innerHTML=`    <div class="title">
+                            <h2><u>${title}</u></h2></div>
+                            </div>
+                                <div class="paragraphs">
+                                ${content}
+                                </div>
+                            </div>`;
+        }
+
+ }
+
+}
+
+
+
+
+
+fetchBlog();
 
 
 function fetchComments(){

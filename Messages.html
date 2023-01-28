@@ -19,7 +19,7 @@
          <ul>
          <a href="sampledashboard.html"><li><img src="dashboard1.png" alt="">&nbsp; <span>Dashboard</span></li></a> 
          <a href="AddBlog.html"><li><img src="blog.png" alt="">&nbsp;<span>Add Blog</span> </li></a>
-          <a href="Comments.html"><li><img src="comments.png" alt=""> &nbsp;<span>Comments</span></li></a>
+          <!-- <a href="Comments.html"><li><img src="comments.png" alt=""> &nbsp;<span>Comments</span></li></a> -->
          <a href="Messages.html"><li><img src="messages.png" alt="">&nbsp;<span>Messages</span></li></a> 
           
           </ul>
@@ -90,10 +90,9 @@
         var messagesec=document.getElementById('messagesection');
         messages=JSON.parse(localStorage.getItem('messages'));
         messagesec.innerHTML=` <div class="messagemenu">
-             <p>Messages From:</p>
-             <p>Messages</p>
-             <p>Email</p></div> `;
-
+             <p>Message From:</p>
+             <p>Email</p>
+             <p>Message</p></div> `;
         for(let i=0;i<messages.length;i++){
           var contactname=messages[i].name;
           var message=messages[i].message;
@@ -101,9 +100,10 @@
           messagesec.innerHTML+=`<div class="messagelist">
        <input type="checkbox">
         <img src="maleuser.png">
-        <p>${contactname}</p>
-        <p>${message}</p>
-        <p> <a href="mailto:deandaryl7@gmail.com"  id="myemail" style="text-decoration: none; color: black;">${email}</a></p></div>`
+        <p style="padding-right:200px">${contactname}</p>
+        <p style="padding-right:100px "> <a href="mailto:deandaryl7@gmail.com"  id="myemail" style="text-decoration: none; color: black;">${email}</a></p>
+        <p style=" width:400px;">${message}</p>
+      </div>`
           
 
 

@@ -156,7 +156,7 @@ align-items: center;
     height: 30px;
     position:absolute;
     top:10px;
-    left:10px;
+    left:10;
     
 }
 
@@ -226,7 +226,7 @@ padding-bottom: 100px;;
 }
 .container .Blog .blogtitle label{
 
-font-size: 2vw;
+font-size: 1.5vw;
 padding-right: 50px;
 
     
@@ -257,7 +257,7 @@ left:75px;
     position: relative;
     top:105px;
     left:0px;
-    font-size:20px;
+    font-size:1.5vw;
     
     
 }    
@@ -270,20 +270,25 @@ left:75px;
     }
 .container .Blog .summary label{
 
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding-right: 50px;
         
             
         }
 .container .Blog .blogcontent label{
 
-    font-size: 2vw;
+    font-size: 0vw;
     padding-right: 10px;
     position: relative;
     bottom:100px;
     
     
         
+    }
+    .container .coverimage{
+        position: relative;
+        top:70px;
+        font-size: 1.5vw;
     }
    
     .note-editor{
@@ -366,6 +371,9 @@ left:75px;
         }
         .Messages .messagelist  {
             background-color: rgba(217, 217, 217,2 );
+            border-bottom:1px solid black;
+            border-left:1px solid black;
+            border-right:1px solid black;
            position: relative;
             left:50px;
             top:50px;
@@ -374,11 +382,9 @@ left:75px;
             margin-left: 200px;
         }
         .Messages .messagelist p{
-            display: inline;
-            padding-right:180px;
-            position: relative;
-            top:0px;
-            left:10px;
+            display:inline-flex;
+            margin-left: 0px;
+            
             }
             .Messages .messagelist img{
                 height:30px;

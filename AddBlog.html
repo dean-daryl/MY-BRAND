@@ -22,7 +22,7 @@
          <ul>
           <a href="sampledashboard.html"><li><img src="dashboard1.png" alt="">&nbsp; <span>Dashboard</span></li></a>
          <a href="AddBlog.html"><li><img src="blog.png" alt="">&nbsp;<span>Add Blog</span> </li></a>
-          <a href="Comments.html"><li><img src="comments.png" alt=""> &nbsp;<span>Comments</span></li></a>
+          <!-- <a href="Comments.html"><li><img src="comments.png" alt=""> &nbsp;<span>Comments</span></li></a> -->
          <a href="Messages.html"><li><img src="messages.png" alt="">&nbsp;<span>Messages</span></li></a> 
           
           </ul>
@@ -66,7 +66,11 @@
             <div class="blogcontent">
 
                 <textarea name="summernote" id="summernote" ></textarea>
-              <p id="content_error" style=" visibility: visible; font-size:12px;position:relative;right:30px;top:84px;color: red; font-family: 'inconsolata';"> </p>
+              <p id="content_error" style=" visibility: visible; font-size:12px;position:relative;right:30px;top:30px;color: red; font-family: 'inconsolata';"> </p>
+            </div>
+            <div class="coverimage">
+                <label for="myfile">Cover Image:</label>
+                <input type="file" id="myimage" name="myfile" accept="image/png, image/jpeg">
             </div>
             <div class="Blogresources">
               <label>Resources: </label>
@@ -88,7 +92,7 @@ function validate(){
   var summary=blogsummary.value.trim();
   var title= blogtitleinput.value.trim();
   var content=summernote.value.trim();
-  console.log(summary.length)
+
 const title_input=document.getElementById("blogtitleinput")
 if(title.length==0){
 title_error.innerHTML="Title is required";
@@ -151,12 +155,28 @@ var blogtitle=document.getElementById("blogtitleinput").value.trim();
 var blogsummary=document.getElementById("blogsummary").value.trim();
 var blogcontent=document.getElementById("summernote").value.trim();
 var blogresources=document.getElementById("blogresources").value.trim();
-var blog={
+var fileInput=document.getElementById('myimage');
+var source;
+var image=fileInput.files[0];
+var reader=new FileReader();
+reader.readAsDataURL(image);
+reader.onload = function() {
+    var img = new Image();
+    img.src = reader.result;
+     source=img.src;
+    console.log(img.src);
+    // img.onload = function() {
+    //     canvas.width = img.width;
+    //     canvas.height = img.height;
+    //     context = canvas.getContext("2d");
+    //     context.drawImage(img, 0, 0, img.width, img.height);
+    // }
+    var blog={
   title:blogtitle,
   summary:blogsummary,
   content:blogcontent,
-  resources:blogresources
-
+  resources:blogresources,
+  coverimage:source
 };
 var blogs;
 if(validate()){
@@ -172,6 +192,8 @@ else{
 localStorage.setItem("blogs",JSON.stringify( blogs));
 
 } 
+}
+
 
 
 
