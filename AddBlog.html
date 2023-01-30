@@ -88,6 +88,7 @@
 <script src="sweetalert.min.js"></script>
 <script>
 
+
 function validate(){
   var summary=blogsummary.value.trim();
   var title= blogtitleinput.value.trim();
@@ -135,9 +136,16 @@ content_error.innerHTML="Blog too short";
 
 }
 if(title.length>1&&summary.length>1&&summary.length<200){
+  swal({
+  title: "Message Sent!",
+  text: "Your Message Was Successfully Sent",
+  icon: "success",
+  button: "OK",
+})  
   return true;
 }
 }
+
 </script>
 
 <script>$(document).ready(function() {
@@ -165,12 +173,11 @@ reader.onload = function() {
     img.src = reader.result;
      source=img.src;
     console.log(img.src);
-    // img.onload = function() {
-    //     canvas.width = img.width;
-    //     canvas.height = img.height;
-    //     context = canvas.getContext("2d");
-    //     context.drawImage(img, 0, 0, img.width, img.height);
-    // }
+  
+
+
+
+
     var blog={
   title:blogtitle,
   summary:blogsummary,
@@ -180,7 +187,6 @@ reader.onload = function() {
 };
 var blogs;
 if(validate()){
- 
   if(localStorage.getItem("blogs")){
   blogs=JSON.parse(localStorage.getItem("blogs"));
   blogs.push(blog);
@@ -194,12 +200,7 @@ localStorage.setItem("blogs",JSON.stringify( blogs));
 } 
 }
 
-
-
-
-}
-
-);
+});
 
 
 

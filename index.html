@@ -489,11 +489,6 @@ cards.innerHTML+=`<div class="card"   style="background-image:url(${cover});back
  }
 
 }
-
-
-
-
-
 fetchBlog();
 
 
@@ -634,7 +629,9 @@ document.getElementById('submit_contactform').addEventListener('click',function(
     };
 var messages;
 if(validate())
-{if(localStorage.getItem('messages')){
+{
+
+    if(localStorage.getItem('messages')){
     messages=JSON.parse(localStorage.getItem('messages'));
     messages.push(message);
 
@@ -646,6 +643,7 @@ else{
 localStorage.setItem('messages',JSON.stringify(messages));
 
 }
+
 location.reload();
 });
 
