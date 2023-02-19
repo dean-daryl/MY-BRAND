@@ -459,42 +459,42 @@ return true;
 }
 // fetching blogs from local storage
 
-function fetchBlog(){
-   blogs=JSON.parse(localStorage.getItem("blogs"));
-  var cards=document.getElementById("cards");
+// function fetchBlog(){
+//    blogs=JSON.parse(localStorage.getItem("blogs"));
+//   var cards=document.getElementById("cards");
   
 
-    if (!blogs) {
+//     if (!blogs) {
 
-    document.querySelector("#cards").innerHTML = "No blog posts available.";
+//     document.querySelector("#cards").innerHTML = "No blog posts available.";
     
-}else{
-    for( let i=0;i<blogs.length;i++){
-        var title=blogs[i].title;
-    var summary=blogs[i].summary;
-    var resources=blogs[i].resources;
-    var cover=blogs[i].coverimage;
-cards.innerHTML+=`<div class="card"   style="background-image:url(${cover});background-size:cover;backdrop-filter:blur(5px);background-blend-mode:multiply;" onclick=>  
-            <div class="card-content" >
-                <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
-                <div class="link"><a href="blogview.html" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div>
+// }else{
+//     for( let i=0;i<blogs.length;i++){
+//         var title=blogs[i].title;
+//     var summary=blogs[i].summary;
+//     var resources=blogs[i].resources;
+//     var cover=blogs[i].coverimage;
+// cards.innerHTML+=`<div class="card"   style="background-image:url(${cover});background-size:cover;backdrop-filter:blur(5px);background-blend-mode:multiply;" onclick=>  
+//             <div class="card-content" >
+//                 <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
+//                 <div class="link"><a href="blogview.html" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div>
                
-                <h2><a href="blogview.html" style="text-decoration:none;color:white;">${title}</a></h2>
-                <p>${summary}</p>
-                    <ul><li>${resources}</li>
-                    </ul>
-            </div>`;
-        }
+//                 <h2><a href="blogview.html" style="text-decoration:none;color:white;">${title}</a></h2>
+//                 <p>${summary}</p>
+//                     <ul><li>${resources}</li>
+//                     </ul>
+//             </div>`;
+//         }
 
- }
+//  }
 
-}
-fetchBlog();
-
-
+// }
+// fetchBlog();
 
 
-        // slide down navbar
+
+
+// slide down navbar
 
         var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -506,6 +506,7 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
 
 
 // // Hamburger button
@@ -646,6 +647,54 @@ localStorage.setItem('messages',JSON.stringify(messages));
 
 location.reload();
 });
+
+
+// fetch('https://my-api-kiyi.onrender.com/api/blogs')
+//   .then(response => console.log(response.status))
+//   .catch(error => console.error(error));
+
+
+  async function getBlogs() {
+    let url = 'https://my-api-kiyi.onrender.com/api/blogs';
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+async function renderBlogs() {
+    let blogs = await getBlogs();
+    let html = '';
+     blogs.forEach(blog => {
+        let htmlSegment = `<div class="card"   style="background-image:url(${blog.image});background-size:cover;backdrop-filter:blur(5px);background-blend-mode:multiply;" onclick=>  
+            <div class="card-content" >
+                <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
+                <div class="link"><a href="blogview.html#${blog._id}" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div>
+               
+                <h2><a href="blogview.html#${blog._id}" style="text-decoration:none;color:white;">${blog.title}</a></h2>
+                <p>${blog.content}</p>
+                    
+            </div></div>`;
+
+        html += htmlSegment;
+    });
+
+    var cards=document.getElementById("cards");
+    cards.innerHTML = html;
+}
+renderBlogs();
+
+
+
+
+
+
+
+
+
 
 </script>
     
