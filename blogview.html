@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-    <link  rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
-</head>
-<body style="width: 100vw;">
+  </head>
+  <body style="width: 100vw">
     <div class="backtoblogs">
-        <a href="index.html" style="color: #64ffda;text-decoration: none;font-family: inconsolata;">Back to Blogs</a>
+      <a
+        href="index.html"
+        style="color: #64ffda; text-decoration: none; font-family: inconsolata"
+        >Back to Blogs</a
+      >
     </div>
 
-    <div class="blogcontent">
-        <div class="title"><h2><u>Integrating Algolia Search with Wordpress Multisite</u></h2></div>
-        <div class="CoverImage">
-            <img src="telescope.jpeg" >
-
-        </div>
-        <div class="paragraphs">
-                <p>At Upstatement, we recently wrapped up a project where one of the more notable engineering tasks was implementing global search for a large WordPress multisite network. We were tasked with revamping the web experience for a college of a large university, and each school under this college had its own individual site within the broader network.</p>
-    <p>Building websites for higher-ed is not for the faint of heart. Unless executed properly, these websites can quickly spin into deep labyrinths of information. That’s why we decided to make search a prominent and easily accessible feature of the site we were working on (and subsequently every site in the network). Rather than jam-packing the top navigation with nested menus and links, we empowered the user to take the path of least resistance to their desired destination — via a global search box in the navigation bar of every page.
-        Setting up search with Algolia</p>
-    <p>Choosing Algolia to build search for our WordPress multisite network was a no-brainer. Not only were our clients familiar with and happy with what Algolia had to offer, but we’ve also successfully built many sites with the tool over the years. Since we’re tech agnostic here at Upstatement, a big advantage of using Algolia with our projects is that they have robust SDKs for whichever tech stack we’re using.</p>
-    <p>Typically, there are three main steps to integrate Algolia into a project:</p>
-        <p>
-            1.Indexing your data<br>
-            2.Optimizing your data relevance<br>
-            3.Building your front-end search experience</p><br>
-    <p>In a typical web project, indexing data would probably not be a big deal. Most likely, you would install the Algolia npm package, throw all of your searchable data into a JSON file, push it up to Algolia, and call it a day.</p>
-    <p>Indexing data for a WordPress site, however, is a little more complex. Due to the way content is managed and stored in WordPress, the data we wish to index requires more work on our end in order to be formatted in a way that Algolia understands. The editorial nature of WordPress also requires us to make sure our Algolia records are kept in sync with the latest and greatest content available in our database. In other words, content should be searchable as soon as it’s published.</p>        
-    <p>In a typical web project, indexing data would probably not be a big deal. Most likely, you would install the Algolia npm package, throw all of your searchable data into a JSON file, push it up to Algolia, and call it a day.</p>
-    <img src="Pikachu.gif">
-    <p>Indexing data for a WordPress site, however, is a little more complex. Due to the way content is managed and stored in WordPress, the data we wish to index requires more work on our end in order to be formatted in a way that Algolia understands. The editorial nature of WordPress also requires us to make sure our Algolia records are kept in sync with the latest and greatest content available in our database. In other words, content should be searchable as soon as it’s published.</p>        
-
-
-        </div>
-
-
-    </div>
+    <div class="blogcontent" id="blogcontent"></div>
 
     <div class="postactivity">
-        <p id="likecount" style="color: white;">100</p>
-        <img src="whitelike.png" alt="" id="whitelike">
-        <p id="commentcount" style="color: white;padding-left: 15px;">3</p>
-        <img src="comments.png" alt="" id="commentpost">
+      <p id="likecount" style="color: white">0</p>
+      <img src="whitelike.png" alt="" id="whitelike" />
+      <!-- <p id="commentcount" style="color: white;padding-left: 15px;"></p> -->
+      <!-- <img src="comments.png" alt="" id="commentpost"> -->
     </div>
-    <!-- <div class="relatedarticles">
+    <!-- <div class="relatedarticles" >
 
         <h2><u>Other Related Articles</u></h2>
         <ul style="list-style-type: decimal;">
@@ -64,114 +45,223 @@
         <div class="advert-content">
 
         </div> -->
-    
-    <div class="comment">     
-        <h2 id="comments_title" >Comments</h2>
-                <form name="commentform" id="commentform" onsubmit="validate(); return false; "> 
-                    <input type="text" id="commentorname" placeholder="Add Name"><br>
-                    <span id="commentorname_error" style=" visibility: visible; color: red;font-family: 'inconsolata';"></span><br>
-                    <input type="text" id="comment" name="comment" placeholder="Leave a Comment" ><br>
-                    <p id="comment_error" style=" visibility: hidden; color: red;font-family: 'inconsolata';">Comment required</p>
-                    <button id="submit_comment" type="submit">Comment</button></form>
-           
+
+    <div class="comment">
+      <h2 id="comments_title">Comments</h2>
+      <form
+        name="commentform"
+        id="commentform"
+        onsubmit="validate(); return false; "
+      >
+        <input type="text" id="commentorname" placeholder="Add Name" /><br />
+        <span
+          id="commentorname_error"
+          style="visibility: visible; color: red; font-family: 'inconsolata'"
+        ></span
+        ><br />
+        <input
+          type="text"
+          id="comment"
+          name="comment"
+          placeholder="Leave a Comment"
+        /><br />
+        <p
+          id="comment_error"
+          style="visibility: hidden; color: red; font-family: 'inconsolata'"
+        >
+          Comment required
+        </p>
+        <button id="submit_comment" type="submit">Comment</button>
+      </form>
     </div>
-    <div  id="commentssection"> 
-    </div>
- 
+    <div id="commentssection"></div>
 
-        <script src="sweetalert.min.js"></script>
+    <script>
+      const href = new URL(location.href);
+      const blogId = href.hash.replace('#', '');
+      document
+        .getElementById('whitelike')
+        .addEventListener('click', function (e) {
+          likecount = document.getElementById('likecount');
+          var likecounter = document.getElementById('likecount').value;
+          likecounter = 0;
+          var img = e.target;
+          if (img.id === 'whitelike') {
+            likecounter++;
 
-<script>    
-function validate() {
-    if(document.commentform.comment.value==""){
-        comment_error.style.visibility="visible";
-        comment.style.border="solid 2px red";
-      
-    }
-     if(document.commentform.commentorname.value==""){
-        commentorname.style.border="solid 2px red";
+            img.src = 'blacklikebutton.png';
+            img.id = 'blacklike';
+          } else if (img.id === 'blacklike') {
+            img.src = 'whitelike.png';
+            img.id = 'whitelike';
+          }
+          likecount.innerHTML = `${likecounter}`;
+        });
 
-        commentorname_error.innerHTML="Name is required";
-    }
-     if(document.commentform.commentorname.value.length>0 && document.commentform.commentorname.value.length<2){
-        commentorname.style.border="solid 2px red";
-        commentorname_error.innerHTML="Name is too short";
+      // function validate() {
+      //     if(document.commentform.comment.value==""){
+      //         comment_error.style.visibility="visible";
+      //         comment.style.border="solid 2px red";
 
-    }
-    
-    if(document.commentform.commentorname.value.length>1 ){
-        comment_error.style.visibility="hidden";
-        comment.style.border="solid 1px #64ffda";
-        commentorname.style.border="solid 2px #64ffda";
-        commentorname_error.innerHTML="";
-    }
-    if(document.commentform.comment.value.length>0 ){
-        comment.style.border="solid 1px #64ffda";
-        comment_error.style.visibility="hidden";
+      //     }
+      //      if(document.commentform.commentorname.value==""){
+      //         commentorname.style.border="solid 2px red";
 
-    }
-}
+      //         commentorname_error.innerHTML="Name is required";
+      //     }
+      //      if(document.commentform.commentorname.value.length>0 && document.commentform.commentorname.value.length<2){
+      //         commentorname.style.border="solid 2px red";
+      //         commentorname_error.innerHTML="Name is too short";
 
-document.getElementById('submit_comment').addEventListener('click',function(){
-    var name=document.getElementById('commentorname').value;
-    var commentcontent=document.getElementById('comment').value;
-    var comment={
-    name:name,
-    comment:commentcontent
+      //     }
 
-}
-var comments;
-    if(name&&comment){
-        if(localStorage.getItem("comments")){
-            comments=JSON.parse(localStorage.getItem('comments'))
-            comments.push(comment);
+      //     if(document.commentform.commentorname.value.length>1 ){
+      //         comment_error.style.visibility="hidden";
+      //         comment.style.border="solid 1px #64ffda";
+      //         commentorname.style.border="solid 2px #64ffda";
+      //         commentorname_error.innerHTML="";
+      //     }
+      //     if(document.commentform.comment.value.length>0 ){
+      //         comment.style.border="solid 1px #64ffda";
+      //         comment_error.style.visibility="hidden";
+
+      //     }
+      // }
+
+      // document.getElementById('submit_comment').addEventListener('click',function(){
+      //     var name=document.getElementById('commentorname').value;
+      //     var commentcontent=document.getElementById('comment').value;
+      //     var comment={
+      //     name:name,
+      //     comment:commentcontent
+
+      // }
+      // var comments;
+      //     if(name&&comment){
+      //         if(localStorage.getItem("comments")){
+      //             comments=JSON.parse(localStorage.getItem('comments'))
+      //             comments.push(comment);
+      //         }
+      //         else{
+      //             comments=[];
+      //             comments.push(comment);
+      //         }
+      //     localStorage.setItem('comments',JSON.stringify(comments))
+
+      //     }
+
+      // location.reload();
+
+      // })
+
+      // function fetchBlog(){
+      //    blogs=JSON.parse(localStorage.getItem("blogs"));
+      //   var blogcontent=document.getElementById("blogcontent");
+
+      // // If there are no Blogs in Local Storage
+      //     if (!blogs) {
+
+      //     document.querySelector("#blogcontent").innerHTML = "No blog posts available.";
+
+      // }
+      // // Incase there are Blogs
+      // else{
+      //     for( let i=0;i<blogs.length;i++){
+      //         var title=blogs[i].title;
+      //     var summary=blogs[i].summary;
+      //     var content=blogs[i].content
+      //     var resources=blogs[i].resources;
+      //     var cover=blogs[i].coverimage;
+      //     blogcontent.innerHTML=`    <div class="title">
+      //                             <h2><u>${title}</u></h2></div>
+      //                             </div>
+      //                                 <div class="paragraphs">
+      //                                 ${content}
+      //                                 </div>
+      //                             </div>`;
+      //         }
+
+      //  }
+
+      // }
+
+      async function getBlogs() {
+        let url = `https://my-api-kiyi.onrender.com/api/blogs`;
+
+        try {
+          let res = await fetch(url);
+          return await res.json();
+        } catch (error) {
+          console.log(error);
         }
-        else{
-            comments=[];
-            comments.push(comment);
+      }
+
+      //   async function getBlogById(id) {
+      //     let url = `https://my-api-kiyi.onrender.com/api/blogs/${id}`;
+
+      //     try {
+      //       let res = await fetch(url);
+      //       return await res.json();
+      //     } catch (error) {
+      //       console.log(error);
+      //     }
+      //   }
+
+      async function renderSingleBlog() {
+        console.log(getBlogs());
+        let blogs = await getBlogs();
+        console.log(blogs);
+        const currentBlog = blogs.filter(({ _id }) => _id == blogId);
+        let html = '';
+        if (currentBlog) {
+          currentBlog.map((blog) => {
+            let htmlSegment = `<div class="title">
+                            <h2><u>${blog.title}</u></h2></div>
+                            </div>
+                                <div class="paragraphs">
+                                ${blog.content}
+                                </div>
+                            </div>`;
+            html += htmlSegment;
+          });
         }
-    localStorage.setItem('comments',JSON.stringify(comments))
 
-    }
-    
+        var blogcontent = document.getElementById('blogcontent');
+        blogcontent.innerHTML = html;
+      }
+      renderSingleBlog();
 
-location.reload();
+      // fetchBlog();
 
+      function fetchComments(){
 
+         var commentsec=document.getElementById("commentssection");
 
-})
+         comments=JSON.parse(localStorage.getItem("comments"));
 
+              if(!comments){
+                 document.querySelector('#commentssection').innerHTML='No Comments'
+              }
+              else{
 
-function fetchComments(){
+                  for(let i=0;i<comments.length;i++){
+              var name=comments[i].name;
+              var comment=comments[i].comment;
 
-   var commentsec=document.getElementById("commentssection");
+                  commentsec.innerHTML +=`
+                  <div class="UserComments" onclick>
 
-   comments=JSON.parse(localStorage.getItem("comments"));
+                  <img src="Portfolio picture.jpg">
+                  <h4>${name}</h4>
+                  <p>${comment}</p>
+                              <h5 style="font-weight: 10;">21.December.2022  .</h5>
+                  <h5 style="font-weight: 10;">2 hours ago</h5>
+                                   </div>`
+              }
+          }
+          };
 
-        if(!comments){
-           document.querySelector('#commentssection').innerHTML='No Comments'
-        }
-        else{
-
-            for(let i=0;i<comments.length;i++){
-        var name=comments[i].name;
-        var comment=comments[i].comment;
-
-            commentsec.innerHTML +=`
-            <div class="UserComments" onclick>
-            
-            <img src="Portfolio picture.jpg">
-            <h4>${name}</h4>
-            <p>${comment}</p>
-                        <h5 style="font-weight: 10;">21.December.2022  .</h5>
-            <h5 style="font-weight: 10;">2 hours ago</h5>
-                             </div>`
-        }
-    }
-    };
-
-fetchComments();
-</script>
-       
-</body>
+      fetchComments();
+    </script>
+  </body>
 </html>
