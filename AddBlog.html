@@ -78,6 +78,7 @@
         <form
           id="AddBlogform"
           name="AddBlogform"
+          enctype="multipart/form-data"
           onsubmit="validate();return false;"
         >
           <div class="blogtitle">
@@ -101,7 +102,7 @@
           </div>
           <div class="summary">
             <label>Summary: </label>
-            <textarea id="blogsummary"></textarea><br />
+            <textarea id="blogsummary" name="blogsummary"></textarea><br />
             <span
               id="summaryerror"
               style="
@@ -150,6 +151,56 @@
     <script src="sweetalert.min.js"></script>
 
     <script>
+      const createBlog = async (payload) => {
+        try {
+          const response = await fetch(
+            'https://my-api-kiyi.onrender.com/api/blogs',
+            {
+              method: 'POST',
+              body: payload,
+              headers: {
+                Authorization: `Bearer ${JSON.parse(
+                  localStorage.getItem('token'),
+                )}`,
+              },
+            },
+          );
+          const data = await response.json();
+          console.log(data);
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      const AddBlogFormEl = document.getElementById('AddBlogform');
+      const { myfile, blogtitleinput,blogsummary,summernote } = AddBlogFormEl;
+      AddBlogFormEl.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // console.log(myfile.files[0])
+        const formData = new FormData();
+        formData.append('title', blogtitleinput.value);
+        formData.append('summary',blogsummary.value)
+        formData.append('content', summernote.value);
+        formData.append('image', myfile.files[0]);
+        createBlog(formData);
+        // console.log(formData);
+
+        // .then((res) => {
+        //   console.log(res.json());
+        // })
+        // .catch((error) => console.log(error));
+
+        //   fetch('https://my-api-kiyi.onrender.com/api/blogs', {
+        //     method: 'POST',
+        //     headers: {
+
+        //       Authorization:
+        //         'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWY0NDU4ZGI2NzFlMzE4NDY1NmQxMCIsInVzZXJuYW1lIjoiZGVhbmRhcnlsIiwiZW1haWwiOiJkZWFuZGFyeWw3QGdtYWlsLmNvbSIsImlhdCI6MTY3NjgxNDQxNCwiZXhwIjoxNjc2OTAwODE0fQ.ktYJmy0Wtz77aAFzC94VHPs_aaFxOqnSaGUwDou6UMQ',
+        //     },
+        //     body: payload,
+        //   })
+      });
+
       function validate() {
         var summary = blogsummary.value.trim();
         var title = blogtitleinput.value.trim();
@@ -211,9 +262,9 @@
         $('#summernote').summernote();
       });
 
-      document
-        .getElementById('publish')
-        .addEventListener('click', function () {});
+      // document
+      //   .getElementById('publish')
+      //   .addEventListener('click', function () {});
 
       // var blogtitle = document.getElementById('blogtitleinput').value.trim();
       // var blogsummary = document.getElementById('blogsummary').value.trim();
