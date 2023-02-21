@@ -1,152 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link  rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-</head>
-<body style="align-content: center;">
-    <a href="index.html" style="text-decoration: none;color: #64ffda; font-family:'Inconsolata';">Back</a>
+  </head>
+  <body style="align-content: center">
+    <a
+      href="index.html"
+      style="text-decoration: none; color: #64ffda; font-family: 'Inconsolata'"
+      >Back</a
+    >
     <div class="SignUp">
-        <div class="SignUpForm">
-            <form id="SignUp_Form" name="signupform" onsubmit="validate(event);return false;">
-                <h2 id="SignUpTitle">Sign Up</h2>
-                <label for="contactname" id="Name_label" style=" font-family:'Inconsolata';">Name:</label><br>
-                    <input type="text" id="contactname" name="username" ><br>
-                    <p id="name-error" style="visibility: hidden;color: red;font-family: 'Inconsolata';margin-top: 2px;">Name is required</p><br>
-                <label for="Email" id="email_label" style="color: white; font-family:'Inconsolata';">Email:</label><br>
-                <input type="text" id="Email" name="useremail"  value="" ><br><br>
-                <span id="email_error" style="visibility: visible;color: red;font-family: 'Inconsolata';margin-top: -15px;"></span><br>
-                <label for="password" id="password_label" style="color: white; font-family:'Inconsolata';" >Password:</label><br>
-                <input type="password" id="password" name="password" value=""><br>
-               <span id="password_error"  style=" position: relative; top:20px;font-size:15px;font-family: 'Inconsolata'; color: red;" ></span><br>
-                <a href="SignIn.html" style=" text-decoration:none;"><h5 style="color: white; font-family:'Inconsolata';">Already Have an account?Log In</h5></a>
-                <button id="submit_SignUpform" name="submit_SignUpForm" type="submit">Submit</button>
-            </form>
-        </div>
-        
-        </div>
+      <div class="SignUpForm">
+        <form
+          id="SignUp_Form"
+          name="signupform"
+          onsubmit="validate();return false;"
+        >
+          <h2 id="SignUpTitle">Sign Up</h2>
+          <label
+            for="contactname"
+            id="Name_label"
+            style="font-family: 'Inconsolata'"
+            >Name:</label
+          ><br />
+          <input type="text" id="contactname" name="username" /><br />
+          <p
+            id="name-error"
+            style="
+              visibility: hidden;
+              color: red;
+              font-family: 'Inconsolata';
+              margin-top: 2px;
+            "
+          >
+            Name is required
+          </p>
+          <br />
+          <label
+            for="Email"
+            id="email_label"
+            style="color: white; font-family: 'Inconsolata'"
+            >Email:</label
+          ><br />
+          <input type="text" id="Email" name="useremail" value="" /><br /><br />
+          <span
+            id="email_error"
+            style="
+              visibility: visible;
+              color: red;
+              font-family: 'Inconsolata';
+              margin-top: -15px;
+            "
+          ></span
+          ><br />
+          <label
+            for="password"
+            id="password_label"
+            style="color: white; font-family: 'Inconsolata'"
+            >Password:</label
+          ><br />
+          <input type="password" id="password" name="password" value="" /><br />
+          <span
+            id="password_error"
+            style="
+              position: relative;
+              top: 20px;
+              font-size: 15px;
+              font-family: 'Inconsolata';
+              color: red;
+            "
+          ></span
+          ><br />
+          <a href="SignIn.html" style="text-decoration: none"
+            ><h5 style="color: white; font-family: 'Inconsolata'">
+              Already Have an account?Log In
+            </h5></a
+          >
+          <button id="submit_SignUpform" name="submit_SignUpForm" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
 
-        <script src="sweetalert.min.js"></script>
-        <script>
- document.getElementById('submit_SignUpform').addEventListener('click',function(){
-    
-   var useremail=document.getElementById('Email').value;
-   var userpassword=document.getElementById('password').value;
-   var username=document.getElementById('contactname').value;
-    var user={
-        email:useremail,
-        password:userpassword,
-        name:username
+    <script src="sweetalert.min.js"></script>
+    <script>
+      const SignUp = async (payload) => {
+        try {
+          const response = await fetch(
+            'https://my-api-kiyi.onrender.com/api/signup',
 
-    }
-    var users;
-    if(useremail && userpassword && username){
-if(localStorage.getItem("users")){
- users=JSON.parse(localStorage.getItem("users"));
- users.push(user);
-}
-else{
-    users=[];
-    users.push(user);
-}
+            {
+              method: 'POST',
+              body: JSON.stringify(payload),
+              headers: {
+                'content-type': 'application/json',
+              },
+            },
+          );
 
-localStorage.setItem("users",JSON.stringify(users))
+          const data = await response.json();
+          console.log(data);
+        //   if (data.success === true) {
+        //     localStorage.setItem('token', JSON.stringify(data.token));
+        //     const payload = JSON.parse(atob(data.token.split('.')[1]));
 
-}
-window.location.href="SignIn.html";
+        //     console.log(payload);
+        //     if (payload.username == 'deandaryl') {
+        //       location.href = '/sampledashboard.html';
+        //     } else {
+        //       location.href = '/';
+        //     }
+        //   } else {
+        //     console.log('Error Signing In');
+        //   }
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+      const SignUp_Form = document.getElementById('SignUp_Form');
+      const { contactname,email, password } = SignUp_Form;
+      document
+        .getElementById('submit_SignUpform')
+        .addEventListener('click', function () {
+            if(validate()){
+                const payload = {
+          name:SignUp_Form.contactname.value,   
+          email:SignUp_Form.Email.value,
+          password: SignUp_Form.password.value,
+        };SignUp(payload)
+            location.href='/signin.html';
+            }
+            
 
- });
+        });
 
+      //  document.getElementById('submit_SignUpform').addEventListener('click',function(){
 
+      //    var useremail=document.getElementById('Email').value;
+      //    var userpassword=document.getElementById('password').value;
+      //    var username=document.getElementById('contactname').value;
+      //     var user={
+      //         email:useremail,
+      //         password:userpassword,
+      //         name:username
 
+      //     }
+      //     var users;
+      //     if(useremail && userpassword && username){
+      // if(localStorage.getItem("users")){
+      //  users=JSON.parse(localStorage.getItem("users"));
+      //  users.push(user);
+      // }
+      // else{
+      //     users=[];
+      //     users.push(user);
+      // }
 
+      // localStorage.setItem("users",JSON.stringify(users))
 
+      // }
+      // window.location.href="SignIn.html";
 
+      //  });
 
+      function validate() {
+        // if(document.signupform.username.value=="" && document.signupform.useremail.value=="" && document.signupform.password.value==""){
+        //     swal({
+        //   title: "Empty Field!",
+        //   text: "Please Provide Name",
+        //   icon: "error",
+        //   button: "OK",
+        // });
+        // }
 
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const name = document.getElementById('contactname');
+        const email = document.getElementById('Email');
+        const password = document.getElementById('password');
+        var nameerror = document.getElementById('name-error');
+        var emailerror = document.getElementById('email_error');
+        var password_error = document.getElementById('password_error');
+        if (name.value == '') {
+          nameerror.style.visibility = 'visible';
+          name.style.border = '2px solid red';
+        }
+        if (name.value.length > 0) {
+          name.style.border = 'solid 2px green';
+          nameerror.style.visibility = 'hidden';
+        }
 
+        if (email.value.length === 0) {
+          email.style.border = 'solid 2px red';
+          email_error.innerHTML = 'Email is required';
+        }
+        if (!email.value.match(mailformat) && email.value.length > 0) {
+          email.style.border = 'solid 2px red';
+          email_error.innerHTML = 'Enter a valid Email';
+        }
+        if (email.value.match(mailformat) && email.value.length > 0) {
+          email.style.border = 'solid 2px green';
+          email_error.innerHTML = '';
+        }
+        if (password.value.length === 0) {
+          password.style.border = '2px solid red';
+          password_error.innerHTML = 'Password is required';
+        }
+        if (password.value.length < 7 && password.value.length > 0) {
+          password.style.border = '2px solid red';
+          password_error.innerHTML = 'Password must contain 8 characters';
+        }
 
-
-
-
-
-
-
-
-function validate(event){
-event.preventDefault;
-// if(document.signupform.username.value=="" && document.signupform.useremail.value=="" && document.signupform.password.value==""){
-//     swal({
-//   title: "Empty Field!",
-//   text: "Please Provide Name",
-//   icon: "error",
-//   button: "OK",
-// });
-// }
-
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
-const name= document.getElementById("contactname");
-const email=document.getElementById("Email");
-const password=document.getElementById("password");
-var nameerror=document.getElementById("name-error");
-var emailerror=document.getElementById("email_error");
-var password_error = document.getElementById("password_error");
-if(name.value==""){
-    nameerror.style.visibility="visible";
-    name.style.border="2px solid red";
-
-
-}
-if(name.value.length>0){
-    name.style.border="solid 2px green";
-    nameerror.style.visibility="hidden";
-  
-}
-
-if(email.value.length===0){
-    email.style.border="solid 2px red";
-    email_error.innerHTML="Email is required";
-
-   
-}
-if(!email.value.match(mailformat) && email.value.length>0){
-    email.style.border="solid 2px red";
-    email_error.innerHTML="Enter a valid Email";
-  
-}
-if(email.value.match(mailformat) && email.value.length>0){
-    email.style.border="solid 2px green";
-  email_error.innerHTML="";
-}
-if(password.value.length===0){
-    password.style.border="2px solid red";
-    password_error.innerHTML="Password is required";
-   
-}
-if(password.value.length<7&&password.value.length>0){
-    password.style.border="2px solid red";
-    password_error.innerHTML="Password must contain 8 characters";
-
-}
-
-if(password.value.length>0 && password.value.length>7){
-    password.style.border="solid 2px green";
-    password_error.style.visibility="hidden";
-    password_error.innerHTML=""
-    // window.location.href="index.html";
-}
-return true;    
-
-}
-
-
-
-
- </script>
-</body>
+        if (password.value.length > 0 && password.value.length > 7) {
+          password.style.border = 'solid 2px green';
+          password_error.style.visibility = 'hidden';
+          password_error.innerHTML = '';
+          // window.location.href="index.html";
+        }
+        return true;
+      }
+    </script>
+  </body>
 </html>

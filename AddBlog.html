@@ -138,6 +138,7 @@
               name="myfile"
               accept="image/png, image/jpeg"
             />
+            <img class="oldImage" style="display: none" />
           </div>
           <div class="Blogresources">
             <label>Resources: </label>
@@ -151,6 +152,64 @@
     <script src="sweetalert.min.js"></script>
 
     <script>
+      const AddBlogFormEl = document.getElementById('AddBlogform');
+      const oldImage = document.querySelector('.oldImage');
+      const { myfile, blogtitleinput, blogsummary, summernote } = AddBlogFormEl;
+      const href = new URL(location.href);
+      const blogId = href.hash.replace('#', '');
+      if (blogId) {
+        // We are going to update if there is a blogId
+        async function getBlog(blogId) {
+          let url = `https://my-api-kiyi.onrender.com/api/blogs/${blogId}`;
+
+          try {
+            let res = await fetch(url);
+            return await res.json();
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        getBlog(blogId).then((currentBlog) => {
+          console.log(currentBlog);
+          blogtitleinput.value = currentBlog.title;
+          blogsummary.value = currentBlog.summary;
+          summernote.value = currentBlog.content;
+          oldImage.src = currentBlog.image;
+          oldImage.style =
+            'display:block;height:280px;width:200px;object-fit:cover;';
+        });
+
+        // Update Blog
+        async function updateBlog(payload, blogId) {
+          let url = `https://my-api-kiyi.onrender.com/api/blogs/${blogId}`;
+          try {
+            let res = await fetch(url, {
+              method: 'PATCH',
+              body: payload,
+              headers: {
+                Authorization: `Bearer ${JSON.parse(
+                  localStorage.getItem('token'),
+                )}`,
+              },
+            });
+            await console.log(res.json());
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        AddBlogFormEl.addEventListener('submit', (event) => {
+          event.preventDefault();
+
+          const formData = new FormData();
+          formData.append('title', blogtitleinput.value);
+          formData.append('summary', blogsummary.value);
+          formData.append('content', summernote.value);
+          formData.append('image', myfile.files[0]);
+          updateBlog(formData, blogId);
+        });
+      }
+      else{
+        
       const createBlog = async (payload) => {
         try {
           const response = await fetch(
@@ -172,14 +231,12 @@
         }
       };
 
-      const AddBlogFormEl = document.getElementById('AddBlogform');
-      const { myfile, blogtitleinput,blogsummary,summernote } = AddBlogFormEl;
       AddBlogFormEl.addEventListener('submit', (event) => {
         event.preventDefault();
         // console.log(myfile.files[0])
         const formData = new FormData();
         formData.append('title', blogtitleinput.value);
-        formData.append('summary',blogsummary.value)
+        formData.append('summary', blogsummary.value);
         formData.append('content', summernote.value);
         formData.append('image', myfile.files[0]);
         createBlog(formData);
@@ -200,6 +257,7 @@
         //     body: payload,
         //   })
       });
+    }
 
       function validate() {
         var summary = blogsummary.value.trim();

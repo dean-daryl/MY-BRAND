@@ -22,11 +22,9 @@
 
     <div class="blogcontent" id="blogcontent"></div>
 
-    <div class="postactivity">
+    <div class="postactivity" id="postactivity">
       <p id="likecount" style="color: white">0</p>
-      <img src="whitelike.png" alt="" id="whitelike" />
-      <!-- <p id="commentcount" style="color: white;padding-left: 15px;"></p> -->
-      <!-- <img src="comments.png" alt="" id="commentpost"> -->
+      <img src="whitelike.png" alt="blanklike" id="whitelike" />
     </div>
     <!-- <div class="relatedarticles" >
 
@@ -79,54 +77,124 @@
     <script>
       const href = new URL(location.href);
       const blogId = href.hash.replace('#', '');
+
+      const createComment = async (payload, blogId) => {
+        try {
+          const response = await fetch(
+            `https://my-api-kiyi.onrender.com/api/blogs/${blogId}/comments`,
+            {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json',
+              },
+              body: JSON.stringify(payload),
+            },
+          );
+          const data = await response.json();
+          console.log(data);
+          if (data.success === true) {
+            location.reload();
+          }
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      const comment_form = document.getElementById('commentform');
+      const { commentorname, comment } = comment_form;
+      comment_form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const payload = {
+          name: commentorname.value,
+          comment: comment.value,
+        };
+
+        createComment(payload, blogId);
+      });
+
+      const addLike = async (blogId) => {
+        try {
+          const response = await fetch(
+            `https://my-api-kiyi.onrender.com/api/blogs/${blogId}/likes`,
+            {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${JSON.parse(
+                  localStorage.getItem('token'),
+                )}`,
+              },
+            },
+          );
+          const data = await response.json();
+          console.log(data);
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
       document
         .getElementById('whitelike')
         .addEventListener('click', function (e) {
-          likecount = document.getElementById('likecount');
-          var likecounter = document.getElementById('likecount').value;
-          likecounter = 0;
-          var img = e.target;
+          e.preventDefault
+          addLike(blogId);
+          var img =e.target
           if (img.id === 'whitelike') {
-            likecounter++;
-
             img.src = 'blacklikebutton.png';
             img.id = 'blacklike';
           } else if (img.id === 'blacklike') {
             img.src = 'whitelike.png';
             img.id = 'whitelike';
           }
-          likecount.innerHTML = `${likecounter}`;
         });
 
-      // function validate() {
-      //     if(document.commentform.comment.value==""){
-      //         comment_error.style.visibility="visible";
-      //         comment.style.border="solid 2px red";
+      // document
+      //   .getElementById('whitelike')
+      //   .addEventListener('click', function (e) {
+      //     likecount = document.getElementById('likecount');
+      //     var likecounter = document.getElementById('likecount').value;
+      //     likecounter = 0;
+      //     var img = e.target;
+      //     if (img.id === 'whitelike') {
+      //       likecounter++;
 
+      //       img.src = 'blacklikebutton.png';
+      //       img.id = 'blacklike';
+      //     } else if (img.id === 'blacklike') {
+      //       img.src = 'whitelike.png';
+      //       img.id = 'whitelike';
       //     }
-      //      if(document.commentform.commentorname.value==""){
-      //         commentorname.style.border="solid 2px red";
+      //     likecount.innerHTML = `${likecounter}`;
+      //   });
 
-      //         commentorname_error.innerHTML="Name is required";
-      //     }
-      //      if(document.commentform.commentorname.value.length>0 && document.commentform.commentorname.value.length<2){
-      //         commentorname.style.border="solid 2px red";
-      //         commentorname_error.innerHTML="Name is too short";
+      function validate() {
+        if (document.commentform.comment.value == '') {
+          comment_error.style.visibility = 'visible';
+          comment.style.border = 'solid 2px red';
+        }
+        if (document.commentform.commentorname.value == '') {
+          commentorname.style.border = 'solid 2px red';
 
-      //     }
+          commentorname_error.innerHTML = 'Name is required';
+        }
+        if (
+          document.commentform.commentorname.value.length > 0 &&
+          document.commentform.commentorname.value.length < 2
+        ) {
+          commentorname.style.border = 'solid 2px red';
+          commentorname_error.innerHTML = 'Name is too short';
+        }
 
-      //     if(document.commentform.commentorname.value.length>1 ){
-      //         comment_error.style.visibility="hidden";
-      //         comment.style.border="solid 1px #64ffda";
-      //         commentorname.style.border="solid 2px #64ffda";
-      //         commentorname_error.innerHTML="";
-      //     }
-      //     if(document.commentform.comment.value.length>0 ){
-      //         comment.style.border="solid 1px #64ffda";
-      //         comment_error.style.visibility="hidden";
-
-      //     }
-      // }
+        if (document.commentform.commentorname.value.length > 1) {
+          comment_error.style.visibility = 'hidden';
+          comment.style.border = 'solid 1px #64ffda';
+          commentorname.style.border = 'solid 2px #64ffda';
+          commentorname_error.innerHTML = '';
+        }
+        if (document.commentform.comment.value.length > 0) {
+          comment.style.border = 'solid 1px #64ffda';
+          comment_error.style.visibility = 'hidden';
+        }
+      }
 
       // document.getElementById('submit_comment').addEventListener('click',function(){
       //     var name=document.getElementById('commentorname').value;
@@ -222,6 +290,8 @@
                                 ${blog.content}
                                 </div>
                             </div>`;
+                            var likecount=document.getElementById('likecount')
+                            likecount.innerHTML=`${blog.likes.length}`
             html += htmlSegment;
           });
         }
@@ -231,37 +301,63 @@
       }
       renderSingleBlog();
 
+      async function renderComments() {
+        console.log(getBlogs());
+        let blogs = await getBlogs();
+        console.log(blogs);
+        const currentBlog = blogs.filter(({ _id }) => _id == blogId);
+        let html = '';
+        if (currentBlog) {
+          currentBlog.map((blog) => {
+            for (let i = 0; i < blog.comments.length; i++) {
+              let htmlSegment = ` <div class="UserComments">
+
+                  <img src="maleuser.png">
+                  <h4>${blog.comments[i].name}</h4>
+                  <p>${blog.comments[i].comment}</p>
+                  <h5 style="font-weight: 10;">21.December.2022  .</h5>
+                  <h5 style="font-weight: 10;">2 hours ago</h5>
+                                   </div>`;
+              html += htmlSegment;
+            }
+          });
+        }
+
+        var commentsec = document.getElementById('commentssection');
+        commentsec.innerHTML = html;
+      }
+      renderComments();
       // fetchBlog();
 
-      function fetchComments(){
+      // function fetchComments(){
 
-         var commentsec=document.getElementById("commentssection");
+      //    var commentsec=document.getElementById("commentssection");
 
-         comments=JSON.parse(localStorage.getItem("comments"));
+      //    comments=JSON.parse(localStorage.getItem("comments"));
 
-              if(!comments){
-                 document.querySelector('#commentssection').innerHTML='No Comments'
-              }
-              else{
+      //         if(!comments){
+      //            document.querySelector('#commentssection').innerHTML='No Comments'
+      //         }
+      //         else{
 
-                  for(let i=0;i<comments.length;i++){
-              var name=comments[i].name;
-              var comment=comments[i].comment;
+      //             for(let i=0;i<comments.length;i++){
+      //         var name=comments[i].name;
+      //         var comment=comments[i].comment;
 
-                  commentsec.innerHTML +=`
-                  <div class="UserComments" onclick>
+      //             commentsec.innerHTML +=`
+      //             <div class="UserComments" onclick>
 
-                  <img src="Portfolio picture.jpg">
-                  <h4>${name}</h4>
-                  <p>${comment}</p>
-                              <h5 style="font-weight: 10;">21.December.2022  .</h5>
-                  <h5 style="font-weight: 10;">2 hours ago</h5>
-                                   </div>`
-              }
-          }
-          };
+      //             <img src="Portfolio picture.jpg">
+      //             <h4>${name}</h4>
+      //             <p>${comment}</p>
+      //                         <h5 style="font-weight: 10;">21.December.2022  .</h5>
+      //             <h5 style="font-weight: 10;">2 hours ago</h5>
+      //                              </div>`
+      //         }
+      //     }
+      // };
 
-      fetchComments();
+      // fetchComments();
     </script>
   </body>
 </html>

@@ -1,251 +1,241 @@
 @font-face {
-    font-family: 'Inconsolata';
-    src: url() format('truetype');
+  font-family: 'Inconsolata';
+  src: url() format('truetype');
 }
-
 
 body {
-   overflow-x: hidden;
-   overflow-y: scroll;
-    background-color: #0a192f;
-  }
-  
-
-.NavBar{
-    z-index:1;
-    opacity: 100%;
-    height: 60px;
-    background-color:rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(5px);
-    position: fixed;
-    left:0;
-    top: 0;
-    width: 100%;
-    display: block;
-    transition: top 0.5s;
-    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-}
-span{
-    color:#64ffda;
-} 
-nav ul li{
-    color:  rgba(246, 252, 251, 0.7);
-    padding: 10px;
-    font-size: 15px;
-    list-style-type: none;
-    display: inline-block;
-    font-style: normal;
-    position: relative;
-    left:40vw;
-}
-#resume{
-    width: 100px;
-    left:85vw;   
-    top:-60px;;
-    padding: 2px 14px;
-    border: 2px solid #64ffda;
-    height: 50px;
-    position: relative;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    font-family:"Inconsolata";
-    color: #64ffda;
-    border-radius: 5px;
-    
-   }
-   
-   #resume:hover {
-    background-color:rgba(121, 177, 172, 0.1);
-    color:#64ffda;
-    
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #0a192f;
 }
 
-
-    #Resume{
-        display: none;
-    }
-nav ul li:hover{
-        color:#64ffda;
-        transition: .3s;
+.NavBar {
+  z-index: 1;
+  opacity: 100%;
+  height: 60px;
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-right: 10px;
+  width: 100%;
+  display: block;
+  transition: top 2s;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
-nav img{
-margin-right: 400px;
-width: 80px;
-height: 80px;
+span {
+  color: #64ffda;
 }
-
-#Logo{
-color:white;
-margin-right: 500px;
-position: absolute;
-top: 0;
-font-family: "Inconsolata";
-cursor: pointer;
+nav ul li {
+  color: rgba(246, 252, 251, 0.7);
+  padding: 10px;
+  font-size: 15px;
+  list-style-type: none;
+  display: inline-block;
+  font-style: normal;
+  position: relative;
+  left: 40vw;
 }
-#surname{
-color:#64ffda;
-}
-
-#greetings{
-width: 294px;
-height: 54.8px;
-margin-left: 150px;
-margin-top: 100px;
-font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
-transition-delay: 100ms;
-color: #64ffda;
-
-
-}
-#name{
-width:100%;
-
-/* position: relative; */
-margin-top:20px;
- margin-bottom: 0px;
-margin-left: 150px;
-font-size: clamp(40px, 8vw, 70px);
-font-family: sans-serif;   
-font-style: normal;
-font-weight: 700;
-transition-delay: 200ms;
-color:white;
+#resume {
+  width: 100px;
+  left: 90vw;
+  top: -60px;
+  padding-left: 50px;
+  padding: 2px 14px;
+  border: 2px solid #64ffda;
+  height: 50px;
+  display: none;
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Inconsolata';
+  color: #64ffda;
+  border-radius: 5px;
 }
 
-#slogan{
-margin-top: 0px;
-margin-left: 150px;
-font-size: clamp(40px, 8vw, 70px);
-font-family:sans-serif;
-font-style: normal;
-font-weight: 700;
-color:rgba(255, 255, 255, 0.7);
-transition-delay: 300ms;
-
-}
-#description{
-    margin-top:-50px;
-    margin-left:150px; 
-    width: 40%;  
-    font-family:"Inconsolata";
-    font-style: normal;
-    font-weight: 400;  
-    font-size: 17px;
-    line-height: 24px;
-    display: block;
-    align-items: center;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255, 0.4);
-    transition-delay: 400ms;
+#resume:hover {
+  background-color: rgba(121, 177, 172, 0.1);
+  color: #64ffda;
 }
 
-#reachout{
-   margin-left:20vw;   
-    margin-top: 50px;
-    width:250px;
-    border: 1px solid#64ffda;
-    height: 60px;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color:#64ffda;
-    border-radius: 5px;
-    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+#Resume {
+  display: none;
+}
+nav ul li:hover {
+  color: #64ffda;
+  transition: 0.3s;
+}
+nav img {
+  margin-right: 400px;
+  width: 80px;
+  height: 80px;
+}
+
+#Logo {
+  color: white;
+  margin-right: 500px;
+  position: absolute;
+  top: 0;
+  font-family: 'Inconsolata';
+  cursor: pointer;
+}
+#surname {
+  color: #64ffda;
+}
+
+#greetings {
+  width: 294px;
+  height: 54.8px;
+  margin-left: 150px;
+  margin-top: 100px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  transition-delay: 100ms;
+  color: #64ffda;
+}
+#name {
+  width: 100%;
+
+  /* position: relative; */
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 150px;
+  font-size: clamp(40px, 8vw, 70px);
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  transition-delay: 200ms;
+  color: white;
+}
+
+#slogan {
+  margin-top: 0px;
+  margin-left: 150px;
+  font-size: clamp(40px, 8vw, 70px);
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  transition-delay: 300ms;
+}
+#description {
+  margin-top: -50px;
+  margin-left: 150px;
+  width: 40%;
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  display: block;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  transition-delay: 400ms;
+}
+
+#reachout {
+  margin-left: 20vw;
+  margin-top: 50px;
+  width: 250px;
+  border: 1px solid#64ffda;
+  height: 60px;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #64ffda;
+  border-radius: 5px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
 #reachout:hover {
-    background-color:rgba(121, 177, 172, 0.1);
-    color:#64ffda;
-    
+  background-color: rgba(121, 177, 172, 0.1);
+  color: #64ffda;
 }
-#socialmed_list{
-    margin-left:0.1vw;
-    position: fixed;
-    list-style: none;
-    justify-content: flex-start;
-    
+#socialmed_list {
+  margin-left: 0.1vw;
+  position: fixed;
+  list-style: none;
+  justify-content: flex-start;
 }
-.social_section svg:hover{
-    color:#64ffda;
-
+.social_section svg:hover {
+  color: #64ffda;
 }
 
- .email_section a:hover{
-    color:#64ffda;
+.email_section a:hover {
+  color: #64ffda;
 }
- .social_section svg{ 
-    position: relative;
-    top:150px;
-    padding-top:50px;
-    color: rgba(156, 153, 153, 0.6);
-    height:23px;
-    width:22.05px;
-    vertical-align: top;
-}
-
-.Intro{
-    padding-left: 80px;
-    width:1500px;
-    display: block;
-    justify-content: center;
-
-
+.social_section svg {
+  position: relative;
+  top: 150px;
+  padding-top: 50px;
+  color: rgba(156, 153, 153, 0.6);
+  height: 23px;
+  width: 22.05px;
+  vertical-align: top;
 }
 
-#titleAboutme{
-    margin-bottom: 100px;
-    padding-left: 100px;
-    padding-top: 100px;
-    top:120px;
-    color: white;
-    font-family: 'consolas';}
+.Intro {
+  padding-left: 80px;
+  width: 1500px;
+  display: block;
+  justify-content: center;
+}
 
-.AboutMe span{
-    font-family: 'consolas';
-    font-weight: 100;
-    color:#64ffda;
+#titleAboutme {
+  margin-bottom: 100px;
+  padding-left: 100px;
+  padding-top: 100px;
+  top: 120px;
+  color: white;
+  font-family: 'consolas';
 }
-.AboutMe{
-    /* position: absolute; */
-    margin-top:100px;
-    padding-left: 20px;
-    margin-left: 150px;
-}
-#story{
 
-    margin-top:10px;
-    padding-bottom: 25px;
+.AboutMe span {
+  font-family: 'consolas';
+  font-weight: 100;
+  color: #64ffda;
 }
-.AboutMe p{
-    /* padding-bottom: 20px;
+.AboutMe {
+  /* position: absolute; */
+  margin-top: 100px;
+  padding-left: 20px;
+  margin-left: 150px;
+}
+#story {
+  margin-top: 10px;
+  padding-bottom: 25px;
+}
+.AboutMe p {
+  /* padding-bottom: 20px;
     /* position: relative; */
-    /* left: 80px;
+  /* left: 80px;
     top: 310px;
     margin-top:50px;
     margin-left:120px;   */
-    position:static;
-    padding-top:2px;
-    margin-left: 100px;
-    width: 542px;
-    height:50px ; 
-    font-family:"Inconsolata";
-    font-style: normal;
-    font-weight: 100;  
-    font-size: 15px;
-    line-height:20px;
-    align-items: center;
-    letter-spacing: 0;
-    color: rgba(255, 255, 255, 0.4);
-    
- /* position: relative;
+  position: static;
+  padding-top: 2px;
+  margin-left: 100px;
+  width: 542px;
+  height: 50px;
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 20px;
+  align-items: center;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.4);
+
+  /* position: relative;
  left: 200px;
  top: 250px;
  width: 700px;
@@ -260,24 +250,23 @@ transition-delay: 300ms;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.5); */
 }
-#picture{
-    
-    width:400px;
-    height: 540px;
-    border-radius: 10px;
-    padding-top: 50px;
-    padding-right: 50px;
-    margin-left:60vw;
-    margin-bottom:600px;
-    margin-top: -1000px;
-    border-left: #0a192f;
-    border-top-left-radius: 0px;
+#picture {
+  width: 400px;
+  height: 540px;
+  border-radius: 10px;
+  padding-top: 50px;
+  padding-right: 50px;
+  margin-left: 60vw;
+  margin-bottom: 600px;
+  margin-top: -1000px;
+  border-left: #0a192f;
+  border-top-left-radius: 0px;
 }
 
-#mypicture{
-    margin-right:10px;
-    height:550px;
-    border-radius: 25px;
+#mypicture {
+  margin-right: 10px;
+  height: 550px;
+  border-radius: 25px;
 }
 /* .AboutMe .picture img{
     position: absolute;
@@ -293,412 +282,395 @@ transition-delay: 300ms;
     opacity: 100%;
 } */
 
-#skills{
-width:30px;
-color: rgba(255, 255, 255, 0.3);
-margin-left:110px;
-margin-top: -60px;
-margin-bottom: 450px;
-font-family:"Inconsolata";
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 30px;
-list-style-type:circle;
-
+#skills {
+  width: 30px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-left: 110px;
+  margin-top: -60px;
+  margin-bottom: 450px;
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 30px;
+  list-style-type: circle;
 }
-#get_in_touch{
-    width:250px;
-    position: relative;
-    right:30px;
-    color: white;
-    font-family: 'consolas';}
-#titleWhats_Next{
-    width:250px;
-    position: relative;
-    top: 10px;
-    right:40px;     
-    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    font-style: normal;
-    font-size: 20px;
-    color:#64ffda;
-    font-weight: 100px;
+#get_in_touch {
+  width: 250px;
+  position: relative;
+  right: 30px;
+  color: white;
+  font-family: 'consolas';
 }
-.contact{
-    margin-left:40vw;
-    padding-top:50px;
-   
-
+#titleWhats_Next {
+  width: 250px;
+  position: relative;
+  top: 10px;
+  right: 40px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-style: normal;
+  font-size: 20px;
+  color: #64ffda;
+  font-weight: 100px;
 }
-#contactform{
-border: 1px solid;
-border-color: #64ffda;
-border-radius: 10px;
-justify-content: center;
-height: 400px;
-padding-top: 50px;
-padding-left: 50px;
-width:25vw;
-margin-left:-9vw;
-
-
+.contact {
+  margin-left: 40vw;
+  padding-top: 50px;
+}
+#contactform {
+  border: 1px solid;
+  border-color: #64ffda;
+  border-radius: 10px;
+  justify-content: center;
+  height: 400px;
+  padding-top: 50px;
+  padding-left: 50px;
+  width: 25vw;
+  margin-left: -9vw;
 }
 
-
-.Contact_form .error{
-    color:red;
-    font-size:9px;
-    height: 13px;
+.Contact_form .error {
+  color: red;
+  font-size: 9px;
+  height: 13px;
 }
-#contactname{
-    color: white;
-position: relative;
-background:#0a192f;
-border: 1px solid rgba(255, 255, 255, 0.5);
-border-radius: 5px;
-width: 330.84px;
-height: 42.14px;
+#contactname {
+  color: white;
+  position: relative;
+  background: #0a192f;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  width: 330.84px;
+  height: 42.14px;
 }
-#Name_label{
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+#Name_label {
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
 
-    position: relative;
-    bottom:10px;
-    color: white;
- font-size:20px;   
+  position: relative;
+  bottom: 10px;
+  color: white;
+  font-size: 20px;
 }
-#email_label{
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+#email_label {
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
 
-    position: relative;
-    color: white;
-    font-size:20px;   
-    padding-bottom: 2px; 
+  position: relative;
+  color: white;
+  font-size: 20px;
+  /* padding-bottom: 2px; */
 }
-#Email{
-    color: white;  
-position: relative;
-
-background:#0a192f;
-border: 1px solid rgba(255, 255, 255, 0.5);
-border-radius: 5px;
-width: 330.84px;
-height: 42.14px;
-margin-bottom: 10px;
+#Email {
+  color: white;
+  position: relative;
+  top: 0px;
+  background: #0a192f;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  width: 330.84px;
+  height: 42.14px;
+  margin-bottom: 10px;
 }
-.messageinput{
-
-    position: relative;
-    bottom:0px;
-    right: 0px;
-  
-}
-
- #message_label{ 
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-
-    position: relative;
-    top:15px;
-    color: white;
-    font-size:20px;    
-}
-#message{
-      margin-bottom: 12px;
-    color: white;
-position: relative;
-top:20px;
-background:#0a192f;
-border: 1px solid rgba(255, 255, 255, 0.5);
-border-radius: 5px;
-width: 330.84px;
-height: 42.14px;
-
+.messageinput {
+  position: relative;
+  top: 10px;
+  right: 0px;
 }
 
-#SignIn_button{
-    left:60px;   
-    top:5px;;
-    padding: 2px 14px;
-    border: 2px solid #64ffda;
-    height: 50px;
-    width:200px;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #64ffda;
-    border-radius: 5px;
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-} 
-#submit_contactform{
-    position: relative;   
-    /* right:20px;
-     bottom:50px; */
-     margin-top: 30px;
-    padding: 2px 14px;
-    border: 2px solid #64ffda;
-    height: 50px;
-    width:200px;
-   
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    transition: .3s;
-   
-    font-family: inherit;
-    color: #64ffda;
-    border-radius: 5px;
-    font-family:"consolas";}
-#submit_SignUpform{
-    
-    padding: 2px 14px;
-    border: 2px solid #64ffda;
-    height: 50px;
-    width:10vw;
-    margin-left:5vw;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #64ffda;
-    border-radius: 5px;
-    font-family:'Consolas';
-}
-#submit_SignInform{
-    left:60px;   
-    top:60px;
-    padding: 2px 14px;
-    border: 2px solid #64ffda;
-    height: 50px;
-    width:200px;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #64ffda;
-    border-radius: 5px;
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-}
-#contact_description{
-    position: relative;
-    top:20px;
-    right:170px;
-    width:500px;
-    text-align: center;
-     line-height: 30px;
-    font-size: 13px;
-    padding-bottom: 10px;
-    font-weight: 200;
-    font-family:'inconsolata';
-    color: rgba(255, 255, 255, 0.5);
-}
-#SignUp_Form{
-background-color:#0a192f;
-border: 1px solid;
-border-color: #64ffda;
-border-radius: 10px;
-height: 600px;
-padding-top: 0px;
-padding-left: 50px;
-width:400px;
-margin-left:30vw; ;
+#message_label {
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
 
+  position: relative;
+  top: 1px;
+  color: white;
+  font-size: 20px;
 }
-#SignUpTitle{
+#message {
+  margin-bottom: 22px;
+  color: white;
+  position: relative;
+  top: 20px;
+  background: #0a192f;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  width: 330.84px;
+  height: 42.14px;
+}
+*/ #SignIn_button {
+  left: 60px;
+  top: 5px;
+  padding: 2px 14px;
+  border: 2px solid #64ffda;
+  height: 50px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #64ffda;
+  border-radius: 5px;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
+}
+#submit_contactform {
+  position: relative;
+  padding: 2px 14px;
+  left: 40px;
+  top: 25px;
+  border: 2px solid #64ffda;
+  height: 50px;
+  width: 200px;
 
-    position: relative;
-    left:110px;  
-    bottom:10px;   
-    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    font-style: normal;
-    font-size: 20px;
-    color:#64ffda;
-    font-weight: 100px;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
 
+  font-family: inherit;
+  color: #64ffda;
+  border-radius: 5px;
+  font-family: 'consolas';
 }
-#password_label{
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-    position: relative;
-    top:10px;
-    color: white;
-    font-size:20px;    
+#submit_SignUpform {
+  padding: 2px 14px;
+  border: 2px solid #64ffda;
+  height: 50px;
+  width: 10vw;
+  margin-left: 5vw;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #64ffda;
+  border-radius: 5px;
+  font-family: 'Consolas';
 }
-#password{
-color: white;
-position: relative;
-top:20px;
-background:#0a192f;
-border: 1px solid rgba(255, 255, 255, 0.5);
-border-radius: 5px;
-width: 330.84px;
-height: 42.14px;
-
+#submit_SignInform {
+  left: 60px;
+  top: 60px;
+  padding: 2px 14px;
+  border: 2px solid #64ffda;
+  height: 50px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #64ffda;
+  border-radius: 5px;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
 }
-#SignInTitle{
-
-    position: relative;
-    left:110px;  
-    bottom:10px;   
-    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    font-style: normal;
-    font-size: 20px;
-    color:#64ffda;
-    font-weight: 100px;
-
+#contact_description {
+  position: relative;
+  top: 20px;
+  right: 170px;
+  width: 500px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  font-weight: 200;
+  font-family: 'inconsolata';
+  color: rgba(255, 255, 255, 0.5);
 }
-#SignIn_Form{
-    background-color:#0a192f;
-border: 1px solid;
-border-color: #64ffda;
-border-radius: 10px;
-justify-content: center;
-height: 400px;
-padding-top: 50px;
-padding-left: 50px;
-width:400px;
-margin-left: 30vw;
+#SignUp_Form {
+  background-color: #0a192f;
+  border: 1px solid;
+  border-color: #64ffda;
+  border-radius: 10px;
+  height: 600px;
+  padding-top: 0px;
+  padding-left: 50px;
+  width: 400px;
+  margin-left: 30vw;
 }
-
-.About .email_section a{
-    position: fixed;
-    left:1450px;
-    bottom: 340px;
-    padding-top:150px;
-    height: 50px;
-    font-size:18px;
-    color: rgba(156, 153, 153, 0.6);
-    writing-mode: vertical-rl;
-    text-decoration: none;
-    font-family:"Inconsolata";
+#SignUpTitle {
+  position: relative;
+  left: 110px;
+  bottom: 10px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-style: normal;
+  font-size: 20px;
+  color: #64ffda;
+  font-weight: 100px;
 }
-.About .email_section a:hover{
-    color: #64ffda;
+#password_label {
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
+  position: relative;
+  top: 10px;
+  color: white;
+  font-size: 20px;
 }
-
-#linktowork svg{
-    padding-top: -320px;
+#password {
+  color: white;
+  position: relative;
+  top: 20px;
+  background: #0a192f;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  width: 330.84px;
+  height: 42.14px;
+}
+#SignInTitle {
+  position: relative;
+  left: 110px;
+  bottom: 10px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-style: normal;
+  font-size: 20px;
+  color: #64ffda;
+  font-weight: 100px;
+}
+#SignIn_Form {
+  background-color: #0a192f;
+  border: 1px solid;
+  border-color: #64ffda;
+  border-radius: 10px;
+  justify-content: center;
+  height: 400px;
+  padding-top: 50px;
+  padding-left: 50px;
+  width: 400px;
+  margin-left: 30vw;
 }
 
-#blogtitle{
-    position: relative;
-    font-size: 13px;
-    width:200px;
-    bottom: 70px;;
-    left: 240px;
+.About .email_section a {
+  position: fixed;
+  left: 1450px;
+  bottom: 340px;
+  padding-top: 150px;
+  height: 50px;
+  font-size: 18px;
+  color: rgba(156, 153, 153, 0.6);
+  writing-mode: vertical-rl;
+  text-decoration: none;
+  font-family: 'Inconsolata';
+}
+.About .email_section a:hover {
+  color: #64ffda;
 }
 
-.Blogs .Cards{
- width:75%;
- margin:auto;
- display:grid;
- grid-template-columns: repeat(3,1fr);
- grid-gap: 25px;
+#linktowork svg {
+  padding-top: -320px;
 }
-.card{
-    
-    border:1px solid #64ffda;
-    border-radius: 10px;
-    padding:10px;
-    width: 305px;
-    height: 255px;
-    background-color:#112240;
-    transition: all 0.5s;
-    box-shadow: 12px 17px 51px rgba(100, 255, 218,0.2)
+
+#blogtitle {
+  position: relative;
+  font-size: 13px;
+  width: 200px;
+  bottom: 70px;
+  left: 240px;
+}
+
+.Blogs .Cards {
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+}
+.card {
+  border: 1px solid #64ffda;
+  border-radius: 10px;
+  padding: 0px;
+  width: 305px;
+  height: 255px;
+  background-color: #112240;
+  transition: all 0.5s;
+  box-shadow: 12px 17px 51px rgba(100, 255, 218, 0.2);
 }
 .card:hover {
-    border: 1px solid white;
-    transform: scale(1.15);
-  }
-.card .card-content{
-    bottom:21px;
-    right:4px;
-    width:309px;
-    height: 264px;
-    border-radius: 10px;
+  border: 1px solid white;
+  transform: scale(1.15);
 }
-.card .card-content h2{
+.card .card-content {
+  bottom: 21px;
+  right: 4px;
+  width: 309px;
+  height: 264px;
+  border-radius: 10px;
+}
+.card .card-content h2 {
+  padding-left: 40px;
+  padding-top: -20px;
+  color: white;
+  width: 200px;
+  font-size: 15px;
+  font-family: 'Inconsolata';
+  font-weight: 200;
+}
+.card .card-content p {
+  color: white;
+  padding-left: 45px;
+  width: 200px;
+  font-size: 13px;
+  font-family: 'calibri', sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 200;
+  line-height: 15px;
+}
+.card .card-content li {
+  display: inline;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.5);
 
-    padding-left:40px;
-    padding-top:-20px;
-    color:white;
-    width:200px;
-    font-size: 15px;
-    font-family:'Inconsolata';
-    font-weight: 200;
+  right: 30px;
+  font-size: 10px;
+  font-family: 'consolas', 'sans-serif';
+  font-style: italic;
+  font-weight: 100;
 }
-.card .card-content p{
- 
-    color:white;
-    padding-left:45px;
-    width:200px;
-    font-size: 13px;
-    font-family:'calibri',sans-serif;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 200;
-    line-height: 15px;;
-
-}
-.card .card-content li{
-    display:inline;
-    padding:10px;
-    color: rgba(255, 255, 255, 0.5);
-    
-    right:30px;
-    font-size: 10px;
-    font-family:'consolas','sans-serif';
-    font-style: italic;
-    font-weight: 100;
-
-}
-#blog_Section_title{
-    position: relative;
-    left:600px;
-    font-family:"consolas";
-    color:white;
+#blog_Section_title {
+  position: relative;
+  left: 600px;
+  font-family: 'consolas';
+  color: white;
 }
 
-#Join{
-   margin-left:600px;
-   margin-top: 30px;
-    width:250px;
-    border: 2px solid#64ffda;
-    height: 60px;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color:#64ffda;
-    border-radius: 5px;
-    font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+#Join {
+  margin-left: 600px;
+  margin-top: 30px;
+  width: 250px;
+  border: 2px solid#64ffda;
+  height: 60px;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #64ffda;
+  border-radius: 5px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
 #Join:hover {
-    background-color:rgba(121, 177, 172, 0.1);
-    color:#64ffda;
+  background-color: rgba(121, 177, 172, 0.1);
+  color: #64ffda;
 }
-.blogcontent{
-
-    position: relative;
-    top:50px;
-    left:8vw;
-    width: 80%; 
-    background-color: rgba(17, 34, 64, 0.72);
-
+.blogcontent {
+  position: relative;
+  top: 50px;
+  left: 8vw;
+  width: 80%;
+  background-color: rgba(17, 34, 64, 0.72);
 }
 /* .content p{
     color:white;
@@ -707,159 +679,143 @@ margin-left: 30vw;
     margin-left:200px;
     padding:10px;   
 } */
-.blogcontent .title h2{
-    font-family: "Inconsolata";
-    color:white;
-    position: relative;
-    left:100px;
-    bottom:20px;
-    padding-top: 30px;
+.blogcontent .title h2 {
+  font-family: 'Inconsolata';
+  color: white;
+  position: relative;
+  left: 100px;
+  bottom: 20px;
+  padding-top: 30px;
 }
-.blogcontent .CoverImage img{
-    position: relative;
-    left:60px;
-    bottom:10px;
-    width:700px;
-
+.blogcontent .CoverImage img {
+  position: relative;
+  left: 60px;
+  bottom: 10px;
+  width: 700px;
 }
-.blogcontent .paragraphs p{
-    color:rgba(255, 255, 255, 0.7);
-font-family: "Inconsolata";
-    padding:10px;
-    position: relative;
-    
+.blogcontent .paragraphs p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Inconsolata';
+  padding: 10px;
+  position: relative;
 }
-.blogcontent .paragraphs img{
-    position: relative;
-    left:200px;
+.blogcontent .paragraphs img {
+  position: relative;
+  left: 200px;
 }
-.relatedarticles{
-position: relative;
-left:1100px;
-bottom:1650px;
-color:white;
+.relatedarticles {
+  position: relative;
+  left: 1100px;
+  bottom: 1650px;
+  color: white;
 }
-.relatedarticles li{ 
-      
-    font-size: 20px;
-    font-family: "calibri",sans-serif; 
-    position: relative;
-    right:60px;
-    padding-top: 10px;
+.relatedarticles li {
+  font-size: 20px;
+  font-family: 'calibri', sans-serif;
+  position: relative;
+  right: 60px;
+  padding-top: 10px;
 }
-.relatedarticles h2{
-    font-family: "calibri",sans-serif;   
+.relatedarticles h2 {
+  font-family: 'calibri', sans-serif;
 }
-.advert{
-    color:white;
-    position: relative;
-    left:1100px;
-    bottom:1550px;
-    }
-.advert h2{
-    font-family: "calibri",sans-serif;  
-
-
+.advert {
+  color: white;
+  position: relative;
+  left: 1100px;
+  bottom: 1550px;
 }
-.advert .advert-content{
-    background-color:#112240;
-width: 200px;
-height: 150px;
-color: rgba(17, 34, 64, 0.72);
-
-
+.advert h2 {
+  font-family: 'calibri', sans-serif;
+}
+.advert .advert-content {
+  background-color: #112240;
+  width: 200px;
+  height: 150px;
+  color: rgba(17, 34, 64, 0.72);
 }
 .postactivity {
-    display: flex;
-    gap: 10px;
-    position: relative;
-    top:50px;
-    left:10vw;
-    width:35vw;
-    height:4vw;
-    
+  display: flex;
+  gap: 10px;
+  position: relative;
+  top: 50px;
+  left: 10vw;
+  width: 35vw;
+  height: 4vw;
 }
-.postactivity img{
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top:10px;
-
+.postactivity img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 10px;
 }
-.UserComments{
-    padding:10px;
-    background-color:#112240;
-    width: 800px;
-    height: 90px;
-    position: relative;
-    left:150px;
-    bottom: 250px;
-    border-radius: 5px;
-   
-    border: 1px solid black ;
-    
+.UserComments {
+  padding: 10px;
+  background-color: #112240;
+  width: 800px;
+  height: 90px;
+  position: relative;
+  left: 150px;
+  bottom: 250px;
+  border-radius: 5px;
 
+  border: 1px solid black;
 }
 
-.UserComments p{
-    font-family: "consolas";
-color:white;
-position: relative;
-left:100px; 
-bottom:80px; 
-
-
+.UserComments p {
+  font-family: 'consolas';
+  color: white;
+  position: relative;
+  left: 100px;
+  bottom: 80px;
 }
-.UserComments img{
-    width:50px;
-    height:50px;
-    border-radius:50%;
+.UserComments img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
-.UserComments h4{
-    font-family: "consolas";
-    color:white;
- position: relative;
- left:100px;
- bottom:70px;
+.UserComments h4 {
+  font-family: 'consolas';
+  color: white;
+  position: relative;
+  left: 100px;
+  bottom: 70px;
 }
-.UserComments h5{
-    font-family: "calibri";
-    padding: 2px;
-    color:grey;
-    position: relative;
-    display: inline;
-    bottom:70px;
-    }
-.comment{
-    color: white;
-    font-size: 15px;;
-    font-family: "consolas";
-    margin-top: 380px;
-position: relative;
-left:150px;
-   bottom :300px;
+.UserComments h5 {
+  font-family: 'calibri';
+  padding: 2px;
+  color: grey;
+  position: relative;
+  display: inline;
+  bottom: 70px;
 }
-.comment button{
-    color:white;
-    font-family: "consolas";
-    border:1px solid #64ffda;
-    border-radius: 2px;
-   background-color:#0a192f;
-    width:70px;
-    padding:5px;
-    position:relative;
-    top:5px;
+.comment {
+  color: white;
+  font-size: 15px;
+  font-family: 'consolas';
+  margin-top: 380px;
+  position: relative;
+  left: 150px;
+  bottom: 300px;
 }
-#comment,#commentorname{
-    margin-bottom: 10px;
-    height:50px;
-    width:  500px;
-    border-radius: 5px ;
+.comment button {
+  color: white;
+  font-family: 'consolas';
+  border: 1px solid #64ffda;
+  border-radius: 2px;
+  background-color: #0a192f;
+  width: 70px;
+  padding: 5px;
+  position: relative;
+  top: 5px;
 }
-
-
-
-
+#comment,
+#commentorname {
+  margin-bottom: 10px;
+  height: 50px;
+  width: 500px;
+  border-radius: 5px;
+}
 
 /* .comments .comment{
         padding:30px;
@@ -875,7 +831,7 @@ left:150px;
     
     
     } */
-    /* .comments img{
+/* .comments img{
         width:50px;
         height:50px;
         border-radius:50%;
@@ -903,458 +859,421 @@ left:150px;
     }
     */
 
-.Blogs .folder svg{ 
-        color:#64ffda;
-        height: 40px;
-      
-        
-
-    }
-    .Blogs .link svg{
-        color:white;
-        height: 40px;
-        padding-bottom:20px;
-        margin-left:250px;
-        margin-top:-90px;
-
-    }
-    #BlogsSectionTitle{
-        color:white;
-        font-family:"Inconsolata";
-        margin-left: 200px;
-    }
-    .Blogs span{
-        position: relative;
-        font-family: 'consolas';
-        font-weight: 100;
-        color: #64ffda;
-    }
+.Blogs .folder svg {
+  color: #64ffda;
+  height: 40px;
+}
+.Blogs .link svg {
+  color: white;
+  height: 40px;
+  padding-bottom: 20px;
+  margin-left: 250px;
+  margin-top: -90px;
+}
+#BlogsSectionTitle {
+  color: white;
+  font-family: 'Inconsolata';
+  margin-left: 200px;
+}
+.Blogs span {
+  position: relative;
+  font-family: 'consolas';
+  font-weight: 100;
+  color: #64ffda;
+}
 .Join .login {
-    margin-left:630px;  
+  margin-left: 630px;
 }
-.Work{
-margin-bottom:50vh;
-}
-
-.Work .title h2{
-    font-size:18px;
-   margin-left:15vw;
-    padding-bottom: 50px;
-    color:white;
-    font-family: 'consolas';
-}
-.Work .title span{
-    font-family: 'consolas';
-    font-weight: 100;
-    color: #64ffda;
-}
-.Work .workimage img{   
-height: 430px;
-margin-left:15vw;
-
-
-}  
-.Work .workimage img:hover{
-    mix-blend-mode: normal;
-}     
-
-
-
-
-
-
-.Work .projectdescription p{
-background-color: #112240;
-border-radius: 5px;
-padding:25px;
-color:white;
-font-size:12px;
-font-family: 'inconsolata';
-font-style: normal;
-font-weight: 100;
-width:500px;
-margin-left: -2vw;
-
-
-}
-.Work .projectdescription a{
-color:#64ffda}
-
-.Work .links svg{
-    color: white;
-    padding-right:20px;
-    height: 30px;
-   
-  
-}
-.Work .links svg:hover{
-    color:#64ffda;
-
-}
-.Work .projectdetails{
-
-margin-left:60vw;
-margin-top:-25vw;
-
+.Work {
+  margin-bottom: 50vh;
 }
 
-.Work  .projectheading h2{
- margin-left: 20vw;
-color:white;
-font-size:1vw;
-font-family: 'Inconsolata';
-
+.Work .title h2 {
+  font-size: 18px;
+  margin-left: 15vw;
+  padding-bottom: 50px;
+  color: white;
+  font-family: 'consolas';
+}
+.Work .title span {
+  font-family: 'consolas';
+  font-weight: 100;
+  color: #64ffda;
+}
+.Work .workimage img {
+  height: 430px;
+  margin-left: 15vw;
+}
+.Work .workimage img:hover {
+  mix-blend-mode: normal;
 }
 
-.Work  .projectname h2{
-    margin-left: 20vw;
-    color:white;
-font-size:1vw;
-font-family: 'Inconsolata';
-   
-   }
-
-.Work .resources li{
-   display: inline;
-   padding: 1vw;
-   color: grey;
-   font-family:"consolas";
-   font-size:0.8vw;
+.Work .projectdescription p {
+  background-color: #112240;
+  border-radius: 5px;
+  padding: 25px;
+  color: white;
+  font-size: 12px;
+  font-family: 'inconsolata';
+  font-style: normal;
+  font-weight: 100;
+  width: 500px;
+  margin-left: -2vw;
+}
+.Work .projectdescription a {
+  color: #64ffda;
 }
 
-.experience .companyname{
-padding-bottom: 100px;
-margin-left: 25vw;
-
+.Work .links svg {
+  color: white;
+  padding-right: 20px;
+  height: 30px;
 }
-.experience .companyname li{
-    font-family: 'Inconsolata';
-    list-style-type: none;
-    padding-bottom:15px;
-    color:rgba(255, 255, 255, 0.7);
+.Work .links svg:hover {
+  color: #64ffda;
 }
-.experience .companyname li:hover{
-    color:#64ffda;
-}
-.experience .jobdetails{
-    margin-bottom: 200px;
-    margin-top:-350px;
-    margin-left:35vw;
-    }
-.experience .jobname h3{
-    font-family: 'consolas';
-    color:white;
-    padding-bottom: 240px;
-    margin-left:50px;
-    padding-bottom: 0;
-}
-.experience .jobname h5{
-    font-family: 'consolas';
-    font-weight: 100;
-    color:rgba(255, 255, 255, 0.5);
-    margin-left: 50px;
-
-
-}
-.experience .jobdescription li{
-    color:rgba(255, 255, 255, 0.5);
-    
-    width: 500px;
-    font-family: 'calibri';
-    font-weight: 100;
-    padding-bottom:10px;
-}
-.experience h2{
-    margin-left:20vw;
-    margin-bottom:20px;
-    font-family: 'consolas';
-    color: white;
-    
+.Work .projectdetails {
+  margin-left: 60vw;
+  margin-top: -25vw;
 }
 
-
-.footer footer{
-    width:300px;
-    text-align: center;
-    font-size:smalL;
-   margin: 0  auto;
-   
-}
-    /* DASHBOARD */
-
-.dashboard .searchkeywords{
-    padding-left: 50px;
-    position: relative;
-    bottom:828px;   
-    left:140px;
-    height: 50px;;
-    background-color: #21564D;
-    }
-.dashboard .searchkeywords input{
-    position: relative;
-    left:130px;
-    top:10px;
-    width: 200px;
-    height:20px;
-    border:1px solid white;
-    border-radius: 5px;;
-}
-.dashboard .searchkeywords img{
-position: relative;
-left:120px;
-top:14px;
-height:20px;
-width: 20px;
-
+.Work .projectheading h2 {
+  margin-left: 20vw;
+  color: white;
+  font-size: 1vw;
+  font-family: 'Inconsolata';
 }
 
-
- .dashboard .dashboardmenu li {
-    color: white;
-    
-    padding-top: 30px;
-    padding-bottom: 150px;
-    list-style-type:none;
-    font-family: 'calibri';
-    font-style:normal;
-    font-weight: 300;
-
- }
-.dashboard .dashboardmenu{
- margin:0px;
- position: relative;
- right:10px;
- bottom:15px;
-    height: 100%;
-    width:150px;
-    background-color: #21564D;
+.Work .projectname h2 {
+  margin-left: 20vw;
+  color: white;
+  font-size: 1vw;
+  font-family: 'Inconsolata';
 }
-.dashboard .counter{
-    position: relative;
-    left: 500px;
-    bottom:800px;
+
+.Work .resources li {
+  display: inline;
+  padding: 1vw;
+  color: grey;
+  font-family: 'consolas';
+  font-size: 0.8vw;
 }
-.counter .UserCount{
-    font-family: 'Calibri';
-    color: white;
-    position: relative;
-    right:100px;
-    top:20px;
-    width: 200px;
-    height:40px;
-    padding: 20px;
-    background-color: #21564D;
-    border-radius: 5px;
+
+.experience .companyname {
+  padding-bottom: 100px;
+  margin-left: 25vw;
+}
+.experience .companyname li {
+  font-family: 'Inconsolata';
+  list-style-type: none;
+  padding-bottom: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.experience .companyname li:hover {
+  color: #64ffda;
+}
+.experience .jobdetails {
+  margin-bottom: 200px;
+  margin-top: -350px;
+  margin-left: 35vw;
+}
+.experience .jobname h3 {
+  font-family: 'consolas';
+  color: white;
+  padding-bottom: 240px;
+  margin-left: 50px;
+  padding-bottom: 0;
+}
+.experience .jobname h5 {
+  font-family: 'consolas';
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 50px;
+}
+.experience .jobdescription li {
+  color: rgba(255, 255, 255, 0.5);
+
+  width: 500px;
+  font-family: 'calibri';
+  font-weight: 100;
+  padding-bottom: 10px;
+}
+.experience h2 {
+  margin-left: 20vw;
+  margin-bottom: 20px;
+  font-family: 'consolas';
+  color: white;
+}
+
+.footer footer {
+  width: 300px;
+  text-align: center;
+  font-size: smalL;
+  margin: 0 auto;
+}
+/* DASHBOARD */
+
+.dashboard .searchkeywords {
+  padding-left: 50px;
+  position: relative;
+  bottom: 828px;
+  left: 140px;
+  height: 50px;
+  background-color: #21564d;
+}
+.dashboard .searchkeywords input {
+  position: relative;
+  left: 130px;
+  top: 10px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.dashboard .searchkeywords img {
+  position: relative;
+  left: 120px;
+  top: 14px;
+  height: 20px;
+  width: 20px;
+}
+
+.dashboard .dashboardmenu li {
+  color: white;
+
+  padding-top: 30px;
+  padding-bottom: 150px;
+  list-style-type: none;
+  font-family: 'calibri';
+  font-style: normal;
+  font-weight: 300;
+}
+.dashboard .dashboardmenu {
+  margin: 0px;
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+  height: 100%;
+  width: 150px;
+  background-color: #21564d;
+}
+.dashboard .counter {
+  position: relative;
+  left: 500px;
+  bottom: 800px;
+}
+.counter .UserCount {
+  font-family: 'Calibri';
+  color: white;
+  position: relative;
+  right: 100px;
+  top: 20px;
+  width: 200px;
+  height: 40px;
+  padding: 20px;
+  background-color: #21564d;
+  border-radius: 5px;
 }
 
 .counter .BlogCount {
-    font-family: 'Calibri';
-    color: white;
-    position: relative;
-    left:450px;
-    bottom:59px;
-    width: 200px;
-    height:40px;
-    padding: 20px;
-    background-color: #21564D;
-    border-radius: 5px;
-
+  font-family: 'Calibri';
+  color: white;
+  position: relative;
+  left: 450px;
+  bottom: 59px;
+  width: 200px;
+  height: 40px;
+  padding: 20px;
+  background-color: #21564d;
+  border-radius: 5px;
 }
 
- .UserList{
-    position:relative;
-    left:400px;
-    bottom:870px;
-    border-radius:5px;
+.UserList {
+  position: relative;
+  left: 400px;
+  bottom: 870px;
+  border-radius: 5px;
 }
- .BlogList{
-    position:relative;
-    left:950px;
-    bottom:1030px;
-    border-radius:5px;
+.BlogList {
+  position: relative;
+  left: 950px;
+  bottom: 1030px;
+  border-radius: 5px;
 }
-.UserList input{
-    position: relative;
-    bottom:505px;
-    left:200px;
-    width: 200px;
-    height:20px;
-    border:1px solid white;
-    border-radius: 5px;;
+.UserList input {
+  position: relative;
+  bottom: 505px;
+  left: 200px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
-.BlogList input{
-    border:1px solid white;     
-    width: 200px;
-    height:20px;
-    border-radius: 3px;
-    position: relative;
-    bottom:385px;
-    right:90px;   
-}
-
-.dashboard .sitevisits{
-    height: 150px;
-    width:200px;
-    position: relative;
-    left:400px;
-    background-color: #21564D;
-    bottom:500px;
-    border-radius: 5px;;
+.BlogList input {
+  border: 1px solid white;
+  width: 200px;
+  height: 20px;
+  border-radius: 3px;
+  position: relative;
+  bottom: 385px;
+  right: 90px;
 }
 
-.dashboard .sitevisits p{
-    text-align: center;
-    position: relative;
-    top:50px;
-    color: white;
-    font-family: "calibri";
-}
-.dashboard .advertclicks{
-    height: 150px;
-    width:200px;
-    position: relative;
-    left:950px;
-    background-color: #21564D;
-    bottom:670px;
-    border-radius: 5px;;
+.dashboard .sitevisits {
+  height: 150px;
+  width: 200px;
+  position: relative;
+  left: 400px;
+  background-color: #21564d;
+  bottom: 500px;
+  border-radius: 5px;
 }
 
-.dashboard .advertclicks p{
-    text-align: center;
-    position: relative;
-    top:50px;
-    color: white;
-    font-family: "calibri";
+.dashboard .sitevisits p {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  color: white;
+  font-family: 'calibri';
 }
-.dashboard .sitevisitstracker{
-    height:0px;
-    width:300px;
-    position: relative;
-    bottom:750px;
-    left: 400px;;
-}
-.dashboard .sitevisitstracker img{
-    height:200px;
-    width:700px;
+.dashboard .advertclicks {
+  height: 150px;
+  width: 200px;
+  position: relative;
+  left: 950px;
+  background-color: #21564d;
+  bottom: 670px;
+  border-radius: 5px;
 }
 
-
-
+.dashboard .advertclicks p {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  color: white;
+  font-family: 'calibri';
+}
+.dashboard .sitevisitstracker {
+  height: 0px;
+  width: 300px;
+  position: relative;
+  bottom: 750px;
+  left: 400px;
+}
+.dashboard .sitevisitstracker img {
+  height: 200px;
+  width: 700px;
+}
 
 /* Add Blog */
 
-
-.blog .searchkeywords{
-    padding-left: 50px;
-    position: relative;
-    bottom:828px;   
-    left:140px;
-    height: 50px;;
-    background-color: #21564D;
-    }
-.blog .searchkeywords input{
-    position: relative;
-    left:130px;
-    top:10px;
-    width: 200px;
-    height:20px;
-    border:1px solid white;
-    border-radius: 5px;;
+.blog .searchkeywords {
+  padding-left: 50px;
+  position: relative;
+  bottom: 828px;
+  left: 140px;
+  height: 50px;
+  background-color: #21564d;
 }
-.blog .searchkeywords img{
-position: relative;
-left:120px;
-top:14px;
-height:20px;
-width: 20px;
-
+.blog .searchkeywords input {
+  position: relative;
+  left: 130px;
+  top: 10px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.blog .searchkeywords img {
+  position: relative;
+  left: 120px;
+  top: 14px;
+  height: 20px;
+  width: 20px;
 }
 
+.blog .dashboardmenu li {
+  color: white;
 
- .blog .dashboardmenu li {
-    color: white;
-    
-    padding-top: 30px;
-    padding-bottom: 150px;
-    list-style-type:none;
-    font-family: 'calibri';
-    font-style:normal;
-    font-weight: 300;
-
- }
-.blog .dashboardmenu{
- margin:0px;
- position: relative;
- right:10px;
- bottom:15px;
-    height: 100%;
-    width:150px;
-    background-color: #21564D;
+  padding-top: 30px;
+  padding-bottom: 150px;
+  list-style-type: none;
+  font-family: 'calibri';
+  font-style: normal;
+  font-weight: 300;
+}
+.blog .dashboardmenu {
+  margin: 0px;
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+  height: 100%;
+  width: 150px;
+  background-color: #21564d;
 }
 
-.blog .blog_title{
-position: relative;
-margin-top:-830px;
+.blog .blog_title {
+  position: relative;
+  margin-top: -830px;
+}
+.blog .blog_title label {
+  font-family: 'calibri';
+  color: white;
+  font-size: 20px;
+  position: relative;
+  left: 300px;
+  top: 100px;
+}
+#blog_title {
+  position: relative;
+  top: 100px;
+  left: 500px;
+  background-color: #0a192f;
+  border: 1px solid #64ffda;
+  border-radius: 5px;
+  height: 40px;
+  width: 400px;
+  color: white;
+}
 
+.blog .content label {
+  position: relative;
+  top: 150px;
+  font-family: 'calibri';
+  color: white;
+  font-size: 20px;
+  position: relative;
+  left: 300px;
 }
-.blog .blog_title label{
-    font-family: "calibri";
-color: white;
-font-size: 20px;
-position: relative;
-left:300px;
-top:100px;
+.blog .content textarea {
+  position: relative;
+  top: 300px;
+  left: 450px;
+  height: 250px;
+  width: 500px;
 }
-#blog_title{
-    position: relative;
-    top:100px;
-    left: 500px;
-    background-color:#0a192f;
-    border:1px solid #64ffda;
-    border-radius: 5px;
-    height: 40px;
-    width:400px;
-    color:white;
+#publish_blog {
+  left: 700px;
+  top: 350px;
+  padding: 2px 14px;
+  border: 2px solid #64ffda;
+  height: 50px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #64ffda;
+  border-radius: 5px;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
 }
 
-.blog .content label{
-position: relative;
-top:150px;
-font-family: "calibri";
-color: white;
-font-size: 20px;
-position: relative;
-left:300px;
-}
-.blog .content textarea{
-    position: relative;
-    top:300px;  
-    left:450px;
-    height:250px;
-    width:500px;
-}
-#publish_blog{
-    left:700px;   
-    top:350px;
-    padding: 2px 14px;
-    border: 2px solid #64ffda;
-    height: 50px;
-    width:200px;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #64ffda;
-    border-radius: 5px;
-    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-}
-   
-
-    /* comments */
+/* comments */
 
 /* .searchcomment{
     position: relative;
@@ -1372,1007 +1291,843 @@ left:300px;
     top:10px;
 } */
 
-
-
-.CommentsPageMenu .searchkeywords{
-    padding-left: 50px;
-    position: relative;
-    bottom:828px;   
-    left:140px;
-    height: 50px;;
-    background-color: #21564D;
-    }
-.CommentsPageMenu .searchkeywords input{
-    position: relative;
-    left:130px;
-    top:10px;
-    width: 200px;
-    height:20px;
-    border:1px solid white;
-    border-radius: 5px;;
+.CommentsPageMenu .searchkeywords {
+  padding-left: 50px;
+  position: relative;
+  bottom: 828px;
+  left: 140px;
+  height: 50px;
+  background-color: #21564d;
 }
-.CommentsPageMenu .searchkeywords img{
-position: relative;
-left:120px;
-top:14px;
-height:20px;
-width: 20px;
-
+.CommentsPageMenu .searchkeywords input {
+  position: relative;
+  left: 130px;
+  top: 10px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.CommentsPageMenu .searchkeywords img {
+  position: relative;
+  left: 120px;
+  top: 14px;
+  height: 20px;
+  width: 20px;
 }
 
+.CommentsPageMenu .dashboardmenu li {
+  color: white;
 
- .CommentsPageMenu .dashboardmenu li {
-    color: white;
-    
-    padding-top: 30px;
-    padding-bottom: 150px;
-    list-style-type:none;
-    font-family: 'calibri';
-    font-style:normal;
-    font-weight: 300;
-
- }
-.CommentsPageMenu .dashboardmenu{
- margin:0px;
- position: relative;
- right:10px;
- bottom:15px;
-    height: 100%;
-    width:150px;
-    background-color: #21564D;
+  padding-top: 30px;
+  padding-bottom: 150px;
+  list-style-type: none;
+  font-family: 'calibri';
+  font-style: normal;
+  font-weight: 300;
+}
+.CommentsPageMenu .dashboardmenu {
+  margin: 0px;
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+  height: 100%;
+  width: 150px;
+  background-color: #21564d;
 }
 
-
-
-.menu{
-    background-color: rgba(33, 86, 77, 1);
-    height: 80px;
-    width:1022px;
-    position: relative;
-    left:150px;
-    margin-left: 200px;
-    margin-bottom:0px;
-    margin-top: -750px;
-    bottom:200px;
+.menu {
+  background-color: rgba(33, 86, 77, 1);
+  height: 80px;
+  width: 1022px;
+  position: relative;
+  left: 150px;
+  margin-left: 200px;
+  margin-bottom: 0px;
+  margin-top: -750px;
+  bottom: 200px;
 }
-.menu p{
-    display: inline;
-    padding-right:210px;
-    position: relative;
-    left:90px;
-    top:30px;
-    color: white;
-    font-family: "calibri";
-
-  
+.menu p {
+  display: inline;
+  padding-right: 210px;
+  position: relative;
+  left: 90px;
+  top: 30px;
+  color: white;
+  font-family: 'calibri';
 }
-.Comments .commentlist  {
-    background-color: rgba(217, 217, 217,2 );
-   position: relative;
-    left:50px;
-    top:50px;
-    height: 50px;
-    width: 1022px;
-    margin-left: 200px;
+.Comments .commentlist {
+  background-color: rgba(217, 217, 217, 2);
+  position: relative;
+  left: 50px;
+  top: 50px;
+  height: 50px;
+  width: 1022px;
+  margin-left: 200px;
 }
-.Comments .commentlist p{
-    display: inline;
-    padding-right:180px;
-    position: relative;
-    top:0px;
-    left:10px;
-    }
-    .Comments .commentlist img{
-        height:30px;
-        position: relative;
-        top:10px;
-        left:20px;
-        padding-right: 30px;
-    }
-
-
-        /* Messages */
-
-
-        .searchmessage{
-            position: relative;
-            left:50px;
-        }
-        .searchmessage input{
-            width:250px;
-            height:25px;
-            border: 1px solid white;
-            border-radius:8px;
-        }
-        .searchmessage img{
-        
-            position: relative;
-            top:10px;
-        }
-        .menu{
-            background-color: rgba(33, 86, 77, 1);
-            
-            height: 80px;
-            width:1022px;
-            position: relative;
-            left:50px;
-            top:50px;
-        }
-        .menu p{
-            display: inline;
-            padding-right:210px;
-            position: relative;
-            left:90px;
-            top:30px;
-            color: white;
-            font-family: "calibri";
-        
-          
-        }
-        .Messages .messagelist  {
-            background-color: rgba(217, 217, 217,2 );
-           position: relative;
-            left:50px;
-            top:50px;
-            height: 50px;
-            width: 1022px;
-        }
-        .Messages .messagelist p{
-            display: inline;
-            padding-right:180px;
-            position: relative;
-            top:0px;
-            left:10px;
-            }
-            .Messages .messagelist img{
-                height:130px;
-                position: relative;
-                top:10px;
-                left:20px;
-                padding-right: 30px;
-            }
-        
-
-            .NavBar .HamburgerMenu svg{
-                
-                fill:#64ffda;
-            
-            }
-            
-        .NavBar .show-menu{     
-            display: none;
-        }
-        .NavBar .HamburgerMenu{
-            display: none;
-        }
-
-
-
-
-
-/* for small devices */
-
-
- 
-  @media screen and  (max-width:600px) {
- html,body{
-    overflow-x:hidden ;
+.Comments .commentlist p {
+  display: inline;
+  padding-right: 180px;
+  position: relative;
+  top: 0px;
+  left: 10px;
+}
+.Comments .commentlist img {
+  height: 30px;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  padding-right: 30px;
 }
 
-nav{
-        height:12vh;
-        backdrop-filter: blur(1px);
-       
-    }
-    #Logo{
-       font-size: 18px;
-       width:10px;
-    }
-    .NavBar button{
-display: none;    }
+/* Messages */
 
-   .NavBar .HamburgerMenu{
-    display: block;
-    position:absolute;
-    left:90vw;
-    top:0.5vh;
-   }
-
-.nav-menu {
-    height:100vh;
-    position: fixed;
-display: none;
-background-color: rgba(17, 34, 64, 0.98);
-
+.searchmessage {
+  position: relative;
+  left: 50px;
 }
-.nav-menu.show-menu {
-    
-    padding: 0;
-    display:list-item;
-    width: 100vw;
-    height: 100vh;
-    margin-right:150px;
-    margin-left: -10px;
+.searchmessage input {
+  width: 250px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+.searchmessage img {
+  position: relative;
+  top: 10px;
+}
+.menu {
+  background-color: rgba(33, 86, 77, 1);
 
+  height: 80px;
+  width: 1022px;
+  position: relative;
+  left: 50px;
+  top: 50px;
 }
-.nav-menu.show-menu li{
-    width:100vw;
-    color: antiquewhite;
-    position: relative;
-    padding-top: 80px; 
+.menu p {
+  display: inline;
+  padding-right: 210px;
+  position: relative;
+  left: 90px;
+  top: 30px;
+  color: white;
+  font-family: 'calibri';
+}
+.Messages .messagelist {
+  background-color: rgba(217, 217, 217, 2);
+  position: relative;
+  left: 50px;
+  top: 50px;
+  height: 50px;
+  width: 1022px;
+}
+.Messages .messagelist p {
+  display: inline;
+  padding-right: 180px;
+  position: relative;
+  top: 0px;
+  left: 10px;
+}
+.Messages .messagelist img {
+  height: 130px;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  padding-right: 30px;
+}
 
-}
-.HamburgerMenu.active .bar:nth-child(1){
-  transform: rotate(45deg) translate(0,-40px);
-}
-.HamburgerMenu.active .bar:nth-child(2){
-  opacity: 0;
-}
-.HamburgerMenu.active .bar:nth-child(3){
-  transform: rotate(-45deg) translate(0, -8px);
+.NavBar .HamburgerMenu svg {
+  fill: #64ffda;
 }
 
-
-.social_section ul{
+.NavBar .show-menu {
+  display: none;
+}
+.NavBar .HamburgerMenu {
   display: none;
 }
 
-.About .Intro{
-padding-left: 0;
-width:80vw;
-align-items: center;
-}
-#greetings{
-    padding-top: 100PX;;
-    font-size:5vw;
-    margin-left:8vw;
-    
-}
-#name{
-    font-size:8vw;
-    margin-left:8vw;
-}
-#slogan{
-    font-size: 6vw;
-    margin-left:8vw;   
-}
+/* for small devices */
 
-#description{
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    height: 12vh;
+    backdrop-filter: blur(1px);
+  }
+  #Logo {
+    font-size: 18px;
+    width: 10px;
+  }
+  .NavBar button {
+    display: none;
+  }
+
+  .NavBar .HamburgerMenu {
+    display: block;
+    position: absolute;
+    left: 90vw;
+    top: 0.5vh;
+  }
+
+  .nav-menu {
+    height: 100vh;
+    position: fixed;
+    display: none;
+    background-color: rgba(17, 34, 64, 0.98);
+  }
+  .nav-menu.show-menu {
+    padding: 0;
+    display: list-item;
+    width: 100vw;
+    height: 100vh;
+    margin-right: 150px;
+    margin-left: -10px;
+  }
+  .nav-menu.show-menu li {
+    width: 100vw;
+    color: antiquewhite;
+    position: relative;
+    padding-top: 80px;
+  }
+  .HamburgerMenu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(0, -40px);
+  }
+  .HamburgerMenu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .HamburgerMenu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -8px);
+  }
+
+  .social_section ul {
+    display: none;
+  }
+
+  .About .Intro {
+    padding-left: 0;
+    width: 80vw;
+    align-items: center;
+  }
+  #greetings {
+    padding-top: 100px;
+    font-size: 5vw;
+    margin-left: 8vw;
+  }
+  #name {
+    font-size: 8vw;
+    margin-left: 8vw;
+  }
+  #slogan {
+    font-size: 6vw;
+    margin-left: 8vw;
+  }
+
+  #description {
     font-size: 3vw;
-    margin-left:8vw;
-    padding-top:40px;
+    margin-left: 8vw;
+    padding-top: 40px;
     width: 70%;
     height: 50%;
-}
-.reach_out {
-    margin-left:-10vw;
+  }
+  .reach_out {
+    margin-left: -10vw;
     padding-left: 0;
-}
+  }
 
+  .AboutMe {
+    margin-left: 0vw;
+  }
 
-.AboutMe{
-    margin-left:0vw;
-}
-
-#story p{
+  #story p {
     font-size: 3vw;
-width: 80%;
-height:11vh;
-margin-left: 5vw;
-left:5px;
-line-height:20px;
-
-}
-#skills{
+    width: 80%;
+    height: 11vh;
+    margin-left: 5vw;
+    left: 5px;
+    line-height: 20px;
+  }
+  #skills {
     margin-left: 2vw;
-    padding-top:12px;
-}
+    padding-top: 12px;
+  }
 
-#mypicture {
-    height:50vh;
-    width:80vw;
+  #mypicture {
+    height: 50vh;
+    width: 80vw;
     padding-top: 600px;
     margin-left: -50vw;
     border: none;
     border-radius: 0px;
-}
-#picture{
-border: none;
-}
+  }
+  #picture {
+    border: none;
+  }
 
-/* Experience */
+  /* Experience */
 
-
-
-#WhereIveworked{
+  #WhereIveworked {
     font-family: 'consolas';
-margin-left:15vw;
+    margin-left: 15vw;
+  }
+  .experience .companyname {
+    margin-left: 1vw;
+  }
+  .experience .jobdetails li {
+    font-size: 10px;
+    width: 50vw;
+  }
 
-}
-.experience .companyname{
-    margin-left:1vw;
-}
-.experience .jobdetails li{
-    font-size:10px;
-    width:50vw;
-    
-}
+  .experience .jobdetails {
+    margin-left: 30vw;
+  }
 
-.experience .jobdetails{
-    margin-left:30vw;
+  /* Blogs */
+  #BlogsSectionTitle {
+    font-family: 'consolas';
+    margin-left: 0vw;
+  }
 
-}
+  .Blogs .Cards {
+    justify-self: center;
+    width: 100vw;
+    margin: 5vw;
+    overflow-x: scroll;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    box-shadow: none;
+  }
+  #Join {
+    margin-left: 10vw;
+  }
 
+  .Join .login {
+    margin-left: 12vw;
+  }
 
-        /* Blogs */
-    #BlogsSectionTitle{
-        font-family: 'consolas';
-        margin-left:0vw;
-    }
-
-        .Blogs .Cards {
-            justify-self: center;
-            width:100vw;
-            margin:5vw;
-            overflow-x: scroll;
-            grid-template-columns: repeat(1,1fr);
-        
-        }
-        .card{
-            box-shadow: none;
-        }
-        #Join{
-            margin-left: 10vw;
-        }
-
-        .Join .login{
-            margin-left: 12vw;
-        }
-
-        
-
-.blogcontent{
-    width:90vw;
+  .blogcontent {
+    width: 90vw;
     left: 0px;
-    
-}
-.blogcontent p{
+  }
+  .blogcontent p {
     width: 90%;
     font-size: 13px;
     position: relative;
-   
-}
-.blogcontent .paragraphs {
-
-position: relative;
-left:1px;
-
-
-}
-.blogcontent .paragraphs img{
-    height:200px ;
+  }
+  .blogcontent .paragraphs {
+    position: relative;
+    left: 1px;
+  }
+  .blogcontent .paragraphs img {
+    height: 200px;
     width: 90%;
     position: relative;
-    left:20px;
-}
-.blogcontent .CoverImage img{
+    left: 20px;
+  }
+  .blogcontent .CoverImage img {
     height: 200px;
-    width:90%;
+    width: 90%;
     position: relative;
     left: 20px;
-}
-.blogcontent .title{
-font-size: 10px;
-width:250px;
-position: relative;
-right:50px;  
-}
-.comment{
+  }
+  .blogcontent .title {
+    font-size: 10px;
+    width: 250px;
     position: relative;
-    left:0px;   
-}
-.UserComments{
+    right: 50px;
+  }
+  .comment {
     position: relative;
-    left:0px;
+    left: 0px;
+  }
+  .UserComments {
+    position: relative;
+    left: 0px;
     width: 95%;
-}
+  }
 
-.postactivity{
+  .postactivity {
     margin-left: -10vw;
-}
- /* Work Section */
+  }
+  /* Work Section */
 
- .Work .workimage img{
-    margin-left:2vw;
-    width:60vw;
+  .Work .workimage img {
+    margin-left: 2vw;
+    width: 60vw;
     height: 30vh;
- }
-.Work .projectdetails .projectdescription p{
-    padding:5px;
-    height:6vh;
+  }
+  .Work .projectdetails .projectdescription p {
+    padding: 5px;
+    height: 6vh;
     width: 35vw;
-    margin-left:0vw;
+    margin-left: 0vw;
 
-    font-size:6.5px;
+    font-size: 6.5px;
+  }
+  .Work .projectdetails {
+    margin-top: -55vw;
+  }
 
-
-}
-.Work .projectdetails{
-    margin-top:-55vw;
- 
-}
-
-.Work .projectdetails .projectheading h2{
+  .Work .projectdetails .projectheading h2 {
     font-size: 10px;
     width: 100px;
-    margin-left:65vw;
-}
+    margin-left: 65vw;
+  }
 
-.Work .projectdetails .projectname h2{
+  .Work .projectdetails .projectname h2 {
     font-size: 10px;
     width: 100px;
-    margin-left:65vw;
-}
+    margin-left: 65vw;
+  }
 
-
-.Work .projectdetails .resources li{
+  .Work .projectdetails .resources li {
     list-style-type: none;
     display: list-item;
     margin-left: -10vw;
-    padding-left:4vw;
-    font-size:6px
-
-    
-}
-.Work .links{
+    padding-left: 4vw;
+    font-size: 6px;
+  }
+  .Work .links {
     height: 5px;
-    margin-left:15vw;
+    margin-left: 15vw;
     margin-top: -8vh;
-
-}
-.Work .links svg{
-    padding:2px;
+  }
+  .Work .links svg {
+    padding: 2px;
     height: 20px;
-}
-.Work .projectdetails .projectheading{
-    margin-left:-52vw;
-}
-.Work .projectdetails .projectname{
+  }
+  .Work .projectdetails .projectheading {
     margin-left: -52vw;
+  }
+  .Work .projectdetails .projectname {
+    margin-left: -52vw;
+  }
+
+  /* contact */
+
+  .contact .contact_titles {
+    margin-left: -12vw;
+  }
+  .contact {
+    margin-left: 40vw;
+    padding-top: 50px;
+  }
+
+  #contactform {
+    width: 75vw;
+    margin-left: -37vw;
+    margin-top: 8vh;
+  }
+  #contactname,
+  #Email,
+  #message,
+  #password {
+    width: 60vw;
+    position: relative;
+    right: 10px;
+    margin-left: 5vw;
+    font-family: 'inconsolata';
+  }
+  #contact_description {
+    font-size: 11px;
+  }
+  #submit_form {
+    width: 40vw;
+    margin-left: -10vw;
+  }
+
+  #Resume {
+    display: block;
+  }
+  .SignUp {
+    height: 100vh;
+  }
+
+  #SignUpTitle {
+    color: #64ffda;
+    font-family: calibri;
+    position: relative;
+    left: 0px;
+  }
+  #SignUp_Form {
+    width: 70vw;
+
+    margin-left: 8vw;
+    margin-top: 15vh;
+  }
+  #contactname,
+  #Email,
+  #password {
+    width: 60vw;
+    position: relative;
+    right: 30px;
+  }
+
+  #submit_contactform {
+    width: 40vw;
+    margin-left: -10vw;
+  }
+
+  .SignIn {
+    height: 100vh;
+  }
+
+  #SignInTitle {
+    color: #64ffda;
+    font-family: calibri;
+  }
+  #SignIn_Form {
+    width: 70vw;
+
+    margin-left: 8vw;
+    margin-top: 15vh;
+  }
+
+  #SignIn_button {
+    width: 40vw;
+    margin-left: -10vw;
+  }
+
+  #submit_SignUpform {
+    width: 30vw;
+    margin-left: 15vw;
+  }
+
+  #submit_SignInform {
+    width: 30vw;
+    margin-left: 0vw;
+  }
 }
 
-/* contact */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
-    .contact .contact_titles{
-        margin-left:-12vw;
-    }
-    .contact{
-    margin-left:40vw;
-    padding-top:50px;
-   
-}
+  nav {
+    height: 12vh;
+    backdrop-filter: blur(1px);
+  }
+  #Logo {
+    font-size: 18px;
+    width: 10px;
+  }
+  .NavBar button {
+    display: none;
+  }
 
+  .NavBar .HamburgerMenu {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: 90vw;
+    top: 0.5vh;
+  }
 
-    #contactform{
-        width:75vw;
-        margin-left:-37vw;
-        margin-top: 8vh;
-    }
-    #contactname , #Email , #message,#password{
-        width:60vw;
-        position: relative;;
-        right:10px;
-        margin-left:5vw;
-        font-family: "inconsolata";
-    }
-    #contact_description{
-        font-size: 11px;
-
-    }
-    #submit_form{
-        width:40vw;
-        margin-left:-10vw;
-
-    }
-
-
-
-        #Resume{
-            display: block;
-        }
-        .SignUp{
-            height:100vh;        }
-
-        #SignUpTitle{
-            color: #64ffda;
-            font-family: calibri ;
-            position: relative;
-            left:0px;
-
-        }
-        #SignUp_Form{
-            width:70vw;
-            
-            margin-left:8vw;
-            margin-top:15vh;
-        }
-        #contactname , #Email , #password{
-            width:60vw;
-            position: relative;;
-            right:30px;
-        }
-    
-        #submit_contactform{
-            width:40vw;
-            margin-left:-10vw;
-    
-        }
-    
-        .SignIn{
-            height:100vh;        }
-
-        #SignInTitle{
-            color: #64ffda;
-            font-family: calibri ;
-
-        }
-        #SignIn_Form{
-            width:70vw;
-            
-            margin-left:8vw;
-            margin-top:15vh;
-        }
-        
-    
-        #SignIn_button{
-            width:40vw;
-            margin-left:-10vw;
-    
-        }
-
-        #submit_SignUpform{
-            width:30vw;
-            margin-left: 15vw;
-        }
-
-        #submit_SignInform{
-            width:30vw;
-            margin-left:0vw;
-        }
-
-
-
-}      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width:600px) and (max-width:1024px) {
-    html,body{
-        overflow-x:hidden ;
-    }
-    
-    nav{
-            height:12vh;
-            backdrop-filter: blur(1px);
-           
-        }
-    #Logo{
-           font-size: 18px;
-           width:10px;
-        }
-     .NavBar button{
-    display: none;    }
-    
-       .NavBar .HamburgerMenu{
-        cursor: pointer;
-        display: block;
-        position:absolute;
-        left:90vw;
-        top:0.5vh;
-       }
-    
-    .nav-menu {
-        height:90vh;
-        position: fixed;
+  .nav-menu {
+    height: 90vh;
+    position: fixed;
     display: none;
     background-color: rgba(17, 34, 64, 0.98);
-    
-    }
-    .nav-menu.show-menu {
-        
-        padding: 0;
-        display:list-item;
-        width: 100vw;
-        height: 100vh;
-        margin-right:150px;
-        margin-left: -10px;
-    
-    }
-    .nav-menu.show-menu li{
-        width:100vw;
-        color: antiquewhite;
-        position: relative;
-        padding-top: 100px; 
-    
-    }
-        .HamburgerMenu.active .bar:nth-child(1){
-        transform: rotate(45deg) translate(0,8px);
-        }
-        .HamburgerMenu.active .bar:nth-child(2){
-    display: none;    
-}
-        .HamburgerMenu.active .bar:nth-child(3){
-        transform: rotate(-45deg) translate(0, -8px);
-        }
-    
-    
-    .social_section ul{
-      display: none;
-    }
-    
-    .About .Intro{
+  }
+  .nav-menu.show-menu {
+    padding: 0;
+    display: list-item;
+    width: 100vw;
+    height: 100vh;
+    margin-right: 150px;
+    margin-left: -10px;
+  }
+  .nav-menu.show-menu li {
+    width: 100vw;
+    color: antiquewhite;
+    position: relative;
+    padding-top: 100px;
+  }
+  .HamburgerMenu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(0, 8px);
+  }
+  .HamburgerMenu.active .bar:nth-child(2) {
+    display: none;
+  }
+  .HamburgerMenu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -8px);
+  }
+
+  .social_section ul {
+    display: none;
+  }
+
+  .About .Intro {
     padding-left: 0;
-    width:80vw;
-  
-    }
-    #greetings{
-        padding-top: 100PX;;
-        font-size:4vw;
-        margin-left:8vw;
-        
-    }
-    #name{
-        font-size:8vw;
-        margin-left:8vw;
-    }
-    #slogan{
-        font-size: 6vw;
-        margin-left:8vw;   
-    }
-    
-    #description{
-        font-size: 2vw;
-        margin-left:8vw;
-        padding-top:40px;
-        width: 70%;
-        height: 50%;
-    }
-    .reach_out {
-        margin-left:-10vw;
-        padding-left: 0;
-    }
-    
-    
-    .AboutMe{
-        margin-left:0vw;
-    }
-    #story p{
-        width: 80%;
+    width: 80vw;
+  }
+  #greetings {
+    padding-top: 100px;
+    font-size: 4vw;
+    margin-left: 8vw;
+  }
+  #name {
+    font-size: 8vw;
+    margin-left: 8vw;
+  }
+  #slogan {
+    font-size: 6vw;
+    margin-left: 8vw;
+  }
+
+  #description {
+    font-size: 2vw;
+    margin-left: 8vw;
+    padding-top: 40px;
+    width: 70%;
+    height: 50%;
+  }
+  .reach_out {
+    margin-left: -10vw;
+    padding-left: 0;
+  }
+
+  .AboutMe {
+    margin-left: 0vw;
+  }
+  #story p {
+    width: 80%;
     margin-left: 5vw;
-    left:5px;
-    line-height:3vh;
-    
-    }
-    #skills{
-        margin-left: 2vw;
-        padding-top:12px;
-    }
-    
-    #mypicture {
-        height:50vh;
-        width:80vw;
-        padding-top: 500px;
-        margin-left: -50vw;
-        border-radius: 0px;
-        
-    }
-    #picture{
+    left: 5px;
+    line-height: 3vh;
+  }
+  #skills {
+    margin-left: 2vw;
+    padding-top: 12px;
+  }
+
+  #mypicture {
+    height: 50vh;
+    width: 80vw;
+    padding-top: 500px;
+    margin-left: -50vw;
+    border-radius: 0px;
+  }
+  #picture {
     border: none;
-    }
-    
-    /* Experience */
-    
-    
-    
-    #WhereIveworked{
-    margin-left:15vw;
+  }
+
+  /* Experience */
+
+  #WhereIveworked {
+    margin-left: 15vw;
     padding-bottom: 50px;
-    
-    }
-    .experience .companyname{
-        margin-left:15vw;
+  }
+  .experience .companyname {
+    margin-left: 15vw;
+  }
+  .experience .jobdetails li {
+    font-size: 10px;
+    width: 50vw;
+  }
 
-    }
-    .experience .jobdetails li{
-        font-size:10px;
-        width:50vw;
-        
-    }
-    
-    .experience .jobdetails{
-        margin-left:30vw;
-    }
-    
-    
-            /* Blogs */
-        #BlogsSectionTitle{
-            margin-left:5vw;
-        }
-    
-            .Blogs .Cards  {
-                justify-self: center;
-                width:20vw;
-                margin-left:6vw;
-                grid-template-columns: repeat(2,2fr);
-            
-            }
-            
-            #Join{
-                margin-left: 35vw;
-            }
-    
-            .Join .login{
-                margin-left: 38vw;
-            }
-    
-            
-    
-    .blogcontent{
-        width:100%;
-        left: 0px;
-    }
-    .blogcontent p{
-        width: 98%;
-        font-size: 20px;
-        position: relative;
-       left:0px;
-    }
-    .blogcontent .paragraphs {
-    
+  .experience .jobdetails {
+    margin-left: 30vw;
+  }
+
+  /* Blogs */
+  #BlogsSectionTitle {
+    margin-left: 5vw;
+  }
+
+  .Blogs .Cards {
+    justify-self: center;
+    width: 20vw;
+    margin-left: 6vw;
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  #Join {
+    margin-left: 35vw;
+  }
+
+  .Join .login {
+    margin-left: 38vw;
+  }
+
+  .blogcontent {
+    width: 100%;
+    left: 0px;
+  }
+  .blogcontent p {
+    width: 98%;
+    font-size: 20px;
     position: relative;
-    left:1px;
-    
-    
-    }
-    .blogcontent .paragraphs img{
-        height:40vh ;
-        width: 90%;
-        position: relative;
-        left:20px;
-    }
-    .blogcontent .CoverImage img{
-        height:40vh ;
-        width:90%;
-        position: relative;
-        left: 20px;
-    }
-    .blogcontent .title{
+    left: 0px;
+  }
+  .blogcontent .paragraphs {
+    position: relative;
+    left: 1px;
+  }
+  .blogcontent .paragraphs img {
+    height: 40vh;
+    width: 90%;
+    position: relative;
+    left: 20px;
+  }
+  .blogcontent .CoverImage img {
+    height: 40vh;
+    width: 90%;
+    position: relative;
+    left: 20px;
+  }
+  .blogcontent .title {
     font-size: 18px;
-    width:80vw;
+    width: 80vw;
     position: relative;
-    right:50px;  
-    }
-    .comment{
-        position: relative;
-        left:5px;    
-    }
-    .UserComments{
-        position: relative;
-        left:5px;
-    }
-    
-    
-    
-    
-    
-     /* Work Section */
-    
-     .Work .workimage img{
-        margin-left:5vw;
-        width:60vw;
-        height: 30vh;
-     }
-    .Work .projectdetails .projectdescription p{
-        padding:5px;
-        height:6vh;
-        width: 30vw;
-        margin-left: 4vw;
-    
-        font-size:13px;
-    
-    
-    }
-    .Work .projectdetails{
-        margin-top:-35vw;
-     
-    }
-    
-    .Work .projectdetails .projectheading h2{
-        font-size: 10px;
-        width: 100px;
-        margin-left:70vw;
-    }
-    
-    .Work .projectdetails .projectname h2{
-        font-size: 10px;
-        width: 100px;
-        margin-left:70vw;
-    }
-    
-    
-    .Work .projectdetails .resources li{
-        list-style-type: none;
-        display: inline;
-        margin-left: -4vw;
-        padding:3vw;
-    
-        
-    }
-    .Work .links{
-        margin-left:5vw;
-    }
-    .Work .projectdetails .projectheading{
-        margin-left:-52vw;
-    }
-    .Work .projectdetails .projectname{
-        margin-left: -52vw;
-    }
-    
-    /* contact */
-    
-        .contact .contact_titles{
-            margin-left:-12vw;
-        }
-        #contactform{
-            width:80vw;
-            margin-left:-35vw;
-            margin-top:5vh;
-        }
-        #contactname , #Email , #message{
-            width:60vw;
-            position: relative;;
-            right:10px;
-            margin-left: 5vw;
-        }
-    
-        #submit_contactform{
-            width:40vw;
-            margin-left:5vw;
-    
-        }
-    
-    
-    
-            #Resume{
-                display: block;
-            }
-            .SignUp{
-                height:100vh;        }
-    
-            #SignUpTitle{
-                color: #64ffda;
-                font-family: calibri ;
-                position: relative;
-                left:0px;
-    
-            }
-            #SignUp_Form{
-                width:70vw;
-                margin-left:8vw;
-                margin-top:1vh;
-            }
-            #contactname , #Email , #password{
-                width:60vw;
-                position: relative;;
-                right:10px;
-            }
-        
-            #submit_form{
-                width:40vw;
-                margin-left:-10vw;
-        
-            }
-        
-            .SignIn{
-                height:100vh;        }
-    
-            #SignInTitle{
-                color: #64ffda;
-                font-family: calibri ;
-    
-            }
-            #SignIn_Form{
-                width:70vw;
-                
-                margin-left:8vw;
-                margin-top:15vh;
-            }
-            #contactname , #Email , #password{
-                width:60vw;
-                position: relative;;
-                right:10px;
-            }
-        
-            #SignIn_button{
-                width:40vw;
-                margin-left:-10vw;
-        
-            }
-            #submit_SignUpform{
-                width:50vw;
-            }
-    
-    }    
+    right: 50px;
+  }
+  .comment {
+    position: relative;
+    left: 5px;
+  }
+  .UserComments {
+    position: relative;
+    left: 5px;
+  }
 
+  /* Work Section */
 
+  .Work .workimage img {
+    margin-left: 5vw;
+    width: 60vw;
+    height: 30vh;
+  }
+  .Work .projectdetails .projectdescription p {
+    padding: 5px;
+    height: 6vh;
+    width: 30vw;
+    margin-left: 4vw;
 
+    font-size: 13px;
+  }
+  .Work .projectdetails {
+    margin-top: -35vw;
+  }
 
+  .Work .projectdetails .projectheading h2 {
+    font-size: 10px;
+    width: 100px;
+    margin-left: 70vw;
+  }
 
+  .Work .projectdetails .projectname h2 {
+    font-size: 10px;
+    width: 100px;
+    margin-left: 70vw;
+  }
 
+  .Work .projectdetails .resources li {
+    list-style-type: none;
+    display: inline;
+    margin-left: -4vw;
+    padding: 3vw;
+  }
+  .Work .links {
+    margin-left: 5vw;
+  }
+  .Work .projectdetails .projectheading {
+    margin-left: -52vw;
+  }
+  .Work .projectdetails .projectname {
+    margin-left: -52vw;
+  }
 
+  /* contact */
 
+  .contact .contact_titles {
+    margin-left: -12vw;
+  }
+  #contactform {
+    width: 80vw;
+    margin-left: -35vw;
+    margin-top: 5vh;
+  }
+  #contactname,
+  #Email,
+  #message {
+    width: 60vw;
+    position: relative;
+    right: 10px;
+    margin-left: 5vw;
+  }
 
+  #submit_contactform {
+    width: 40vw;
+    margin-left: 5vw;
+  }
 
+  #Resume {
+    display: block;
+  }
+  .SignUp {
+    height: 100vh;
+  }
 
+  #SignUpTitle {
+    color: #64ffda;
+    font-family: calibri;
+    position: relative;
+    left: 0px;
+  }
+  #SignUp_Form {
+    width: 70vw;
+    margin-left: 8vw;
+    margin-top: 1vh;
+  }
+  #contactname,
+  #Email,
+  #password {
+    width: 60vw;
+    position: relative;
+    right: 10px;
+  }
 
+  #submit_form {
+    width: 40vw;
+    margin-left: -10vw;
+  }
 
+  .SignIn {
+    height: 100vh;
+  }
 
+  #SignInTitle {
+    color: #64ffda;
+    font-family: calibri;
+  }
+  #SignIn_Form {
+    width: 70vw;
 
+    margin-left: 8vw;
+    margin-top: 15vh;
+  }
+  #contactname,
+  #Email,
+  #password {
+    width: 60vw;
+    position: relative;
+    right: 10px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
+  #SignIn_button {
+    width: 40vw;
+    margin-left: -10vw;
+  }
+  #submit_SignUpform {
+    width: 50vw;
+  }
+}
