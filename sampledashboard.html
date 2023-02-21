@@ -21,7 +21,6 @@
         <a href="AddBlog.html"
           ><li><img src="blog.png" alt="" />&nbsp;<span>Add Blog</span></li></a
         >
-        <!-- <a href="Comments.html"><li><img src="comments.png" alt=""> &nbsp;<span>Comments</span></li></a> -->
         <a href="Messages.html"
           ><li>
             <img src="messages.png" alt="" />&nbsp;<span>Messages</span>
@@ -112,74 +111,24 @@
             <div class="title">
               <h2>Blogs</h2>
             </div>
-            <table id="blogtable">
-              <!-- <tr>
-          <th>Name</th>
-          <th>Date </th>
-          <th style="position: relative;left:30px;" colspan="2">Option</th>
-
-
-        </tr>
-        
-        <tr>
-          <td>Integrating Algolia search with Wordpress Multisite</td>
-          <td>11/01/2023 </td>
-          <td><a href="blogview.html" class="b.">View</a> </td>
-          <td>Delete</td>
-        </tr>
-        <tr>
-          <td>Integrating Algolia search with Wordpress Multisite</td>
-          <td>11/01/2023 </td>
-          <td><a href="blogview.html" class="b.">View</a> </td>
-          <td>Delete</td>
-        </tr>
-        <tr>
-          <td>Integrating Algolia search with Wordpress Multisite</td>
-          <td>11/01/2023 </td>
-          <td><a href="blogview.html" class="b.">View</a> </td>
-          <td>Delete</td>
-        </tr>
-        <tr>
-          <td>Integrating Algolia search with Wordpress Multisite</td>
-          <td>11/01/2023 </td>
-          <td><a href="blogview.html" class="b.">View</a> </td>
-          <td>Delete</td>
-        </tr> -->
-            </table>
+            <table id="blogtable"></table>
           </div>
           <div class="userlist">
             <div class="title">
               <h2>Users</h2>
             </div>
-            <table id="usertable">
-              <!-- <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Information</th>
-        </tr>
-        <tr>
-          <td>John Doe</td>
-          <td>JohnDoe@gmail.com</td>
-          <td><img src="information.png"></td>      </tr>
-        <tr>
-          <td>John Doe</td>
-          <td>JohnDoe@gmail.com</td>
-          <td><img src="information.png"></td>
-        </tr><tr>
-          <td>John Doe</td>
-          <td>JohnDoe@gmail.com</td>
-          <td><img src="information.png"></td>
-        </tr> -->
-            </table>
+            <table id="usertable"></table>
           </div>
         </div>
       </div>
     </div>
 
     <script>
-     
-
-
+      const logoutButton = document.getElementById('logout');
+      logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('token');
+        location.href('/');
+      });
 
       async function getBlogs() {
         let url = 'https://my-api-kiyi.onrender.com/api/blogs';
@@ -191,7 +140,6 @@
         }
       }
 
-     
       async function renderBlogs() {
         let blogs = await getBlogs();
         let html = '';
@@ -210,78 +158,55 @@
         blogtable = document.getElementById('blogtable');
         blogtable.innerHTML = html;
       }
-     renderBlogs()
+      renderBlogs();
 
-     async function deleteBlog(blogId) {
-  let url = `https://my-api-kiyi.onrender.com/api/blogs/${blogId}`;
-  try {
-    let res = await fetch(url, {
-      method: 'DELETE',
-       headers: {
-                Authorization: `Bearer ${JSON.parse(
-                  localStorage.getItem('token'),
-                )}`
-    }});
-    
-  } catch (error) {
-    console.log(error);
-  }
-}
+      async function deleteBlog(blogId) {
+        let url = `https://my-api-kiyi.onrender.com/api/blogs/${blogId}`;
+        try {
+          let res = await fetch(url, {
+            method: 'DELETE',
+            headers: {
+              Authorization: `Bearer ${JSON.parse(
+                localStorage.getItem('token'),
+              )}`,
+            },
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      }
 
-
-async function renderBlogs() {
-  let blogs = await getBlogs();
-  let html = '';
-  blogs.forEach((blog) => {
-    let htmlSegment = `
+      async function renderBlogs() {
+        let blogs = await getBlogs();
+        let html = '';
+        blogs.forEach((blog) => {
+          let htmlSegment = `
       <tr>
         <td>${blog.title}</td>
         <td>11/01/2023</td>
         <td><a href="blogview.html#${blog._id}" class="b.">View</a></td>
-        <td style="color:red" data-id=${blog._id}>Delete</td>
+        <td style="color:red;cursor:pointer;" data-id=${blog._id}>Delete</td>
+        <td><a href="AddBlog.html#${blog._id}" id="UpdateBlog" style="color:green; cursor:pointer;" data-update=${blog._id}>Update</a></td>
       </tr>`;
 
-    html += htmlSegment;
-  });
+          html += htmlSegment;
+        });
 
-  blogtable = document.getElementById('blogtable');
-  blogtable.innerHTML = html;
+        blogtable = document.getElementById('blogtable');
+        blogtable.innerHTML = html;
 
-  let deleteButtons = blogtable.querySelectorAll('[data-id]');
-  deleteButtons.forEach((button) => {
-    button.addEventListener('click', async () => {
-      let blogId = button.getAttribute('data-id');
-      await deleteBlog(blogId);
-      await renderBlogs();
-    });
-  });
-}
+        let deleteButtons = blogtable.querySelectorAll('[data-id]');
+        deleteButtons.forEach((button) => {
+          button.addEventListener('click', async () => {
+            let blogId = button.getAttribute('data-id');
+            await deleteBlog(blogId);
+            await renderBlogs();
+          });
+        });
+      }
 
-
-      // async function renderBlogs() {
-      //   let blogs = await getBlogs();
-      //   let html = '';
-      //   blogs.forEach((blog) => {
-      //     let htmlSegment = `
-      //                      <tr>
-      //                <td>${blog.title}</td>
-      //                <td>11/01/2023 </td>
-      //                <td><a href="blogview.html#${blog._id}" class="b.">View</a> </td>
-      //                <td id="deleteBlog" class="deleteBlog" style="color:red" data-id=${blog._id}>Delete</td>
-      //              </tr>`;
-
-          
-      //        const deleteBlogButton = document.querySelector(`[data-id="${blog._id}]"`);
-      //        console.log(deleteBlogButton)
-      // // deleteBlogButton.addEventListener('click', async () => {
-      // //    await deleteBlog(blog._id);})
-      // //   deleteBlogButton.parentElement.remove();
-      // //   });
-      //   html += htmlSegment;
-      //   blogtable = document.getElementById('blogtable');
-      //   blogtable.innerHTML = html;
-      //   })}
- renderBlogs();
+      renderBlogs();
+      
 
       async function getUsers() {
         let url = 'https://my-api-kiyi.onrender.com/api/signup';
