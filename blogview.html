@@ -130,14 +130,15 @@
         } catch (error) {
           console.log(error.message);
         }
+        location.reload();
       };
 
       document
         .getElementById('whitelike')
         .addEventListener('click', function (e) {
-          e.preventDefault
+          e.preventDefault;
           addLike(blogId);
-          var img =e.target
+          var img = e.target;
           if (img.id === 'whitelike') {
             img.src = 'blacklikebutton.png';
             img.id = 'blacklike';
@@ -290,8 +291,10 @@
                                 ${blog.content}
                                 </div>
                             </div>`;
-                            var likecount=document.getElementById('likecount')
-                            likecount.innerHTML=`${blog.likes.length}`
+
+            var likecount = document.getElementById('likecount');
+            likecount.innerHTML = `${blog.likes.length}`;
+
             html += htmlSegment;
           });
         }
@@ -315,49 +318,19 @@
                   <img src="maleuser.png">
                   <h4>${blog.comments[i].name}</h4>
                   <p>${blog.comments[i].comment}</p>
-                  <h5 style="font-weight: 10;">21.December.2022  .</h5>
-                  <h5 style="font-weight: 10;">2 hours ago</h5>
+                  <h5 style="font-weight: 10;">22.02.2023  </h5>
+                  <h5 style="font-weight: 10;"></h5>
                                    </div>`;
               html += htmlSegment;
             }
           });
         }
+        // if
 
         var commentsec = document.getElementById('commentssection');
         commentsec.innerHTML = html;
       }
       renderComments();
-      // fetchBlog();
-
-      // function fetchComments(){
-
-      //    var commentsec=document.getElementById("commentssection");
-
-      //    comments=JSON.parse(localStorage.getItem("comments"));
-
-      //         if(!comments){
-      //            document.querySelector('#commentssection').innerHTML='No Comments'
-      //         }
-      //         else{
-
-      //             for(let i=0;i<comments.length;i++){
-      //         var name=comments[i].name;
-      //         var comment=comments[i].comment;
-
-      //             commentsec.innerHTML +=`
-      //             <div class="UserComments" onclick>
-
-      //             <img src="Portfolio picture.jpg">
-      //             <h4>${name}</h4>
-      //             <p>${comment}</p>
-      //                         <h5 style="font-weight: 10;">21.December.2022  .</h5>
-      //             <h5 style="font-weight: 10;">2 hours ago</h5>
-      //                              </div>`
-      //         }
-      //     }
-      // };
-
-      // fetchComments();
     </script>
   </body>
 </html>

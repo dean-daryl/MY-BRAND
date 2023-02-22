@@ -52,7 +52,7 @@
             </button>
           </div>
           <div class="user">
-            <a href="#" class="btn">Add New User</a>
+            <a href="./SignUp.html" class="btn">Add New User</a>
             <img src="notifications.png" />
             <div class="img-case">
               <img
@@ -68,7 +68,7 @@
         <div class="cards">
           <div class="card">
             <div class="box">
-              <h2>21</h2>
+              <h2 id="UserCounter"></h2>
               <h3>Users</h3>
             </div>
             <div class="icon-case">
@@ -78,7 +78,7 @@
 
           <div class="card">
             <div class="box">
-              <h2>210</h2>
+              <h2>0</h2>
               <h3>Site Visits</h3>
             </div>
             <div class="icon-case">
@@ -88,17 +88,17 @@
 
           <div class="card">
             <div class="box">
-              <h2>50</h2>
+              <h2 id="BlogCounter"></h2>
               <h3>Blogs</h3>
             </div>
             <div class="icon-case">
-              <img src="maleuser.png" />
+              <img src="blog.png" />
             </div>
           </div>
 
           <div class="card">
             <div class="box">
-              <h2>23</h2>
+              <h2></h2>
               <h3>Active Users</h3>
             </div>
             <div class="icon-case">
@@ -188,8 +188,10 @@
         <td style="color:red;cursor:pointer;" data-id=${blog._id}>Delete</td>
         <td><a href="AddBlog.html#${blog._id}" id="UpdateBlog" style="color:green; cursor:pointer;" data-update=${blog._id}>Update</a></td>
       </tr>`;
-
           html += htmlSegment;
+          const blogCount=document.getElementById("BlogCounter")
+          blogCount.innerHTML=`${blogs.length}`
+
         });
 
         blogtable = document.getElementById('blogtable');
@@ -229,6 +231,9 @@
                      <td>${user.email}</td>
                      <td><img src="information.png"></td></tr>
                    <tr>`;
+                    const userCount=document.getElementById("UserCounter")
+          userCount.innerHTML=`${users.length}`
+
 
           html += htmlSegment;
         });

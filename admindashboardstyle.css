@@ -377,13 +377,15 @@ left:75px;
            position: relative;
             left:50px;
             top:50px;
-            height: 50px;
+            height: 100px;
             width: 1022px;
             margin-left: 200px;
         }
         .Messages .messagelist p{
-            display:inline-flex;
-            margin-left: 0px;
+            padding-top:20px;
+            width:260px;
+            display:inline-block
+            
             
             }
             .Messages .messagelist img{
