@@ -97,7 +97,7 @@
             const payload = JSON.parse(atob(data.token.split('.')[1]));
 
             console.log(payload);
-            if (payload.username == 'deandaryl') {
+            if (payload.username === 'deandaryl') {
               location.href = '/sampledashboard.html';
             } else {
               location.href = '/';
@@ -106,6 +106,8 @@
             console.log('Error Signing In');
           }
         } catch (error) {
+            const credential_error= document.getElementById('credential_error')
+            credential_error.innerHTML='Incorrect Credentials'
           console.log(error.message);
         }
       };
