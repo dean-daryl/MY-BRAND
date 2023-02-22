@@ -123,6 +123,7 @@
         //   } else {
         //     console.log('Error Signing In');
         //   }
+        
         } catch (error) {
           console.log(error.message);
         }
@@ -136,9 +137,11 @@
                 const payload = {
           name:SignUp_Form.contactname.value,   
           email:SignUp_Form.Email.value,
-          password: SignUp_Form.password.value,
-        };SignUp(payload)
-            location.href='/signin.html';
+          password: SignUp_Form.password.value
+        }
+        location.href='/signin.html';
+        SignUp(payload)
+            
             }
             
 
@@ -226,7 +229,7 @@
           password_error.innerHTML = '';
           // window.location.href="index.html";
         }
-        return true;
+       
       }
     </script>
   </body>
