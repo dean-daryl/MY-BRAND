@@ -1629,6 +1629,7 @@ padding:5px;
   }
   .card {
     box-shadow: none;
+    background-color: #112240;
   }
   #Join {
     margin-left: 10vw;
@@ -1790,6 +1791,7 @@ padding:5px;
   #contact_description {
     position: relative;
     font-size:3vw;
+    
     
     
   }
@@ -2022,6 +2024,7 @@ padding:5px;
     margin-left: 6vw;
     grid-template-columns: repeat(2, 2fr);
   }
+  
 
   #Join {
     margin-left: 35vw;
