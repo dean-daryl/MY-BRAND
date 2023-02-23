@@ -28,6 +28,7 @@ span {
   color: #64ffda;
 }
 nav ul li {
+  z-index: 2;
   color: rgba(246, 252, 251, 0.7);
   padding: 10px;
   font-size: 15px;
@@ -37,7 +38,7 @@ nav ul li {
   position: relative;
   left: 40vw;
 }
-#resume {
+/* #resume {
   width: 100px;
   left: 90vw;
   top: -60px;
@@ -62,7 +63,7 @@ nav ul li {
 
 #Resume {
   display: none;
-}
+} */
 nav ul li:hover {
   color: #64ffda;
   transition: 0.3s;
@@ -90,7 +91,7 @@ nav img {
   height: 54.8px;
   margin-left: 150px;
   margin-top: 100px;
-  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-family: 'consolas';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -192,9 +193,10 @@ nav img {
 
 #titleAboutme {
   margin-bottom: 100px;
-  padding-left: 100px;
-  padding-top: 100px;
-  top: 120px;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  position: relative;
+
   color: white;
   font-family: 'consolas';
 }
@@ -207,8 +209,8 @@ nav img {
 .AboutMe {
   /* position: absolute; */
   margin-top: 100px;
-  padding-left: 20px;
-  margin-left: 150px;
+  padding-left:10px;
+  margin-left: 15px;
 }
 #story {
   margin-top: 10px;
@@ -251,11 +253,11 @@ nav img {
   color: rgba(255, 255, 255, 0.5); */
 }
 #picture {
-  width: 400px;
-  height: 540px;
+  width: 50vw;
+  height: 50vh;
   border-radius: 10px;
   padding-top: 50px;
-  padding-right: 50px;
+  padding-right: 0px;
   margin-left: 60vw;
   margin-bottom: 600px;
   margin-top: -1000px;
@@ -264,23 +266,12 @@ nav img {
 }
 
 #mypicture {
-  margin-right: 10px;
-  height: 550px;
+    position: relative;
+  margin-left:2vw;
+  width:30vw;
+  height:80vh;
   border-radius: 25px;
 }
-/* .AboutMe .picture img{
-    position: absolute;
-    position:static;
-    
-    width: 100%;
-    border-radius: 10px;
-    height: 530px;
-    padding-left: 500px;
-    opacity: 20%;
-}
-.picture img:hover{
-    opacity: 100%;
-} */
 
 #skills {
   width: 30px;
@@ -398,7 +389,7 @@ nav img {
   width: 330.84px;
   height: 42.14px;
 }
-*/ #SignIn_button {
+ #SignIn_button {
   left: 60px;
   top: 5px;
   padding: 2px 14px;
@@ -697,7 +688,7 @@ nav img {
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Inconsolata';
   padding: 10px;
-  
+
   position: relative;
 }
 .blogcontent .paragraphs img {
@@ -873,7 +864,7 @@ nav img {
 }
 #BlogsSectionTitle {
   color: white;
-  font-family: 'Inconsolata';
+  font-family: 'consolas';
   margin-left: 200px;
 }
 .Blogs span {
@@ -901,6 +892,10 @@ nav img {
   font-weight: 100;
   color: #64ffda;
 }
+.Work .workimage {
+  position: relative;
+  z-index: -1;
+}
 .Work .workimage img {
   height: 430px;
   margin-left: 15vw;
@@ -908,18 +903,23 @@ nav img {
 .Work .workimage img:hover {
   mix-blend-mode: normal;
 }
-
-.Work .projectdescription p {
-  background-color: #112240;
+.Work .projectdescription {
+padding:5px;
   border-radius: 5px;
-  padding: 25px;
+  position: relative;
+  right:5vw;
+  background-color: #112240;
+  z-index: 2;
+}
+.Work .projectdescription p {
+  border-radius: 5px;
   color: white;
-  font-size: 12px;
+  font-size: 1vw;
   font-family: 'inconsolata';
   font-style: normal;
   font-weight: 100;
-  width: 500px;
-  margin-left: -2vw;
+  
+
 }
 .Work .projectdescription a {
   color: #64ffda;
@@ -962,9 +962,10 @@ nav img {
 
 .experience .companyname {
   padding-bottom: 100px;
-  margin-left: 25vw;
+  margin-left: 20vw;
 }
 .experience .companyname li {
+  width: 5vw;
   font-family: 'Inconsolata';
   list-style-type: none;
   padding-bottom: 15px;
@@ -977,12 +978,12 @@ nav img {
   margin-bottom: 200px;
   margin-top: -350px;
   margin-left: 35vw;
+  margin-right: 5vw;
 }
 .experience .jobname h3 {
   font-family: 'consolas';
+  padding-right: 5vw;
   color: white;
-  padding-bottom: 240px;
-  margin-left: 50px;
   padding-bottom: 0;
 }
 .experience .jobname h5 {
@@ -1560,11 +1561,10 @@ nav img {
 
   #mypicture {
     height: 50vh;
-    width: 80vw;
+    width: 60vw;
     padding-top: 600px;
     margin-left: -50vw;
-    border: none;
-    border-radius: 0px;
+    border-radius: 10px;
   }
   #picture {
     border: none;
@@ -1576,15 +1576,43 @@ nav img {
     font-family: 'consolas';
     margin-left: 15vw;
   }
-  .experience .companyname {
-    margin-left: 1vw;
+   .experience .jobdetails h3{
+    font-size:1.8vw;
+    position: relative;
+    top:20px;
+    left:7vw;
   }
+   .experience .jobdetails h5{
+    font-size:1.8vw;
+    position: relative;
+    top:1vh;
+    left:7vw;
+  }
+  .experience .companyname {
+    
+    margin-left:-2vw;
+    padding-right:5vw;
+  }
+   .experience .companyname li{
+    font-size:3vw;
+   }
   .experience .jobdetails li {
     font-size: 10px;
     width: 50vw;
   }
+  .experience .jobname h3{
+     font-size: 10px;
+  }
+  .experience .jobname h5{
+    font-size: 10px;
+    position: relative;
+    top:12px;
+    right:15px;
+  }
 
   .experience .jobdetails {
+    position: relative;
+  top:50px;
     margin-left: 30vw;
   }
 
@@ -1595,10 +1623,8 @@ nav img {
   }
 
   .Blogs .Cards {
-    justify-self: center;
+    margin:0px;
     width: 100vw;
-    margin: 5vw;
-    overflow-x: scroll;
     grid-template-columns: repeat(1, 1fr);
   }
   .card {
@@ -1613,11 +1639,11 @@ nav img {
   }
 
   .blogcontent {
-    width: 90vw;
+    width: 50vw;
     left: 0px;
   }
   .blogcontent p {
-    width: 90%;
+    width: 100%;
     font-size: 13px;
     position: relative;
   }
@@ -1633,7 +1659,7 @@ nav img {
   }
   .blogcontent .CoverImage img {
     height: 200px;
-    width: 90%;
+    width: 100%;
     position: relative;
     left: 20px;
   }
@@ -1656,9 +1682,27 @@ nav img {
   .postactivity {
     margin-left: -10vw;
   }
-  /* Work Section */
 
+  /* Work Section */
   .Work .workimage img {
+    position: relative;
+    top:5vw;
+    right:15vw;
+    width: 60vw;
+    height: 60vw;
+    
+  }
+  .Work .projectdetails {
+    margin-top:-25vw;
+    position: relative;
+    bottom:15vw;
+    margin-right:10vw;
+    margin-left: 50vw;
+  }
+
+
+
+  /* .Work .workimage img {
     margin-left: 2vw;
     width: 60vw;
     height: 30vh;
@@ -1708,7 +1752,7 @@ nav img {
   }
   .Work .projectdetails .projectname {
     margin-left: -52vw;
-  }
+  } */
 
   /* contact */
 
@@ -1722,12 +1766,12 @@ nav img {
 
   #contactform {
     width: 75vw;
-    margin-left: -37vw;
+    margin-left: -40vw;
     margin-top: 8vh;
   }
+
   #contactname,
   #Email,
-  #message,
   #password {
     width: 60vw;
     position: relative;
@@ -1735,8 +1779,19 @@ nav img {
     margin-left: 5vw;
     font-family: 'inconsolata';
   }
+  #message{
+      width: 60vw;
+    position: relative;
+    font-family: 'inconsolata';
+    margin-left: 5px;
+    right: 15px;
+
+  }
   #contact_description {
-    font-size: 11px;
+    position: relative;
+    font-size:3vw;
+    
+    
   }
   #submit_form {
     width: 40vw;
@@ -1806,7 +1861,7 @@ nav img {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 600px) and (max-width: 1087px) {
   html,
   body {
     overflow-x: hidden;
@@ -1911,8 +1966,8 @@ nav img {
   }
 
   #mypicture {
-    height: 50vh;
-    width: 80vw;
+    height: 60vh;
+    width: 60vw;
     padding-top: 500px;
     margin-left: -50vw;
     border-radius: 0px;
@@ -1926,9 +1981,26 @@ nav img {
   #WhereIveworked {
     margin-left: 15vw;
     padding-bottom: 50px;
+    padding-top: 50px;
   }
-  .experience .companyname {
-    margin-left: 15vw;
+
+  .experience .jobdetails h3{
+    font-size:1.8vw;
+    position: relative;
+    top:20px;
+    left:7vw;
+  }
+   .experience .jobdetails h5{
+    font-size:1.8vw;
+    position: relative;
+    top:1vw;
+    left:7vw;
+  }
+  .experience .companyname li {
+    width:5vw;
+    position: relative;
+  right:5vw;
+    font-size:2vw;
   }
   .experience .jobdetails li {
     font-size: 10px;
@@ -2003,10 +2075,21 @@ nav img {
   /* Work Section */
 
   .Work .workimage img {
-    margin-left: 5vw;
+    position: relative;
+    top:5vw;
+    right:15vw;
     width: 60vw;
-    height: 30vh;
+    height: 60vw;
+    
   }
+  .Work .projectdetails {
+    margin-top:-25vw;
+    position: relative;
+    bottom:15vw;
+    margin-right:10vw;
+    margin-left: 50vw;
+  }
+  /*
   .Work .projectdetails .projectdescription p {
     padding: 5px;
     height: 6vh;
@@ -2014,8 +2097,8 @@ nav img {
     margin-left: 4vw;
 
     font-size: 13px;
-  }
-  .Work .projectdetails {
+  } */
+  /* .Work .projectdetails {
     margin-top: -35vw;
   }
 
@@ -2045,7 +2128,7 @@ nav img {
   }
   .Work .projectdetails .projectname {
     margin-left: -52vw;
-  }
+  } */
 
   /* contact */
 
@@ -2053,21 +2136,22 @@ nav img {
     margin-left: -12vw;
   }
   #contactform {
-    width: 80vw;
+    width: 50vw;
     margin-left: -35vw;
     margin-top: 5vh;
   }
+  
   #contactname,
   #Email,
   #message {
-    width: 60vw;
+    width: 30vw;
     position: relative;
     right: 10px;
     margin-left: 5vw;
   }
 
   #submit_contactform {
-    width: 40vw;
+    width: 20vw;
     margin-left: 5vw;
   }
 
@@ -2092,7 +2176,7 @@ nav img {
   #contactname,
   #Email,
   #password {
-    width: 60vw;
+    width: 30vw;
     position: relative;
     right: 10px;
   }
@@ -2119,7 +2203,7 @@ nav img {
   #contactname,
   #Email,
   #password {
-    width: 60vw;
+    width: 30vw;
     position: relative;
     right: 10px;
   }
