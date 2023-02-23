@@ -29,7 +29,7 @@
             <li id="Experience"><span>03. </span>Experience</li>
             <li id="Blogs"><span>04. </span>Blogs</li>
             <li id="Contact"><span>05. </span>Contact Me</li>
-            <li id="cv" ><span>06.</span> Resume</li>
+            <li id="cv" ><span>06. </span> Resume</li>
         </ul>
         <ul class="show-menu" >
             <li id="About"><span>01. </span>About</li>
@@ -42,7 +42,7 @@
         
         
         </ul>
-       <button id="resume">Resume</button>
+       
      </nav> 
  </div>
  <div  class="social_section" >
@@ -171,7 +171,7 @@
 
     <div class="Work" id="WorkSection">      
         <div class="projectstitle">
-            <h2 style="color: white;font-family: 'inconsolata';position:relative;left:9vw;"><span>03.</span>Somethings I’ve Built</h2>
+            <h2 style="color: white;font-family:'consolas';position:relative;left:9vw;"><span>03.</span>Somethings I’ve Built</h2>
         </div> 
         <div class="workimage">
             <img src="portfoliofigma.png">
@@ -183,7 +183,7 @@
         <div class="projectname">
             <h2>Halcyon Theme</h2>
         </div>   
-        <div class="projectdescription" fon>
+        <div class="projectdescription">
             <p>A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode" target="_blank" rel="noopener noreferrer">Visual Studio Marketplace</a>, <a href="https://packagecontrol.io/packages/Halcyon%20Theme" target="_blank" rel="noopener noreferrer">Package Control</a>, <a href="https://atom.io/themes/halcyon-syntax" target="_blank" rel="noopener noreferrer">Atom Package Manager</a>,   and <a href="https://www.npmjs.com/package/hyper-halcyon-theme" target="_blank" rel="noopener noreferrer">npm</a>.</p>
         </div>  
         <div class="resources">
@@ -260,7 +260,7 @@
         
         
        <div class="messageinput" >
-        <label for="message" id="message_label" style="font-family: Inconsolata;">Message:</label><br>
+        <label for="message_label" id="message_label" style="font-family: Inconsolata;">Message:</label><br>
         <input type="text" id="message" name="message"><br>
         <span style="visibility: visible;color: red; font-family:'inconsolata'; position: relative;top:5px;"  id="message_error"></span>
     </div>
@@ -385,42 +385,6 @@ return true;
 }
 
 }
-// fetching blogs from local storage
-
-// function fetchBlog(){
-//    blogs=JSON.parse(localStorage.getItem("blogs"));
-//   var cards=document.getElementById("cards");
-  
-
-//     if (!blogs) {
-
-//     document.querySelector("#cards").innerHTML = "No blog posts available.";
-    
-// }else{
-//     for( let i=0;i<blogs.length;i++){
-//         var title=blogs[i].title;
-//     var summary=blogs[i].summary;
-//     var resources=blogs[i].resources;
-//     var cover=blogs[i].coverimage;
-// cards.innerHTML+=`<div class="card"   style="background-image:url(${cover});background-size:cover;backdrop-filter:blur(5px);background-blend-mode:multiply;" onclick=>  
-//             <div class="card-content" >
-//                 <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
-//                 <div class="link"><a href="blogview.html" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div>
-               
-//                 <h2><a href="blogview.html" style="text-decoration:none;color:white;">${title}</a></h2>
-//                 <p>${summary}</p>
-//                     <ul><li>${resources}</li>
-//                     </ul>
-//             </div>`;
-//         }
-
-//  }
-
-// }
-// fetchBlog();
-
-
-
 
 // slide down navbar
 
@@ -441,7 +405,7 @@ window.onscroll = function() {
 
 
 const hamburger = document.querySelector('.HamburgerMenu');
-const nav = document.querySelector(' .nav-menu');
+const nav = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', toggleMenu);
 nav.addEventListener('click', toggleMenu);
 
@@ -462,7 +426,7 @@ link1.addEventListener("click", scrollToSection1);
  function scrollToSection1(event){
     event.preventDefault();
     const section1= document.getElementById("AboutMeSection");
-    section1.scrollIntoView({ behavior: "smooth" });
+    section1.scrollIntoView();
  }
 
 
