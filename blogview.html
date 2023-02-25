@@ -305,7 +305,7 @@
       renderSingleBlog();
 
       async function renderComments() {
-        console.log(getBlogs());
+        console.log(getBlogs());x
         let blogs = await getBlogs();
         console.log(blogs);
         const currentBlog = blogs.filter(({ _id }) => _id == blogId);
