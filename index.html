@@ -63,7 +63,7 @@
 
     </ul>    
 
-</div>
+ </div>
  
  <div class="About" id="AboutSection">
 
@@ -222,6 +222,7 @@
 
 
         <div class="Cards" id="cards">
+            <!-- Blog Section -->
         </div>
       
                  
@@ -237,13 +238,13 @@
        </div>
 
 
-<div class="contact" id="ContactSection">
+ <div class="contact" id="ContactSection">
     <div class="contact_titles">
         <h1 id="get_in_touch">Get In Touch</h1>
         <h2 id="titleWhats_Next" >05. What's Next ?</h2>
         <p id="contact_description">I’m  currently looking for any new opportunities, my inbox is always open. Whether you have a question or just  want to say hi, I’ll get back to you!</p>    
     </div>
-<div class=" Contact_form" >
+ <div class=" Contact_form" >
     <form id="contactform" name="contactform" onsubmit="validate();return false;">
         <div class="nameinput">
             <label for="contactname" id="Name_label" style="font-family: Inconsolata;">Name:</label><br>
@@ -271,15 +272,30 @@
     </form>
     </div>
 
-</div>
+  </div>
 
 
-</div>
+ </div>
 <!-- <div class="footer">
     <footer>Built and Designed by Daryl Murenzi</footer>
 </div> -->
-<script src="sweetalert.min.js"></script>
+<script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+     <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/8.0.5/react-redux.min.js" integrity="sha512-Vhrd0FFt2WqbwkMmfOHRax4CDMGHJPLtcXcKnKuAxcUSnfiZ576tM4YrkQ3EbuQbnyOSBeCaMFSnrPlNSctq4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux-thunk/2.4.2/redux-thunk.min.js" integrity="sha512-doV1QcZI2hB7OuETAuE3ii63YPeDeaWLF6sPMUN9EblvW8TIeDoAlUPFtoRy2folzV2xkAAy4BdqWBbF/FMBsQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="cards.js"></script>
+       
 
+
+
+<script src="sweetalert.min.js"></script>
 <script>
 
 const ContactFormEl=document.getElementById('contactform');
@@ -507,6 +523,7 @@ Scout.style.display="block";
 
 
 
+
   async function getBlogs() {
     let url = 'https://my-api-kiyi.onrender.com/api/blogs';
     try {
@@ -518,27 +535,27 @@ Scout.style.display="block";
 }
 
 
-getBlogs().then
-((blogs) =>{
-    let html = '';
-     blogs.forEach(blog => {
-        let htmlSegment = `<div class="card"   style="background-image:url(${blog.image});background-size:cover;backdrop-filter:blur(5px);background-blend-mode:multiply;" onclick=>  
-            <div class="card-content" >
-                <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
-                <div class="link"><a href="blogview.html#${blog._id}" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div>
+// getBlogs().then
+// ((blogs) =>{
+//     let html = '';
+//      blogs.forEach(blog => {
+//         let htmlSegment = `<div class="card"   style="background-image:url(${blog.image});background-size:cover;backdrop-filter:blur(5px);background-blend-mode:multiply;" onclick=>  
+//             <div class="card-content" >
+//                 <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
+//                 <div class="link"><a href="blogview.html#${blog._id}" aria-label="External Link" class="external" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div>
                
-                <h2><a href="blogview.html#${blog._id}" style="text-decoration:none;color:white;">${blog.title}</a></h2>
-                <p>${blog.summary}</p>
+//                 <h2><a href="blogview.html#${blog._id}" style="text-decoration:none;color:white;">${blog.title}</a></h2>
+//                 <p>${blog.summary}</p>
                     
-            </div>
-            </div>`;
+//             </div>
+//             </div>`;
 
-        html += htmlSegment;
-    });
+//         html += htmlSegment;
+//     });
 
-    var cards=document.getElementById("cards");
-    cards.innerHTML = html;
-})
+//     var cards=document.getElementById("cards");
+//     cards.innerHTML = html;
+// })
 
 
 

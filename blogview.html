@@ -74,6 +74,9 @@
     </div>
     <div id="commentssection"></div>
 
+
+
+
     <script>
       const href = new URL(location.href);
       const blogId = href.hash.replace('#', '');
@@ -130,14 +133,15 @@
         } catch (error) {
           console.log(error.message);
         }
-        location.reload();
+        // location.reload();
       };
 
       document
         .getElementById('whitelike')
-        .addEventListener('click', function (e) {
+        .addEventListener('click', async function (e) {
           e.preventDefault;
-          addLike(blogId);
+          await addLike(blogId);
+          await renderSingleBlog();
           var img = e.target;
           if (img.id === 'whitelike') {
             img.src = 'blacklikebutton.png';
