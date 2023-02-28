@@ -34,7 +34,6 @@ const Card = () => {
         onClick: () => {
           window.location.href = `blogview.html#${blog._id}`;
         },
-        
         children: reactElement('div', {
           key: blog._id,
           className: 'card-content',
